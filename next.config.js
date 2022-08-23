@@ -16,4 +16,9 @@ module.exports = {
 images:{
   disableStaticImages: true, 
 },
+
+env:{
+  SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+  OPTIMAS_EMAIL: process.env.OPTIMAS_EMAIL,
+},
 }

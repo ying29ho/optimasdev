@@ -1,0 +1,62 @@
+.about-container{
+    // display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". header header ."
+    ". hero hero ."
+    ". purpose shape1 ."
+    ". vision shape1 ."
+    ". subheader shape2 ."
+    ". desc1 shape2 ."
+    ". desc2 . ."
+    ". timeline timeline ."
+    ". teamheading teamheading ."
+    ". founder founder ."
+    ". employee1 employee2 ."
+    ". employee3 employee3 ."
+    ;
+}
+
+.header{
+    grid-area: "header";
+    height: 500px;
+    width: 100%;
+    background-color: #FB4647; 
+}
+ .hero{
+     grid-area: "hero";
+     place-self: center;
+     text-align: center;
+ }
+
+ .shape{
+     grid-area: "shape1";
+     width: 50%;
+ }
+
+ .purpose{
+     grid-area: "purpose";
+     width: 50%;
+ }
+
+ .vision{
+    grid-area: "vision";
+    width: 50%;
+}
+
+.subheader{
+    grid-area: "subheader";
+}
+
+.desc1{
+    grid-area: "desc1";
+}
+
+.shape2{
+    grid-area: "shape2";
+}
+
+.timeline{
+    grid-area: "timeline";
+}

@@ -1,15 +1,245 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 4rem;
+  /* width: 1280px;
+  min-width: 1280px; */
 }
+
+.triagleCorner{
+width: 0;
+height: 0;
+border-top: 100px solid lightsalmon;
+border-right: 100px solid transparent;
+}
+
+
+
+/* .h2 {
+  left: 0;
+  top: 0;
+  font-weight: 750;
+  font-size: 2em;
+  line-height: 1.2;
+  font-family: sans-serif;
+  letter-spacing: 4px;
+  color: lightsalmon;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.h2::before{
+content:" ";
+position: absolute;
+} */
+
+/* .h3{
+  font-size: 1.5em;
+  color: #2d2d2d;
+} */
+
+/* .phero {
+  font-size: 1.5em;
+  font-weight: 250;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  color: darkslategrey;
+  
+  text-justify: inter-word;
+} */
+
+.containerHero{
+  padding: 0 4rem;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 200vh;
+  width: 100%; */
+
+}
+
+/* .h1Hero {
+  font-size: 100px;
+  color: #fd5441;
+  line-height: 1.7;
+  font-family: sans-serif;
+  letter-spacing: 6px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+} */
+
+/* .psub {
+  font-size: 1.5em;
+  font-weight: 250;
+  line-height: 1.5;
+  color: darkslategrey;
+  text-align: justify;
+  text-justify: inter-word;
+} */
 
 .main {
   min-height: 100vh;
   padding: 4rem 0;
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.sliderMain {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderMainContainer{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+ 
+}
+
+
+.sliderContainer {
+  width: 1280px;
+  min-width: 1280px;
+  height: 100vh;
+  /* height: 600px; */
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  top: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+.arrow:hover {
+  box-shadow: 0px 0px 40px rgba(0, 0, 80, 0.05);
+}
+
+.arrowRight {
+  right: 0;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.innerImage {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerImage ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  height: 350px;
+  width: 450px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);
+}
+
+.innerImage ul li {
+  height: 350px;
+  width: 450px;
+}
+.innerImage ul li img {
+  height: 350px;
+  width: 450px;
+}
+.innerQuote {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.innerQuote ul {
+  list-style-type: none;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 600px;
+}
+
+.innerQuote ul li {
+  height: 100%;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+}
+/* .innerQuote ul li:nth-child(1) {
+  opacity: 1;
+} */
+
+.quote {
+  width: 100%;
+  /* height: 600px; */
+}
+
+/* .quote h1 {
+  font-size: 50px;
+  color:tomato;
+  letter-spacing: 8px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 5px 17px 5px;
+  text-transform: uppercase;
+ 
+} */
+/* 
+.quote h2 {
+  font-size: 18px;
+  letter-spacing: 0.88px;
+  line-height: 28px;
+  font-weight: 600;
+  color: darkslategrey;
+} */
+.motiv {
+  position: relative;
+  width: auto;
+  height: auto;
+  float: left;
+}
+
+.slide1 {
+  background-image: url("/optimas/public/images/1.jpg");
+}
+.slide2 {
+  background-image: url("/optimas/public/images/2.jpg");
+}
+.slide3 {
+  background-image: url("/optimas/public/images/3.jpg");
+}
+.slide4 {
+  background-image: url("/optimas/public/images/4.jpg");
+}
+.slide5 {
+  background-image: url("/optimas/public/images/5.jpg");
+}
+
+.partners{
+  margin: 100px 0;
 }
 
 .footer {
@@ -69,9 +299,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   max-width: 800px;
 }
+
+
 
 .card {
   margin: 1rem;
@@ -94,13 +327,13 @@
 
 .card h2 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  /* font-size: 1.25rem;
+  line-height: 1.5; */
 }
 
 .logo {
@@ -114,3 +347,5 @@
     flex-direction: column;
   }
 }
+
+

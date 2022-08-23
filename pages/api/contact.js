@@ -1,6 +1,6 @@
 require("dotenv").config();
 const mail = require('@sendgrid/mail');
-const apiKey = `${process.env.SENDGRID_API_KEY}`;
+const apiKey = `${process.env.NEXT_PUBLIC_SENDGRID_API_KEY}`;
 
 mail.setApiKey(apiKey);
 
@@ -41,7 +41,7 @@ export default (req,res)=>{
 
     const data = {
         to: 'ying29ho@gmail.com',
-        from: process.env.OPTIMAS_EMAIL,
+        from: process.env.NEXT_PUBLIC_OPTIMAS_EMAIL,
         subject: `New Web Message from ${body.firstName}!`,
         text: msg,
         html: msg.replace(/\r\n/g, '<br>')
@@ -49,7 +49,7 @@ export default (req,res)=>{
 
     const usrData={
         to: `${body.email}`,
-        from: process.env.OPTIMAS_EMAIL,
+        from: process.env.NEXT_PUBLIC_OPTIMAS_EMAIL,
         subject: `Message Received!`,
         text: usermsg, 
         html: usermsg.replace(/\r\n/g, '<br>')

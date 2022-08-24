@@ -59,8 +59,8 @@ export default function handler (req,res){
     .catch(error=>console.log(error))
 
 
-//  mail.send(usrData)
-//     .catch(error=>console.log(error))
+ mail.send(usrData)
+    .catch(error=>console.log(error))
 
 
     console.log(body);

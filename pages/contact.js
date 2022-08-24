@@ -87,12 +87,12 @@ const Contact = () => {
               </div>
             </div>
             <div className="col">
-            <div hidden={!submitted} className="alert alert-success" role="alert">
+            {/* <div hidden={!submitted} className="alert alert-success" role="alert">
               {message}
               <button type="button" className="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-            </div>
+            </div> */}
               <form onSubmit={formik.handleSubmit}>
                
                 <label className="pt-5" htmlFor="firstName">

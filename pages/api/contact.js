@@ -40,7 +40,7 @@ export default function handler (req,res){
     `
 
     const data = {
-        to: 'ying29ho@gmail.com',
+        to: process.env.OPTIMAS_EMAIL,
         from: process.env.OPTIMAS_EMAIL,
         subject: `New Web Message from ${body.firstName}!`,
         text: msg,

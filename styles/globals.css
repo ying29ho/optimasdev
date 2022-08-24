@@ -466,3 +466,12 @@ margin: 15px;
   font-size: 60px !important;
   text-transform: none !important;
 }
+
+.text-danger{
+  color: #FB4647;
+}
+
+.alert-success{
+  background-color: darkseagreen;
+  color: #262626;
+}

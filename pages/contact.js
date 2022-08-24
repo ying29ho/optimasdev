@@ -1,7 +1,12 @@
 import Image from "next/image";
+import {useState} from 'react';
 import { Field, useFormik, FormikProvider } from "formik";
+import * as yup from "yup";
 import { SubmitButton } from "../components/Buttons";
+
 const Contact = () => {
+  const [message, setMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false);
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -11,33 +16,44 @@ const Contact = () => {
       message: "",
       role: "Agency",
       basedIn: "Brunei",
-      monetiseAdSpace: false, 
-      manageAdCampaigns: false,
-      digitalPresenceAdviseSupport: false,
-      marketInsights: false,
-      mediaTrading: false,
-      other: false,
+      request:[],
+      // monetiseAdSpace: false, 
+      // manageAdCampaigns: false,
+      // digitalPresenceAdviseSupport: false,
+      // marketInsights: false,
+      // mediaTrading: false,
+      // other: false,
       terms: false,
       
     },
-    onSubmit: (values, {resetForm}) => {
+    
+    onSubmit: (values, {setSubmitting, resetForm}) => {
       // alert(JSON.stringify(values, null, 2));
+      // resetForm({ values:''});
+    setTimeout(()=>{
       fetch("/api/contact", {
         method: "post",
         body: JSON.stringify(values),
-        
+      
       });
-      resetForm();
-      // document.getElementById("monetiseAdSpace").checked = false;
-      // document.getElementById("manageAdCampaigns").checked = false;
-      // document.getElementById("digitalPresenceAdviseSupport").checked = false;
-      // document.getElementById("marketInsights").checked = false;
-      // document.getElementById("mediaTrading").checked = false;
-      // document.getElementById("other").checked = false;
-      // document.getElementById("terms").checked = false;
+      setMessage("Success! Your message has been sent. Our team will get back to you shortly")
+      setSubmitted(true)
+      resetForm({ values:''});
       alert("Success! Your Message has been sent!");
-      // console.log("formdata", values);
+      setSubmitting(false);  
+    }, 1000);
+      
     },
+    validationSchema: yup.object({
+      firstName: yup.string().trim().required('First name is required'),
+      lastName: yup.string().trim().required('Last name is required'),
+      email: yup.string().email("Must be a valid email").required("Email is required"),
+      subject: yup.string().trim().required("Subject is required"),
+      message: yup.string().trim().required("Message is required"),
+      terms: yup.bool().oneOf([true], "Terms must be accepted")
+    })
+
+   
   });
   return (
     <div>
@@ -71,7 +87,14 @@ const Contact = () => {
               </div>
             </div>
             <div className="col">
+            <div hidden={!submitted} className="alert alert-success" role="alert">
+              {message}
+              <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+            </div>
               <form onSubmit={formik.handleSubmit}>
+               
                 <label className="pt-5" htmlFor="firstName">
                   Full Name
                 </label>
@@ -87,6 +110,11 @@ const Contact = () => {
                       value={formik.values.firstName}
                       required
                     />
+                    {formik.errors.firstName &&(
+                      <div className="text-danger">
+                        {formik.errors.firstName}
+                        </div>
+                    )}
                   </div>
                   <div className="col">
                     <input
@@ -99,6 +127,11 @@ const Contact = () => {
                       value={formik.values.lastName}
                       required
                     />
+                     {formik.errors.lastName &&(
+                      <div className="text-danger">
+                        {formik.errors.lastName}
+                        </div>
+                    )}
                   </div>
                 </div>
                 <label className="pt-3" htmlFor="email">
@@ -118,6 +151,11 @@ const Contact = () => {
                   <small className="form-text text-muted">
                     We&apos;ll never share your email with anyone else.
                   </small>
+                  {formik.errors.email &&(
+                      <div className="text-danger">
+                        {formik.errors.email}
+                        </div>
+                    )}
                 </div>
                 <label className="pt-4" htmlFor="subject">
                   Subject
@@ -133,6 +171,11 @@ const Contact = () => {
                     value={formik.values.subject}
                     required
                   />
+                   {formik.errors.subject &&(
+                      <div className="text-danger">
+                        {formik.errors.subject}
+                        </div>
+                    )}
                 </div>
                 <label className="pt-3" htmlFor="message">
                   Message
@@ -149,6 +192,11 @@ const Contact = () => {
                     rows="5"
                     required
                   />
+                   {formik.errors.message &&(
+                      <div className="text-danger">
+                        {formik.errors.message}
+                        </div>
+                    )}
                 </div>
 
                 <label className="pt-4" htmlFor="services">
@@ -207,79 +255,85 @@ const Contact = () => {
                 </label>
                 <div className="form-group mb-4">
                   <div className="form-check m-3">
-                    <input
+                    {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="monetiseAdSpace"
                       onChange={formik.handleChange}
                       value={formik.values.monetiseAdSpace}
-                    />
+                    /> */}
                     <label className="form-check-label" htmlFor="monetiseAdSpace">
+                      <Field type="checkbox" name="requests" id="monetiseAdSpace" className="form-check-input" value="monetiseAdSpace" />
                       Monetisaton of my Ad Space
                     </label>
                   </div>
                   <div className="form-check m-3">
-                    <input
+                    {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="manageAdCampaigns"
                       onChange={formik.handleChange}
                       value={formik.values.manageAdCampaigns}
-                    />
+                    /> */}
                     <label className="form-check-label" htmlFor="manageAdCampaigns">
+                    <Field type="checkbox" name="requests" id="manageAdCampaigns" className="form-check-input" value="manageAdCampaigns" />
                       Managing Ad Campaigns
                     </label>
                   </div>
                   <div className="form-check m-3">
-                    <input
+                    {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="digitalPresenceAdviseSupport"
                       onChange={formik.handleChange}
                       value={formik.values.digitalPresenceAdviseSupport}
-                    />
+                    /> */}
                     <label
                       className="form-check-label"
                       htmlFor="digitalPresenceAdviseSupport"
                     >
+                      <Field type="checkbox" name="requests" id="digitalPresenceAdviseSupport" className="form-check-input" value="digitalPresenceAdvisorySupport" />
                       Digital Presence Advisory & Support
                     </label>
                   </div>
                   <div className="form-check m-3">
-                    <input
+                    {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="marketInsights"
                       onChange={formik.handleChange}
                       value={formik.values.marketInsights}
-                    />
+                    /> */}
                     <label className="form-check-label" htmlFor="marketInsights">
+                    <Field type="checkbox" name="requests" id="marketInsights" className="form-check-input" value="marketInsights" />
                       Market Insights
                     </label>
                   </div>
 
                   <div className="form-check m-3">
-                    <input
+                    {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="mediaTrading"
                       onChange={formik.handleChange}
                       value={formik.values.mediaTrading}
-                    />
+                    /> */}
                     <label className="form-check-label" htmlFor="mediaTrading">
+                    <Field type="checkbox" name="requests" id="mediaTrading" className="form-check-input" value="mediaTrading" />
                       Media Trading
                     </label>
                   </div>
 
                   <div className="form-check m-3">
-                    <input
+                    {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="other"
                       onChange={formik.handleChange}
                       value={formik.values.other}
-                    />
+                    /> */}
                     <label className="form-check-label" htmlFor="other">
+                    <Field type="checkbox" name="requests" id="other" className="form-check-input" value="other" />
                       Other Digital Media Needs
                     </label>
                   </div>
@@ -287,18 +341,24 @@ const Contact = () => {
 
                 <div className="form-group pt-5">
                   <div className="form-check m-3">
-                    <input
+                    {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="terms"
                       onChange={formik.handleChange}
                       value={formik.values.terms}
                       required
-                    />
+                    /> */}
 
                     <label className="form-check-label" htmlFor="terms">
+                      <Field className="form-check-input" type="checkbox" name="terms"/>
                       Click here to receive updates on our latest news and
                       upcoming solutions
+                      {formik.errors.terms &&(
+                      <div className="text-danger">
+                        {formik.errors.terms}
+                        </div>
+                    )}
                     </label>
                   </div>
                 </div>

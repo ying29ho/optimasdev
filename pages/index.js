@@ -265,7 +265,7 @@ export default function Home() {
             <a
             className="col"
               target="_blank"
-              href="https://thescoop.co/"
+              href="https://youtraining.sg/"
               rel="noopener noreferrer"
             >
               <Image src={"/brands/You.png"} width={172} height={172} alt="you logo" />

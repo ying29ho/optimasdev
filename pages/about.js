@@ -17,18 +17,18 @@ const teamDesc = [
   },
   {
     id: 2,
-    img: "/images/about/team/team1.png",
-    name: "Amar",
-    role: "Business Development Associate",
-    desc: "The team member who has high spirits and ambitious. Knows one or two dad jokes to make you laugh. She serves as the supporting role in Optimas in creating the conversation of AdTech and Martech. With a background in project coordinating and civic engagement. She has been in youth based work and has represented Brunei in various international and local platforms. And is also active in CrossFit.",
-    quote: false,
-  },
-  {
-    id: 3,
     img: "/images/about/team/wafi.png",
     name: "Wafi",
     role: "Digital Marketing Specialist",
     desc: "Why did a digital marketer get into display advertising?\r\nBecause he wanted to make a lasting impression.\r\nHello, I am Wafi and I hold a Masters in Digital Marketing and a degree in Media Production, allowing me to navigate seamlessly from the creative to the strategic and analytical sides of marketing. Experiencing marketing internationally as an everyday consumer has aligned me to pursue a career with Optimas, in which I intend to help create a data- driven borneo. When I'm not working, you can find me in the gym throwing punches… or getting punched in the face.",
+    quote: false,
+  },
+  {
+    id: 3,
+    img: "/images/about/team/amar.png",
+    name: "Amar",
+    role: "Business Development Associate",
+    desc: "The team member who has high spirits and ambitious. Knows one or two dad jokes to make you laugh. She serves as the supporting role in Optimas in creating the conversation of AdTech and Martech. With a background in project coordinating and civic engagement. She has been in youth based work and has represented Brunei in various international and local platforms. And is also active in CrossFit.",
     quote: false,
   },
 ];
@@ -38,7 +38,7 @@ function About() {
     <div>
       <div className="mainContainer d-flex justify-content-center">
         <Image
-          src={"/images/home/header.jpg"}
+          src={"/images/home/header.png"}
           objectFit="contain"
           quality={100}
           height={567}
@@ -153,12 +153,13 @@ function About() {
             </h1>
           </div>
           <div className="col-4">
-            <h2 className="subh2 p-5 mt-5">
+            {/* <h2 className="subh2 p-5 mt-5"> */}
+            <h3 className="p-5 mt-5">
               With our cutting-edge Advertising Serve Solutions and Marketing
               Technology, we will empower our clients with improved digital
               assets to create, target and launch multichannel digital marketing
               campaigns.
-            </h2>
+            </h3>
           </div>
         </div>
         </div>

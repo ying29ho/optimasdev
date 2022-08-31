@@ -10,7 +10,7 @@ export const DisplayCard = ({ card }) => {
       <div className={styles.displayCardInner}>
         <div className={styles.displayCard}>
           <div className={styles.displayCardBody}>
-            <Image src={card.img} width={180} height={70} al="card background image" />
+            <Image src={card.img} width={180} height={70} alt="card background image" />
           </div>
           <h3>{card.title}</h3>
         </div>

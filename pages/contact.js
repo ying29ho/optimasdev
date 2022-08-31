@@ -79,11 +79,11 @@ const Contact = () => {
               <h1 className="m-3">Get In Touch!</h1>
               <div className="">
                 <form className="mx-5" onSubmit={formik.handleSubmit}>
-                  <label className="pt-3" htmlFor="firstName">
+                  <label className="pt-3" htmlFor="firstName" style={{fontSize: "23px"}}>
                     Full Name
                   </label>
                   <div className="row ">
-                    <div className="col">
+                    <div className="col" >
                       <input
                         className="form-control"
                         placeholder="First Name"
@@ -93,6 +93,7 @@ const Contact = () => {
                         onChange={formik.handleChange}
                         value={formik.values.firstName}
                         required
+                        style={{height: "60px", fontSize: "20px"}}
                       />
                       {formik.errors.firstName && (
                         <div className="text-danger">
@@ -109,6 +110,8 @@ const Contact = () => {
                         type="text"
                         onChange={formik.handleChange}
                         value={formik.values.lastName}
+                        style={{height: "60px", fontSize: "20px"}}
+
                         required
                       />
                       {formik.errors.lastName && (
@@ -118,7 +121,7 @@ const Contact = () => {
                       )}
                     </div>
                   </div>
-                  <label className="pt-3" htmlFor="email">
+                  <label className="pt-3" htmlFor="email" style={{fontSize: "23px"}}>
                     Email
                   </label>
                   <div className="form-group">
@@ -130,6 +133,7 @@ const Contact = () => {
                       type="email"
                       onChange={formik.handleChange}
                       value={formik.values.email}
+                      style={{height: "60px", fontSize: "20px"}}
                       required
                     />
                     <small className="form-text text-muted">
@@ -139,7 +143,7 @@ const Contact = () => {
                       <div className="text-danger">{formik.errors.email}</div>
                     )}
                   </div>
-                  <label className="pt-4" htmlFor="subject">
+                  <label className="pt-4" htmlFor="subject" style={{fontSize: "23px"}}>
                     Subject
                   </label>
                   <div className="form-group">
@@ -151,13 +155,14 @@ const Contact = () => {
                       type="text"
                       onChange={formik.handleChange}
                       value={formik.values.subject}
+                      style={{height: "60px", fontSize: "20px"}}
                       required
                     />
                     {formik.errors.subject && (
                       <div className="text-danger">{formik.errors.subject}</div>
                     )}
                   </div>
-                  <label className="pt-3" htmlFor="message">
+                  <label className="pt-3" htmlFor="message" style={{fontSize: "23px"}}>
                     Message
                   </label>
                   <div className="form-group">
@@ -170,6 +175,7 @@ const Contact = () => {
                       onChange={formik.handleChange}
                       value={formik.values.message}
                       rows="5"
+                      style={{height: "60px", fontSize: "20px"}}
                       required
                     />
                     {formik.errors.message && (
@@ -177,7 +183,7 @@ const Contact = () => {
                     )}
                   </div>
 
-                  <label className="pt-4" htmlFor="services">
+                  <label className="pt-4" htmlFor="services" style={{fontSize: "23px"}}>
                     I&apos;m a...
                   </label>
                   <Field
@@ -185,6 +191,7 @@ const Contact = () => {
                     id="role"
                     as="select"
                     name="role"
+                    style={{height: "60px", fontSize: "20px"}}
                     onChange={formik.handleChange}
                   >
                     <option value="Agency" id="agency">
@@ -198,7 +205,7 @@ const Contact = () => {
                     </option>
                   </Field>
 
-                  <label className="pt-3" htmlFor="basedIn">
+                  <label className="pt-3" htmlFor="basedIn" style={{fontSize: "23px"}}>
                     Based in...
                   </label>
                   <Field
@@ -206,6 +213,7 @@ const Contact = () => {
                     id="basedIn"
                     as="select"
                     name="basedIn"
+                    style={{height: "60px", fontSize: "20px"}}
                     onChange={formik.handleChange}
                   >
                     <option value="Brunei" id="brunei">
@@ -225,7 +233,7 @@ const Contact = () => {
                     </option>
                   </Field>
 
-                  <label className="pt-4" htmlFor="services">
+                  <label className="pt-4" htmlFor="services" style={{fontSize: "23px"}}>
                     How can Optimas support me?
                   </label>
                   <div className="form-group mb-4">
@@ -240,6 +248,7 @@ const Contact = () => {
                       <label
                         className="form-check-label"
                         htmlFor="monetiseAdSpace"
+                        style={{fontSize: "23px"}}
                       >
                         <Field
                           type="checkbox"
@@ -247,6 +256,7 @@ const Contact = () => {
                           id="monetiseAdSpace"
                           className="form-check-input"
                           value="monetiseAdSpace"
+                          style={{height: "25px", width:"25px", fontSize: "20px"}}
                         />
                         Monetisaton of my Ad Space
                       </label>
@@ -262,6 +272,7 @@ const Contact = () => {
                       <label
                         className="form-check-label"
                         htmlFor="manageAdCampaigns"
+                        style={{fontSize: "23px"}}
                       >
                         <Field
                           type="checkbox"
@@ -269,6 +280,7 @@ const Contact = () => {
                           id="manageAdCampaigns"
                           className="form-check-input"
                           value="manageAdCampaigns"
+                          style={{height: "25px", width:"25px", fontSize: "20px"}}
                         />
                         Managing Ad Campaigns
                       </label>
@@ -284,6 +296,7 @@ const Contact = () => {
                       <label
                         className="form-check-label"
                         htmlFor="digitalPresenceAdviseSupport"
+                        style={{fontSize: "23px"}}
                       >
                         <Field
                           type="checkbox"
@@ -291,8 +304,9 @@ const Contact = () => {
                           id="digitalPresenceAdviseSupport"
                           className="form-check-input"
                           value="digitalPresenceAdvisorySupport"
+                          style={{height: "25px", width:"25px", fontSize: "20px"}}
                         />
-                        Digital Presence Advisory & Support
+                        Digital Presence Advisory &amp; Support
                       </label>
                     </div>
                     <div className="form-check m-3">
@@ -306,6 +320,7 @@ const Contact = () => {
                       <label
                         className="form-check-label"
                         htmlFor="marketInsights"
+                        style={{fontSize: "23px"}}
                       >
                         <Field
                           type="checkbox"
@@ -313,6 +328,7 @@ const Contact = () => {
                           id="marketInsights"
                           className="form-check-input"
                           value="marketInsights"
+                          style={{height: "25px", width:"25px", fontSize: "20px"}}
                         />
                         Market Insights
                       </label>
@@ -329,6 +345,7 @@ const Contact = () => {
                       <label
                         className="form-check-label"
                         htmlFor="mediaTrading"
+                        style={{fontSize: "23px"}}
                       >
                         <Field
                           type="checkbox"
@@ -336,6 +353,7 @@ const Contact = () => {
                           id="mediaTrading"
                           className="form-check-input"
                           value="mediaTrading"
+                          style={{height: "25px", width:"25px", fontSize: "20px"}}
                         />
                         Media Trading
                       </label>
@@ -349,13 +367,14 @@ const Contact = () => {
                       onChange={formik.handleChange}
                       value={formik.values.other}
                     /> */}
-                      <label className="form-check-label" htmlFor="other">
+                      <label className="form-check-label" htmlFor="other" style={{fontSize: "23px"}}>
                         <Field
                           type="checkbox"
                           name="requests"
                           id="other"
                           className="form-check-input"
                           value="other"
+                          style={{height: "25px", width:"25px", fontSize: "20px"}}
                         />
                         Other Digital Media Needs
                       </label>
@@ -373,11 +392,12 @@ const Contact = () => {
                       required
                     /> */}
 
-                      <label className="form-check-label" htmlFor="terms">
+                      <label className="form-check-label" htmlFor="terms" style={{fontSize: "23px"}}>
                         <Field
                           className="form-check-input"
                           type="checkbox"
                           name="terms"
+                          style={{height: "25px", width:"25px", fontSize: "20px"}}
                         />
                         Click here to receive updates on our latest news and
                         upcoming solutions
@@ -389,7 +409,7 @@ const Contact = () => {
                       </label>
                     </div>
                   </div>
-                  <div className="p-5" align="center">
+                  <div className="p-5" align="center" style={{fontSize: "23px"}}>
                     <SubmitButton text="Send Message" />
                   </div>
                   {/* <FormButton type="submit" text="Send Email" /> */}

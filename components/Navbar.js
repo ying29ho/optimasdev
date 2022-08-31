@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CgMenu, CgClose } from "react-icons/cg";
-import { NavLinks } from "./Navlinks";
+import { NavLinks } from "./NavLinks";
 import { useState } from "react";
 
 // export const Navbar = () => {

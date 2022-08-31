@@ -358,7 +358,7 @@ export const MobileCarousel = () => {
                 <div data-swiper-parallax="-500">
                   <h1>Building a data-driven digital Borneo</h1>
                 </div>
-                <div className="my-5" data-swiper-parallax="-200" style={{width:"500px"}}>
+                <div className="my-5" data-swiper-parallax="-200" style={{width:"500px", fontSize: "40px"}}>
                   <h2>
                     Offering AdTech and MarTech solutions for clear and
                     effective digital campaigns across the region

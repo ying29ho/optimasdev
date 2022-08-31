@@ -159,7 +159,7 @@ export default function Home() {
       </div>
       <div className="container my-3 pb-5">
         {/* <div className=""> */}
-        <h1 className="mx-4 mx-md-3">Our Partners &amp; Clients Include</h1>
+        <h1 className="mx-4 mx-md-3">Our Partners &amp; Clients</h1>
         {/* </div> */}
         {/* <div className={styles.partners}>
           <div className={styles.grid}> */}

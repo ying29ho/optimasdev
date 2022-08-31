@@ -488,6 +488,14 @@ margin: 15px;
   color: #EE3932;
 }
 
+@media screen and (max-width:900px) {
+  .text-danger{
+    color: #EE3932;
+    font-size: 25px !important;
+    font-weight: 500 !important;
+  }
+}
+
 .alert-success{
   background-color: darkseagreen;
   color: #262626;

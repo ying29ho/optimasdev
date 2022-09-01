@@ -80,7 +80,7 @@ export const MobileNavbar = () => {
   const hamburgerIcon = (
     <CgMenu
       className="hamburger"
-      size="40px"
+      size="60px"
       color="#E8554F"
       onClick={() => setOpen(!open)}
     />
@@ -89,7 +89,7 @@ export const MobileNavbar = () => {
   const closeIcon = (
     <CgClose
       className="hamburger"
-      size="40px"
+      size="60px"
       color="#E8554F"
       onClick={() => setOpen(!open)}
     />
@@ -102,8 +102,10 @@ export const MobileNavbar = () => {
         <Image
           className="brand"
           src={"/OptimasLogo.png"}
-          width={225}
-          height={97}
+          width={337}
+          height={145}
+          // width={281}
+          // height={121}
           objectFit="contain"
           alt="optimas brang logo in orange for navbar. click to redirect to homepage"
         />

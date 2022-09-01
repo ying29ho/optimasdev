@@ -65,7 +65,7 @@ nav{
   background-color: #fff;
   font-size: 30px;
   font-weight: 800;
-  height: 80px;
+  height: 130px;
   width: 100%;
   position: fixed;
   display: flex;
@@ -149,10 +149,12 @@ footer a{
   margin: 0 auto;
 }
 
-
-.layout{
-  margin-top:80px;
+@media screen and (max-width: 900px) {
   
+  .layout{
+    margin-top:80px;
+    
+  }
 }
 
 
@@ -505,6 +507,10 @@ margin: 15px;
   justify-content: end;
 }
 
+.navigation{
+  margin: 0 150px;
+}
+
 /* .navbar .brand{
   left: 0;
 } */
@@ -517,7 +523,7 @@ margin: 15px;
   width: 100%;
 
 text-align: left;
-margin-top: 25px;
+/* margin-top: 25px; */
   
 }
 .navbar nav ul li{
@@ -547,7 +553,7 @@ margin-top: 25px;
   }
 
   .navbar .mobile-navigation{
-padding-top: 10px;
+    padding: 10px;
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -560,14 +566,14 @@ padding-top: 10px;
     right: 5%;
     top: 17%;
     cursor: pointer;
-    margin-top: 15px;
+    margin: 20px 0;
   }
 
   .navbar  nav ul{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 80px; 
+    top: 130px; 
     width: 100%;
     color: #262626;
     background-color: #fff;
@@ -577,6 +583,7 @@ padding-top: 10px;
 
   .navbar nav ul li{
     padding: 3% 2%;
+    font-size: 40px;
   }
 
 

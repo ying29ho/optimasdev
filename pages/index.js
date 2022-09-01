@@ -126,7 +126,6 @@ export default function Home() {
           // quality={100}
           height={567}
           width={1440}
-        
           alt="home page header image"
         />
       </div>

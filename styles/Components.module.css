@@ -23,7 +23,7 @@
 }
 
 .sliderWrapperMobile{
-  height: 100vh;
+  height: 120vh;
 }
 
 .sliderContMobile{
@@ -31,7 +31,7 @@
   /* margin-top: 0 !important; */
   /* height: 100vh; */
   /* height: 580px; */
-  height: 98vh;
+  height: 117vh;
   width: 100%;
   background-color: #fff;
   margin-bottom: 10px !important;
@@ -41,7 +41,7 @@
   /* margin-top: 0 !important; */
   /* height: 100vh; */
   /* height: 610px; */
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-color: #fff;
   margin-bottom: 10px !important;
@@ -151,7 +151,6 @@
 .sliderController {
   position: absolute;
   width: 100%;
-
   bottom: 0;
   right: 0;
   /* background-color: tomato; */

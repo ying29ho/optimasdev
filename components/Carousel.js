@@ -353,6 +353,10 @@ export const MobileCarousel = () => {
         style={{
           "--swiper-nagivation-color": "#E8554F",
           "--swiper-pagination-color": "#E8554F",
+          "--swiper-pagination-bullet-size": "13px",
+          "--swiper-pagination-bullet-horizontal-gap": "6px",
+
+         
         }}
         modules={[Parallax, Autoplay, Navigation, Pagination]}
         loop={true}
@@ -382,8 +386,8 @@ export const MobileCarousel = () => {
       >
         <SwiperSlide>
           <div className={styles.sliderCont1Mobile}>
-            <div className="row pt-5 mx-5">
-              <div className=" pt-5">
+            <div className="row pt-5 mx-5" style={{top: "30vh"}}>
+              <div className="py-5">
                 <div data-swiper-parallax="-500">
                   <h1>Building a data-driven digital Borneo</h1>
                 </div>
@@ -398,7 +402,7 @@ export const MobileCarousel = () => {
                   </h2>
                 </div>
               </div>
-              <div className="mx-5 px-5" align="right">
+              <div className="mt-5 x-5 px-5" align="right">
                 <Link href="/contact">
                   <PrimaryButton text="Be Part of the Movement" />
                 </Link>
@@ -526,7 +530,7 @@ export const MobileCarousel = () => {
               >
                 <h1>Connect with prospects and customers</h1>
               </div>
-              <div className="mt-2" align="center" data-swiper-parallax="-200">
+              <div className="mt-5" align="center" data-swiper-parallax="-200">
                 <h2 style={{fontSize: "40px"}}>
                   Plan, activate and execute ad and marketing campaigns that
                   speak to specific end users

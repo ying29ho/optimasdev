@@ -19,7 +19,7 @@ import "swiper/css/thumbs";
 import "swiper/css/free-mode";
 import Image from "next/image";
 import Link from "next/link";
-import { PrimaryButton } from "../components/Buttons";
+import { PrimaryButton, MobilePrimaryButton } from "../components/Buttons";
 import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
 
 export const DesktopTeam = ({ teamDesc }) => {
@@ -34,7 +34,7 @@ export const DesktopTeam = ({ teamDesc }) => {
             "--swiper-pagination-color": "#E8554F",
           }}
           dir="rtl"
-          loop={false}
+          loop={true}
           centeredSlides={false}
           spaceBetween={-200}
           slidesPerView={3}
@@ -419,7 +419,6 @@ export const MobileCarousel = () => {
   const navigationNextRef = useRef(null);
   const paginationRef = useRef(null);
   return (
-    // <div className={`${styles.sliderWrapper} ${styles.sliderContainer}`}>
     <div className={styles.sliderWrapperMobile}>
       <Swiper
         style={{
@@ -472,8 +471,8 @@ export const MobileCarousel = () => {
                 </div>
               </div>
               <div className="mt-5 x-5 px-5" align="right">
-                <Link href="/contact">
-                  <PrimaryButton text="Be Part of the Movement" />
+                <Link  href="/contact">
+                  <MobilePrimaryButton text="Be Part of the Movement" />
                 </Link>
               </div>
             </div>
@@ -575,7 +574,7 @@ export const MobileCarousel = () => {
                   </h2>
                 </div>
                 <Link href="/contact">
-                  <PrimaryButton text="Learn More" />
+                  <MobilePrimaryButton text="Learn More" />
                 </Link>
               </div>
             </div>

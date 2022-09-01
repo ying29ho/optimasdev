@@ -179,6 +179,7 @@ export const DesktopCarousel = () => {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPositionX: "center",
+              backgroundPositionY: "bottom",
             }}
           >
             <div className="row pt-5 mx-5" align="left">
@@ -202,23 +203,6 @@ export const DesktopCarousel = () => {
             </div>
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide>
-          <div className={styles.sliderCont} align="left" >
-            <div className="row pt-5 mx-5 mb-5" style={{"backgroundImage": "url(/images/home/carousel/carousel03.png)"}}>
-              <div className="col-6 mt-5" >
-                <div data-swiper-parallax="-500">
-                  <h1>Managing Effective &amp; Efficient Ads</h1>
-                </div>
-                <div className="my-5" data-swiper-parallax="-200">
-                  <h2>
-                    We handle ad ops and management so your team always knows
-                    how well ads are performing
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide> */}
         <SwiperSlide>
           <div
             className={styles.sliderCont}
@@ -228,6 +212,7 @@ export const DesktopCarousel = () => {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPositionX: "center",
+              backgroundPositionY: "bottom",
             }}
           >
             <div className="row pt-5 mx-5 " align="left">
@@ -291,6 +276,7 @@ export const DesktopCarousel = () => {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPositionX: "center",
+              backgroundPositionY: "bottom",
             }}
           >
             <div className="row pt-5 mx-5 " align="center">

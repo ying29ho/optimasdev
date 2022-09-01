@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { PrimaryButton } from "../components/Buttons";
 import { Team } from "../components/Carousel";
+import MediaQuery from "react-responsive";
 const teamDesc = [
   {
     id: 1,
@@ -36,16 +37,34 @@ const teamDesc = [
 function About() {
   return (
     <div>
-      <div className="mainContainer d-flex justify-content-center">
-        <Image
-          src={"/images/home/newheader.png"}
-          objectFit="contain"
-          quality={100}
-          height={567}
-          width={1440}
-          alt="optimas header banner"
-        />
-      </div>
+      <MediaQuery maxWidth={900}>
+        <div
+          className="mainContainer d-flex justify-content-center"
+          style={{ height: "100vh" }}
+        >
+          <Image
+            src={"/images/home/newheader.png"}
+            objectFit="contain"
+            layout="fill"
+            quality={100}
+            height={567}
+            width={1440}
+            alt="optimas header banner"
+          />
+        </div>
+      </MediaQuery>
+      <MediaQuery minWidth={901}>
+        <div className="mainContainer d-flex justify-content-center">
+          <Image
+            src={"/images/home/newheader.png"}
+            objectFit="contain"
+            quality={100}
+            height={567}
+            width={1440}
+            alt="optimas header banner"
+          />
+        </div>
+      </MediaQuery>
       <div className="about-container py-5 m-5">
         {/* <div className="row m-5 p-3"> */}
         <div className="mx-3 my-5 mb-5 pb-5 hero">
@@ -55,7 +74,7 @@ function About() {
             marketplace for premium advertising
           </h2>
         </div>
-       
+
         <div className="row purposeimg">
           <div className="col-6 purposevision">
             <div className="purpose m-5">
@@ -69,7 +88,6 @@ function About() {
 
             <br></br>
 
-         
             <div className="vision m-5">
               <h1>Our Vision</h1>
               <br></br>
@@ -92,10 +110,6 @@ function About() {
           </div>
         </div>
       </div>
-
-    
-
-      
 
       <div className="color whatwedo">
         <div className="subheader mx-5 px-5">
@@ -124,8 +138,7 @@ function About() {
             campaigns on premium inventory across screens, from OTT to CTV to
             video and more!
           </p>
-     
-         
+
           <p>
             Our combined assets, including trusted partnerships, powerful
             data-enabled technology and automation, and identity solutions,
@@ -139,7 +152,12 @@ function About() {
 
       <div className="timeline pt-2" align="center">
         {/* <div className="mx-auto px-5" align="center"> */}
-        <Image src={"/images/about/timeline.png"} width={1400} height={900} alt="optimas timeline" />
+        <Image
+          src={"/images/about/timeline.png"}
+          width={1400}
+          height={900}
+          alt="optimas timeline"
+        />
         {/* </div> */}
       </div>
 
@@ -162,14 +180,13 @@ function About() {
             </h3>
           </div>
         </div>
-        </div>
-        <div className="m-5">
+      </div>
+      <div className="m-5">
         <Team teamDesc={teamDesc} />
-        </div>
-        {/* <div className="row"> */}
-       
-        {/* </div> */}
-     
+      </div>
+      {/* <div className="row"> */}
+
+      {/* </div> */}
     </div>
   );
 }

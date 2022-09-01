@@ -60,7 +60,23 @@ const Contact = () => {
     <div>
       <FormikProvider value={formik}>
         {/* <Form> */}
-
+        <MediaQuery maxWidth={900}>
+        <div
+          className="mainContainer2 d-flex justify-content-center"
+          style={{ height: "100vh" }}
+        >
+          <Image
+            src={"/images/contact/contactusheader.png"}
+            // layout="fill"
+            objectFit="contain"
+            quality={100}
+            height={567}
+            width={1440}
+            alt="contact page header image"
+          />
+          </div>
+          </MediaQuery>
+          <MediaQuery minWidth={901}>
         <div className="mainContainer2 d-flex justify-content-center">
           <Image
             src={"/images/contact/contactusheader.png"}
@@ -72,6 +88,7 @@ const Contact = () => {
             alt="contact page header image"
           />
         </div>
+        </MediaQuery>
         <div className="container">
           <div className="row">
             <MediaQuery maxWidth={900}>

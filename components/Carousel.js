@@ -348,7 +348,7 @@ export const MobileCarousel = () => {
   const paginationRef = useRef(null);
   return (
     // <div className={`${styles.sliderWrapper} ${styles.sliderContainer}`}>
-    <div className="">
+    <div className={styles.sliderWrapperMobile}>
       <Swiper
         style={{
           "--swiper-nagivation-color": "#E8554F",
@@ -390,9 +390,9 @@ export const MobileCarousel = () => {
                 <div
                   className="my-5"
                   data-swiper-parallax="-200"
-                  style={{ width: "500px", fontSize: "40px" }}
+                  style={{ width: "600px", fontSize: "40px" }}
                 >
-                  <h2>
+                  <h2 style={{fontSize: "40px"}}>
                     Offering AdTech and MarTech solutions for clear and
                     effective digital campaigns across the region
                   </h2>
@@ -429,9 +429,9 @@ export const MobileCarousel = () => {
                 className="my-5"
                 align="left"
                 data-swiper-parallax="-200"
-                style={{ width: "280px" }}
+                style={{ width: "400px" }}
               >
-                <h2>
+                <h2 style={{fontSize: "40px"}}>
                   We handle ad ops and management so your team always knows how
                   well ads are performing
                 </h2>
@@ -462,11 +462,11 @@ export const MobileCarousel = () => {
                 className="my-5"
                 align="left"
                 data-swiper-parallax="-200"
-                style={{ width: "500px" }}
+                style={{ width: "550px" }}
               >
-                <h2>
-                  Helping you pick the end-to-end solutions from creation,
-                  targeting and execution to meet your campaign objectives and
+                <h2 style={{fontSize: "40px"}}>
+                Helping you pick the end-to-end solutions from creation,
+                  targeting and execution to meet your campaign objectives<br></br> and
                   maximise results
                 </h2>
               </div>
@@ -493,9 +493,9 @@ export const MobileCarousel = () => {
                 <div
                   className="my-5"
                   data-swiper-parallax="-200"
-                  style={{ width: "400px" }}
+                  style={{ width: "500px" }}
                 >
-                  <h2>
+                  <h2 style={{fontSize: "40px"}}>
                     Using simple yet impactful key data to reach audiences,
                     allowing smarter monetisation of your platform and better
                     yield on ads
@@ -527,7 +527,7 @@ export const MobileCarousel = () => {
                 <h1>Connect with prospects and customers</h1>
               </div>
               <div className="mt-2" align="center" data-swiper-parallax="-200">
-                <h2>
+                <h2 style={{fontSize: "40px"}}>
                   Plan, activate and execute ad and marketing campaigns that
                   speak to specific end users
                 </h2>

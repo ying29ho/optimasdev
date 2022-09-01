@@ -115,7 +115,25 @@ export default function Home() {
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossOrigin="anonymous"
       ></Script>
-      <div className="mainContainer d-flex justify-content-center">
+     
+      <div className="">
+        <MediaQuery maxWidth={900}>
+        <div className="mainContainer d-flex justify-content-center" style={{height: "100vh"}}>
+        <Image
+          src={"/images/home/newheader.png"}
+          layout="fill"
+          objectFit="contain"
+          // quality={100}
+          height={567}
+          width={1440}
+        
+          alt="home page header image"
+        />
+      </div>
+          <MobileCarousel />
+        </MediaQuery>
+        <MediaQuery minWidth={901}>
+        <div className="mainContainer d-flex justify-content-center">
         <Image
           src={"/images/home/newheader.png"}
           // layout="fill"
@@ -127,11 +145,6 @@ export default function Home() {
           alt="home page header image"
         />
       </div>
-      <div className="">
-        <MediaQuery maxWidth={900}>
-          <MobileCarousel />
-        </MediaQuery>
-        <MediaQuery minWidth={901}>
           <DesktopCarousel />
         </MediaQuery>
       </div>

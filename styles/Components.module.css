@@ -22,11 +22,16 @@
   margin-bottom: 10px !important;
 }
 
+.sliderWrapperMobile{
+  height: 100vh;
+}
+
 .sliderContMobile{
   /* text-align: left; */
   /* margin-top: 0 !important; */
   /* height: 100vh; */
-  height: 580px;
+  /* height: 580px; */
+  height: 98vh;
   width: 100%;
   background-color: #fff;
   margin-bottom: 10px !important;
@@ -35,7 +40,8 @@
   /* text-align: left; */
   /* margin-top: 0 !important; */
   /* height: 100vh; */
-  height: 610px;
+  /* height: 610px; */
+  height: 100vh;
   width: 100%;
   background-color: #fff;
   margin-bottom: 10px !important;

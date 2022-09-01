@@ -120,7 +120,7 @@ export default function Home() {
         <MediaQuery maxWidth={900}>
         <div className="mainContainer d-flex justify-content-center" style={{height: "100vh"}}>
         <Image
-          src={"/images/home/newheader.png"}
+          src={"/images/home/header.png"}
           layout="fill"
           objectFit="contain"
           // quality={100}
@@ -134,7 +134,7 @@ export default function Home() {
         <MediaQuery minWidth={901}>
         <div className="mainContainer d-flex justify-content-center">
         <Image
-          src={"/images/home/newheader.png"}
+          src={"/images/home/header.png"}
           // layout="fill"
           objectFit="contain"
           // quality={100}

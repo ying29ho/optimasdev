@@ -140,7 +140,7 @@ export const MobileTeam = ({ teamDesc }) => {
         }}
       >
         {/* <div className={styles.sliderController}> */}
-        <div style={{top: "0"}}>
+        <div style={{ top: "0" }}>
           <div className="row justify-content-center">
             <div className="col text-center" ref={paginationRef}></div>
           </div>
@@ -149,41 +149,51 @@ export const MobileTeam = ({ teamDesc }) => {
           <SwiperSlide key={each.id}>
             <div className="px-2">
               <div className="row d-flex justify-content-start">
-              <div className="col-5" style={{zIndex:"99"}}>
-           
-                  <div data-swiper-parallax="-500">
+                <div className="col-5" style={{ zIndex: "99" }}>
+                  <div
+                    data-swiper-parallax="-500"
+                    style={{ height: "655px",width:"550px" }}
+                  >
                     <Image
                       className=""
                       src={each.img}
                       alt={each.name}
-                      height={655}
-                      width={550}
+                      // height={655}
+                      // width={550}
+                      height={935}
+                      width={786}
+                      style={{transform: "translateX(-90px)"}}
+                      // objectFit="cover"
+                      // layout="fill"
                     />
                   </div>
                 </div>
-                <div className="col-7" style={{    transform: "translateX(-120px)" }}>
-                  <div className="my-3" data-swiper-parallax="-300">
+                <div
+                  className="col-7"
+                  style={{ transform: "translateX(-50px)" }}
+                >
+                  <div className="my-3" data-swiper-parallax="-300" style={{ paddingTop: "100px"}}>
                     <h1>{each.name}</h1>
                     <h3 style={{ fontSize: "35px" }}>{each.role}</h3>
                     {each.quote === true ? (
                       <div className="quote mt-4 m-2">
-                        <p style={{ color: "#EE3932" }}>{each.quoteDesc}</p>
+                        <p style={{ color: "#EE3932", fontSize: "30px" }}>{each.quoteDesc}</p>
                       </div>
                     ) : null}
                   </div>
                 </div>
-                
               </div>
-              <div className="row">
-                <div className="px-4" data-swiper-parallax="-100" style={{overflowWrap: "break-word"}}>
+              <div className="row" style={{transform: "translateY(-50px"}}>
+                <div
+                  className="px-4"
+                  data-swiper-parallax="-100"
+                >
                   <p>{each.desc}</p>
                 </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
-
-        
       </Swiper>
     </div>
   );

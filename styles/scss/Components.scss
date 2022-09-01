@@ -64,32 +64,36 @@
 }
 .solution-card-outer {
   position: relative;
-  width: 588px;
-  height: 442px;
+  width: 688px;
+  height: 542px;
   margin: 25px 0;
-  // cursor: pointer;
-  // border-radius: 15px 50px;
-  // background-color: sandybrown;
 
-.solution-card-h3{
+  .solution-card-h3{
   // transform: translate(-50%, -50%);
   position: absolute;
   top:0;
   left: 0;
+  padding: 60px;
   font-family:'Oswald',  sans-serif;
-  font-size: 36px;
+  font-size: 43px;
   text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 1.0;
+  }
 
-}
-.solution-card-p{
+  .solution-card-p{
   // transform: translate(-50%, -50%);
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 0;
-  width: 300px;
+  width: 500px;
+  padding: 63px 60px;
   font-family:  'Manrope', sans-serif;
-  font-size: 22px;
-}
+  font-size: 30px;
+  line-height: 1.5;
+  }
+
+
 
   .solution-card {
     position: absolute;
@@ -99,6 +103,7 @@
     height: 100%;
     border-style: none;
 
+
     text-align: left;
   
     p{
@@ -106,239 +111,34 @@
       font-size: 20px ;
     }
   }
-  // .cardOuter {
-  //   width: 300px;
-  //   height: 300px;
-  //   margin: 25px 0;
-  //   cursor: pointer;
-  // }
-
-  // .sliderMainContainer {
-  //   margin: 0;
-  //   padding: 0 !important;
-  //   height: 100vh;
-  //   width: 100vw;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  // }
-  // .sliderContainer {
-  //   position: relative;
-  //   margin: 0;
-  //   padding: 0;
-  //   height: 80%;
-  //   width: 100%;
-  //   background-color: #fafafa;
-  // }
-
-  // .sliderWrapper {
-  //   display: flex;
-  //   overflow: hidden;
-  //   flex-wrap: nowrap;
-
-  //   /* align-items: center; */
-  // }
-
-  // .sliderImages {
-  //   padding-top: 70%;
-  //   overflow: hidden;
-  //   position: relative;
-  //   background-color: #fafafa;
-  //   display: flex;
-  //   flex-direction: row;
-  // }
-
-  // .imgContainer {
-  //   position: relative;
-  //   width: 100%;
-  //   background-color: lightsalmon;
-  //   // z-index: -1;
-  // }
-
-  // .imgContianer::before {
-  //   position: absolute;
-  //   content: "";
-  //   opacity: 0.3;
-  //   background-image: url("../../public/images/1.jpg");
-  //   background-blend-mode: screen;
-  //   // z-index: 1;
-  // }
-
-  // .triagleCorner {
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   width: 100%;
-  //   background-color: salmon;
-  //   clip-path: polygon(54% 0%, 0% 0%, 0% 53%);
-  //   z-index: 2;
-  // }
-
-  // .sliderController {
-  //   position: absolute;
-  //   width: 100%;
-  //   bottom: 0;
-  //   right: 0;
-  //   background-color: tomato;
-  //   z-index: 1;
-  //   /* clip-path: polygon(23% 53%, 100% 53%, 100% 100%, 0% 100%); */
-  // }
-
-  // .textContainer {
-  //   /* color: tomato; */
-  //   text-align: left;
-  //   word-wrap: break-word;
-  //   word-break: break-word;
-  //   white-space: pre-wrap;
-  //   transform: translate(25%, 300px);
-  // }
-
-  // .textContainer h1 {
-  //   font-size: 50px;
-  //   color: tomato;
-  //   letter-spacing: 8px;
-  //   line-height: 1.2;
-  //   font-weight: 700;
-  //   margin: 0 5px 17px 5px;
-  //   text-transform: uppercase;
-
-  //   /* overflow: visible; */
-  // }
-
-  // .textContainer h2 {
-  //   font-size: 18px;
-  //   letter-spacing: 0.88px;
-  //   line-height: 28px;
-  //   font-weight: 600;
-  //   color: darkslategrey;
-  // }
-
-  // .innerQuote {
-  //   top: 0;
-  //   left: 0;
-  //   display: flex;
-  //   align-items: right;
-  //   z-index: 2;
-  // }
-
-  // .cardInner {
-  //   transform-style: preserve-3d;
-  //   transition: 0.5s linear 0.2s;
-  //   position: relative;
-  //   width: inherit;
-  //   height: inherit;
-  // }
-
-  // .displayCardInner {
-  //   transform-style: preserve-3d;
-  //   transition: 0.5s linear 0.2s;
-  //   position: relative;
-  //   width: inherit;
-  //   height: inherit;
-  // }
-
-  // .displayCard {
-  //   backface-visibility: hidden;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   margin: 1rem;
-  //   padding: 1.5rem;
-  //   text-align: center;
-  //   border-radius: 10px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   background-color: whitesmoke;
-  //   color: #fd5441;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
-  // .cardInner:hover {
-  //   transform: rotateY(180deg);
-  // }
-
-  // /* .showback {
-  //   transform: rotateY(180deg);
-  // } */
-
-  // .card {
-  //   backface-visibility: hidden;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   margin: 1rem;
-  //   padding: 1.5rem;
-  //   text-align: left;
-  //   border-radius: 10px;
-  //   transition: color 0.15s ease, border-color 0.15s ease;
-  //   display: flex;
-  //   flex-direction: column;
-  // }
-
-  // .front {
-  //   /* transform: rotateY(0); */
-  //   background-color: #fd5441;
-  //   color: #fff;
-  //   flex-direction: column;
-  // }
-
-  // .back {
-  //   transform: rotateY(180deg);
-  //   /* transform: translateX(0px); */
-  //   background-color: #fff;
-  //   color: #2d2d2d;
-  // }
-
-  // .cardBody {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-align: justify;
-  //   flex: 1;
-  // }
-  // .cardBodyFront {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-align: justify;
-  //   flex-direction: column;
-  //   padding-top: 10%;
-  // }
-  // .displayCardBody {
-  //   flex: 1;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   /* text-align: justify; */
-  //   flex-direction: column;
-  //   /* padding-top: 10%; */
-  // }
-
-  // .cardLink {
-  //   font-weight: bold;
-  //   color: orange;
-  //   text-align: center;
-  // }
-
-  // .card p {
-  //   margin: 0;
-  //   font-size: 1rem;
-  //   line-height: 1.5;
-  // }
-
-  // .footer {
-  //   text-align: left;
-  // }
 
   @media (max-width: 600px) {
+
+    
     .grid {
       width: 100%;
       flex-direction: column;
+    }
+  }
+}
+@media  screen and (min-width: 900px) {
+
+  .solution-card-outer {
+    position: relative;
+    width: 588px;
+    height: 442px;
+    margin: 25px 0;
+    .solution-card-p{
+      font-size: 22px;
+      width: 400px;
+      padding: 55px 60px;
+      // transform: translateY(-10px);
+    }
+  
+    .solution-card-h3{
+      font-size: 40px;
+      letter-spacing: 1px;
+      line-height: 1.0;
     }
   }
 }

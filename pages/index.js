@@ -117,12 +117,13 @@ export default function Home() {
       ></Script>
       <div className="mainContainer d-flex justify-content-center">
         <Image
-          src={"/images/home/header.png"}
+          src={"/images/home/newheader.png"}
           // layout="fill"
           objectFit="contain"
-          quality={100}
+          // quality={100}
           height={567}
           width={1440}
+          // layout="responsive"
           alt="home page header image"
         />
       </div>

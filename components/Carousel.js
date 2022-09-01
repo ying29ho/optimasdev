@@ -20,8 +20,7 @@ import "swiper/css/free-mode";
 import Image from "next/image";
 import Link from "next/link";
 import { PrimaryButton } from "../components/Buttons";
-import {RiArrowLeftSFill, RiArrowRightSFill} from "react-icons/ri"
-
+import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
 
 export const Team = ({ teamDesc }) => {
   const paginationRef = useRef(null);
@@ -172,17 +171,33 @@ export const DesktopCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.sliderCont} align="left" style={{backgroundImage: "url(/images/home/carousel/carousel03.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPositionX: "center"}}>
-            <div className="row pt-5 mx-5" align="left" >
-              <div className="pt-5 d-flex flex-column" data-swiper-parallax="-500">
+          <div
+            className={styles.sliderCont}
+            align="left"
+            style={{
+              backgroundImage: "url(/images/home/carousel/carousel03.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPositionX: "center",
+            }}
+          >
+            <div className="row pt-5 mx-5" align="left">
+              <div
+                className="pt-5 d-flex flex-column"
+                data-swiper-parallax="-500"
+              >
                 <h1>Managing Effective &amp; Efficient Ads</h1>
               </div>
-              <div className="my-5" align="left" data-swiper-parallax="-200" style={{width: "400px"}}>
+              <div
+                className="my-5"
+                align="left"
+                data-swiper-parallax="-200"
+                style={{ width: "400px" }}
+              >
                 <h2>
-                We handle ad ops and management so your team always knows
-                    how well ads are performing
+                  We handle ad ops and management so your team always knows how
+                  well ads are performing
                 </h2>
-               
               </div>
             </div>
           </div>
@@ -205,18 +220,34 @@ export const DesktopCarousel = () => {
           </div>
         </SwiperSlide> */}
         <SwiperSlide>
-          <div className={styles.sliderCont} align="center" style={{backgroundImage: "url(/images/home/carousel/carousel04.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPositionX: "center"}}>
-            <div className="row pt-5 mx-5 " align="left" >
-              <div className="pt-5  d-flex flex-column" data-swiper-parallax="-500">
+          <div
+            className={styles.sliderCont}
+            align="center"
+            style={{
+              backgroundImage: "url(/images/home/carousel/carousel04.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPositionX: "center",
+            }}
+          >
+            <div className="row pt-5 mx-5 " align="left">
+              <div
+                className="pt-5  d-flex flex-column"
+                data-swiper-parallax="-500"
+              >
                 <h1>Improving, Optimising, Thriving</h1>
               </div>
-              <div className="my-5" align="left" data-swiper-parallax="-200" style={{"width" : "500px"}}>
+              <div
+                className="my-5"
+                align="left"
+                data-swiper-parallax="-200"
+                style={{ width: "500px" }}
+              >
                 <h2>
                   Helping you pick the end-to-end solutions from creation,
                   targeting and execution to meet your campaign objectives and
                   maximise results
                 </h2>
-               
               </div>
             </div>
           </div>
@@ -253,9 +284,20 @@ export const DesktopCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.sliderCont} style={{backgroundImage: "url(/images/home/carousel/carousel05.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPositionX: "center"}}>
+          <div
+            className={styles.sliderCont}
+            style={{
+              backgroundImage: "url(/images/home/carousel/carousel05.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPositionX: "center",
+            }}
+          >
             <div className="row pt-5 mx-5 " align="center">
-              <div className="pt-5 d-flex flex-column" data-swiper-parallax="-500">
+              <div
+                className="pt-5 d-flex flex-column"
+                data-swiper-parallax="-500"
+              >
                 <h1>Connect with prospects and customers</h1>
               </div>
               <div className="mt-2" align="center" data-swiper-parallax="-200">
@@ -282,28 +324,15 @@ export const DesktopCarousel = () => {
         <div className={styles.sliderController}>
           <div className="row justify-content-center">
             <div className="col-4"></div>
-            <div className="col-1 text-primary mr-0 " ref={navigationPrevRef}>
-            <RiArrowLeftSFill 
-      size="40px"
-      color="#E8554F"/>
-              {/* <Image
-                src={"/left-filled-arrow.png"}
-                width={15}
-                height={15}
-                alt="left arrow button for carousel"
-              /> */}
+            <div className="col-1 text-primary mr-0" ref={navigationPrevRef}>
+              <RiArrowLeftSFill size="35px" color="#E8554F" />
             </div>
-            <div className="col text-center " ref={paginationRef}></div>
-            <div className="col-1 text-center ml-0 " ref={navigationNextRef}>
-            <RiArrowRightSFill 
-      size="40px"
-      color="#E8554F"/>
-              {/* <Image
-                src={"/right-filled-arrow.png"}
-                width={15}
-                height={15}
-                alt="right arrow button for carousel"
-              /> */}
+            <div
+              className="col text-center"
+              ref={paginationRef}
+            ></div>
+            <div className="col-1 text-center ml-0" ref={navigationNextRef}>
+              <RiArrowRightSFill size="35px" color="#E8554F" />
             </div>
             <div className="col-4"></div>
           </div>
@@ -358,7 +387,11 @@ export const MobileCarousel = () => {
                 <div data-swiper-parallax="-500">
                   <h1>Building a data-driven digital Borneo</h1>
                 </div>
-                <div className="my-5" data-swiper-parallax="-200" style={{width:"500px", fontSize: "40px"}}>
+                <div
+                  className="my-5"
+                  data-swiper-parallax="-200"
+                  style={{ width: "500px", fontSize: "40px" }}
+                >
                   <h2>
                     Offering AdTech and MarTech solutions for clear and
                     effective digital campaigns across the region
@@ -374,47 +407,94 @@ export const MobileCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.sliderContMobile} align="left" style={{backgroundImage: "url(/images/home/carousel/carousel03.png)", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPositionX: "center", backgroundPositionY: "bottom"}}>
-            <div className="row pt-5 mx-5" align="left" >
-              <div className="pt-5 d-flex flex-column" data-swiper-parallax="-500">
+          <div
+            className={styles.sliderContMobile}
+            align="left"
+            style={{
+              backgroundImage: "url(/images/home/carousel/carousel03.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPositionX: "center",
+              backgroundPositionY: "bottom",
+            }}
+          >
+            <div className="row pt-5 mx-5" align="left">
+              <div
+                className="pt-5 d-flex flex-column"
+                data-swiper-parallax="-500"
+              >
                 <h1>Managing Effective &amp; Efficient Ads</h1>
               </div>
-              <div className="my-5" align="left" data-swiper-parallax="-200" style={{width: "280px"}}>
+              <div
+                className="my-5"
+                align="left"
+                data-swiper-parallax="-200"
+                style={{ width: "280px" }}
+              >
                 <h2>
-                We handle ad ops and management so your team always knows
-                    how well ads are performing
+                  We handle ad ops and management so your team always knows how
+                  well ads are performing
                 </h2>
-               
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.sliderContMobile} align="center" style={{backgroundImage: "url(/images/home/carousel/carousel04.png)", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPositionX: "center", backgroundPositionY: "bottom"}}>
-            <div className="row pt-5 mx-5 " align="left" >
-              <div className="pt-5  d-flex flex-column" data-swiper-parallax="-500">
+          <div
+            className={styles.sliderContMobile}
+            align="center"
+            style={{
+              backgroundImage: "url(/images/home/carousel/carousel04.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPositionX: "center",
+              backgroundPositionY: "bottom",
+            }}
+          >
+            <div className="row pt-5 mx-5 " align="left">
+              <div
+                className="pt-5  d-flex flex-column"
+                data-swiper-parallax="-500"
+              >
                 <h1>Improving, Optimising, Thriving</h1>
               </div>
-              <div className="my-5" align="left" data-swiper-parallax="-200" style={{"width" : "500px"}}>
+              <div
+                className="my-5"
+                align="left"
+                data-swiper-parallax="-200"
+                style={{ width: "500px" }}
+              >
                 <h2>
                   Helping you pick the end-to-end solutions from creation,
                   targeting and execution to meet your campaign objectives and
                   maximise results
                 </h2>
-               
               </div>
             </div>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className={styles.sliderContMobile} style={{backgroundImage: "url(/images/home/carousel/carousel02.png)", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPositionX: "center", backgroundPositionY: "bottom"}} >
+          <div
+            className={styles.sliderContMobile}
+            style={{
+              backgroundImage: "url(/images/home/carousel/carousel02.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPositionX: "center",
+              backgroundPositionY: "bottom",
+            }}
+          >
             <div className="row pt-5 mx-5 mb-5">
               <div className="mt-5">
                 <div data-swiper-parallax="-500">
                   <h1>Discover opportunities with insights</h1>
                 </div>
-                <div className="my-5" data-swiper-parallax="-200" style={{width: "400px"}}>
+                <div
+                  className="my-5"
+                  data-swiper-parallax="-200"
+                  style={{ width: "400px" }}
+                >
                   <h2>
                     Using simple yet impactful key data to reach audiences,
                     allowing smarter monetisation of your platform and better
@@ -429,9 +509,21 @@ export const MobileCarousel = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.sliderContMobile} style={{backgroundImage: "url(/images/home/carousel/carousel05.png)", backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPositionX: "center", backgroundPositionY: "bottom"}}>
+          <div
+            className={styles.sliderContMobile}
+            style={{
+              backgroundImage: "url(/images/home/carousel/carousel05.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "contain",
+              backgroundPositionX: "center",
+              backgroundPositionY: "bottom",
+            }}
+          >
             <div className="row pt-5 mx-5 " align="center">
-              <div className="pt-5 d-flex flex-column" data-swiper-parallax="-500">
+              <div
+                className="pt-5 d-flex flex-column"
+                data-swiper-parallax="-500"
+              >
                 <h1>Connect with prospects and customers</h1>
               </div>
               <div className="mt-2" align="center" data-swiper-parallax="-200">
@@ -458,29 +550,15 @@ export const MobileCarousel = () => {
         <div className={styles.sliderController}>
           <div className="row justify-content-center">
             <div className="col-4"></div>
-            <div className="col-1 text-primary mr-0 " ref={navigationPrevRef}>
-            <RiArrowLeftSFill 
-      size="40px"
-      color="#E8554F"/>
-              {/* <Image
-                src={"/left-filled-arrow.png"}
-                width={15}
-                height={15}
-                alt="left arrow button for carousel"
-              /> */}
-            </div>
+            <div
+              className="col-1 text-primary mr-0 "
+              ref={navigationPrevRef}
+            ></div>
             <div className="col text-center " ref={paginationRef}></div>
-            <div className="col-1 text-center ml-0 " ref={navigationNextRef}>
-            <RiArrowRightSFill 
-      size="40px"
-      color="#E8554F"/>
-              {/* <Image
-                src={"/right-filled-arrow.png"}
-                width={15}
-                height={15}
-                alt="right arrow button for carousel"
-              /> */}
-            </div>
+            <div
+              className="col-1 text-center ml-0 "
+              ref={navigationNextRef}
+            ></div>
             <div className="col-4"></div>
           </div>
         </div>

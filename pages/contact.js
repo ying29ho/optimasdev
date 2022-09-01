@@ -63,7 +63,7 @@ const Contact = () => {
 
         <div className="mainContainer2 d-flex justify-content-center">
           <Image
-            src={"/images/contact/header.png"}
+            src={"/images/contact/contactusheader.png"}
             // layout="fill"
             objectFit="contain"
             quality={100}

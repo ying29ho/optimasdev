@@ -125,20 +125,18 @@ footer a{
   width: 100%;
   height: 75vh;
   position: relative;
-  /* #e93d45 */
-  background-color: rgba(233,61,69,255);
+  background-color: #EE3932;
 }
-
 
 .mainContainer2{
   width: 100%;
   height: 75vh;
   position: relative;
-  background-color: #e85550;
+  background-color: #EE3932;
 }
 
 .container-orange{
-  background-color: rgba(233,61,69,255);
+  background-color: #EE3932;
   width: 100%;
 }
 

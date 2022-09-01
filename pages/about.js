@@ -38,7 +38,7 @@ function About() {
     <div>
       <div className="mainContainer d-flex justify-content-center">
         <Image
-          src={"/images/home/header.png"}
+          src={"/images/home/newheader.png"}
           objectFit="contain"
           quality={100}
           height={567}

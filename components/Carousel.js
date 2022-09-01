@@ -149,10 +149,10 @@ export const MobileTeam = ({ teamDesc }) => {
           <SwiperSlide key={each.id}>
             <div className="px-2">
               <div className="row d-flex justify-content-start">
-                <div className="col-5" style={{ zIndex: "99" }}>
+                <div className="col-6" style={{ zIndex: "99" }}>
                   <div
                     data-swiper-parallax="-500"
-                    style={{ height: "655px",width:"550px" }}
+                    style={{ height: "655px",width:"551px"}}
                   >
                     <Image
                       className=""
@@ -162,17 +162,17 @@ export const MobileTeam = ({ teamDesc }) => {
                       // width={550}
                       height={935}
                       width={786}
-                      style={{transform: "translateX(-90px)"}}
-                      // objectFit="cover"
-                      // layout="fill"
+                      style={{transform: "translate(-38px, -50px)"}}
+                      objectFit="cover"
+                      layout="fill"
                     />
                   </div>
                 </div>
                 <div
-                  className="col-7"
-                  style={{ transform: "translateX(-50px)" }}
+                  className="col-6"
+                  style={{ transform: "translateX(-5px)" }}
                 >
-                  <div className="my-3" data-swiper-parallax="-300" style={{ paddingTop: "100px"}}>
+                  <div className="my-3" data-swiper-parallax="-300" style={{ paddingTop: "30px"}}>
                     <h1>{each.name}</h1>
                     <h3 style={{ fontSize: "35px" }}>{each.role}</h3>
                     {each.quote === true ? (

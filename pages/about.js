@@ -23,7 +23,8 @@ const teamDesc = [
     role: "Digital Marketing Specialist",
     desc: <p>Why did the digital marketer get into display advertising?<br></br><br></br>Because he wanted to make a lasting impression.<br></br><br></br>Hello, I am Wafi and I hold a Masters in Digital Marketing and a degree in Media Production, allowing me to navigate seamlessly from the creative to the strategic and analytical sides of marketing. Experiencing marketing internationally as an everyday consumer has aligned me to pursue a career with Optimas, in which I intend to help create a data-driven borneo.<br></br><br></br>When I&apos;m not working, you can find me in the gym throwing punches…<br></br>or getting punched in the face.</p>,
     quote: false,
-    quoteDesc: ""
+    
+    // quoteDesc: ""
   },
   {
     id: 3,
@@ -32,7 +33,7 @@ const teamDesc = [
     role: "Business Development Associate",
     desc: <p>The team member who has high spirits and ambitious.<br></br>Knows one or two dad jokes to make you laugh.<br></br><br></br>She serves as the supporting role in Optimas in creating the conversation of AdTech and Martech. <br></br><br></br>With a background in project coordinating and civic engagement. She has been in youth based work and has represented Brunei in various international and local platforms. And is also active in CrossFit.</p>,
     quote: false,
-    quoteDesc: ""
+    // quoteDesc: ""
   },
 ];
 

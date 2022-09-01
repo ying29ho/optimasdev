@@ -66,7 +66,7 @@ export const DesktopNavbar = () => {
           width={225}
           height={97}
           // objectFit="contain"
-          alt="optimas brang logo in orange for navbar. click to redirect to homepage"
+          alt="optimas brand logo in orange for navbar. click to redirect to homepage"
         />
       </Link>
       <NavLinks />
@@ -107,7 +107,7 @@ export const MobileNavbar = () => {
           // width={281}
           // height={121}
           objectFit="contain"
-          alt="optimas brang logo in orange for navbar. click to redirect to homepage"
+          alt="optimas brand logo in orange for navbar. click to redirect to homepage"
         />
       </Link>
 

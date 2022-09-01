@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import { PrimaryButton } from "../components/Buttons";
-import { Team } from "../components/Carousel";
+import { DesktopTeam, MobileTeam } from "../components/Carousel";
 import MediaQuery from "react-responsive";
 const teamDesc = [
   {
@@ -11,7 +11,7 @@ const teamDesc = [
     img: "/images/about/team/bani.png",
     name: "Bani",
     role: "Founder",
-    desc: `Friends and Family Call me Bani. You may be thinking that once again, you are viewing yet another profile of someone who is passionate about Digital Marketing, Sports, Technology and Entertainment.\r\nWe might not have met yet, or may only be an acquaintance, or have not seen each other in a while. But, I trust, despite that, we will be introduced through our mutual interests and make a valuable connection.`,
+    desc: <p>Friends and Family Call me Bani.<br></br><br></br> You may be thinking that once again, you are viewing yet another profile of someone who is passionate about Digital Marketing, Sports, Technology and Entertainment.<br></br><br></br>We might not have met yet, or may only be an acquaintance, or have not seen each other in a while. But, I trust, despite that, we will be introduced through our mutual interests and make a valuable connection.</p>,
     quote: true,
     quoteDesc:
       "Rabbani believes in building Brunei's digital ecosystem towards data-driven marketing in Borneo.",
@@ -21,7 +21,7 @@ const teamDesc = [
     img: "/images/about/team/wafi.png",
     name: "Wafi",
     role: "Digital Marketing Specialist",
-    desc: "Why did a digital marketer get into display advertising?\r\nBecause he wanted to make a lasting impression.\r\nHello, I am Wafi and I hold a Masters in Digital Marketing and a degree in Media Production, allowing me to navigate seamlessly from the creative to the strategic and analytical sides of marketing. Experiencing marketing internationally as an everyday consumer has aligned me to pursue a career with Optimas, in which I intend to help create a data- driven borneo. When I'm not working, you can find me in the gym throwing punches… or getting punched in the face.",
+    desc: <p>Why did a digital marketer get into display advertising?<br></br><br></br>Because he wanted to make a lasting impression.<br></br><br></br>Hello, I am Wafi and I hold a Masters in Digital Marketing and a degree in Media Production, allowing me to navigate seamlessly from the creative to the strategic and analytical sides of marketing. Experiencing marketing internationally as an everyday consumer has aligned me to pursue a career with Optimas, in which I intend to help create a data-driven borneo.<br></br><br></br>When I&apos;m not working, you can find me in the gym throwing punches…<br></br>or getting punched in the face.</p>,
     quote: false,
   },
   {
@@ -29,7 +29,7 @@ const teamDesc = [
     img: "/images/about/team/amar.png",
     name: "Amar",
     role: "Business Development Associate",
-    desc: "The team member who has high spirits and ambitious. Knows one or two dad jokes to make you laugh. She serves as the supporting role in Optimas in creating the conversation of AdTech and Martech. With a background in project coordinating and civic engagement. She has been in youth based work and has represented Brunei in various international and local platforms. And is also active in CrossFit.",
+    desc: <p>The team member who has high spirits and ambitious.<br></br>Knows one or two dad jokes to make you laugh.<br></br><br></br>She serves as the supporting role in Optimas in creating the conversation of AdTech and Martech. <br></br><br></br>With a background in project coordinating and civic engagement. She has been in youth based work and has represented Brunei in various international and local platforms. And is also active in CrossFit.</p>,
     quote: false,
   },
 ];
@@ -182,7 +182,12 @@ function About() {
         </div>
       </div>
       <div className="m-5">
-        <Team teamDesc={teamDesc} />
+        <MediaQuery maxWidth={900}>
+          <MobileTeam teamDesc={teamDesc} />
+        </MediaQuery>
+        <MediaQuery minWidth={901}>
+          <DesktopTeam teamDesc={teamDesc} />
+        </MediaQuery>
       </div>
       {/* <div className="row"> */}
 

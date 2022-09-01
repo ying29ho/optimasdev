@@ -22,7 +22,7 @@ import Link from "next/link";
 import { PrimaryButton } from "../components/Buttons";
 import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
 
-export const Team = ({ teamDesc }) => {
+export const DesktopTeam = ({ teamDesc }) => {
   const paginationRef = useRef(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
@@ -97,8 +97,8 @@ export const Team = ({ teamDesc }) => {
                   <p>{each.desc}</p>
                 </div>
                 {each.quote === true ? (
-                  <div>
-                    <p>{each.quoteDesc}</p>
+                  <div className="quote">
+                    <p style={{ color: "#EE3932" }}>{each.quoteDesc}</p>
                   </div>
                 ) : null}
               </div>
@@ -106,6 +106,85 @@ export const Team = ({ teamDesc }) => {
           ))}
         </Swiper>
       </div>
+    </div>
+  );
+};
+
+export const MobileTeam = ({ teamDesc }) => {
+  const paginationRef = useRef(null);
+  return (
+    <div className="">
+      <Swiper
+        style={{
+          "--swiper-pagination-color": "#E8554F",
+          "--swiper-pagination-bullet-size": "13px",
+          "--swiper-pagination-bullet-horizontal-gap": "6px",
+        }}
+        modules={[Parallax, Autoplay, Pagination]}
+        loop={true}
+        parallax={true}
+        speed={600}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        grabCursor={false}
+        spaceBetween={0}
+        slidesPerView={1}
+        pagination={{
+          el: paginationRef.current,
+          clickable: true,
+        }}
+        onBeforeInit={(swiper) => {
+          swiper.params.pagination.el = paginationRef.current;
+        }}
+      >
+        {/* <div className={styles.sliderController}> */}
+        <div style={{top: "0"}}>
+          <div className="row justify-content-center">
+            <div className="col text-center" ref={paginationRef}></div>
+          </div>
+        </div>
+        {teamDesc.map((each) => (
+          <SwiperSlide key={each.id}>
+            <div className="px-2">
+              <div className="row d-flex justify-content-start">
+              <div className="col-5" style={{zIndex:"99"}}>
+           
+                  <div data-swiper-parallax="-500">
+                    <Image
+                      className=""
+                      src={each.img}
+                      alt={each.name}
+                      height={655}
+                      width={550}
+                    />
+                  </div>
+                </div>
+                <div className="col-7" style={{    transform: "translateX(-120px)" }}>
+                  <div className="my-3" data-swiper-parallax="-300">
+                    <h1>{each.name}</h1>
+                    <h3 style={{ fontSize: "35px" }}>{each.role}</h3>
+                    {each.quote === true ? (
+                      <div className="quote mt-4 m-2">
+                        <p style={{ color: "#EE3932" }}>{each.quoteDesc}</p>
+                      </div>
+                    ) : null}
+                  </div>
+                </div>
+                
+              </div>
+              <div className="row">
+                <div className="px-4" data-swiper-parallax="-100" style={{overflowWrap: "break-word"}}>
+                  <p>{each.desc}</p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+
+        
+      </Swiper>
     </div>
   );
 };
@@ -313,10 +392,7 @@ export const DesktopCarousel = () => {
             <div className="col-1 text-primary mr-0" ref={navigationPrevRef}>
               <RiArrowLeftSFill size="35px" color="#E8554F" />
             </div>
-            <div
-              className="col text-center"
-              ref={paginationRef}
-            ></div>
+            <div className="col text-center" ref={paginationRef}></div>
             <div className="col-1 text-center ml-0" ref={navigationNextRef}>
               <RiArrowRightSFill size="35px" color="#E8554F" />
             </div>
@@ -337,12 +413,9 @@ export const MobileCarousel = () => {
     <div className={styles.sliderWrapperMobile}>
       <Swiper
         style={{
-          "--swiper-nagivation-color": "#E8554F",
           "--swiper-pagination-color": "#E8554F",
           "--swiper-pagination-bullet-size": "13px",
           "--swiper-pagination-bullet-horizontal-gap": "6px",
-
-         
         }}
         modules={[Parallax, Autoplay, Navigation, Pagination]}
         loop={true}
@@ -372,7 +445,7 @@ export const MobileCarousel = () => {
       >
         <SwiperSlide>
           <div className={styles.sliderCont1Mobile}>
-            <div className="row pt-5 mx-5" style={{top: "30vh"}}>
+            <div className="row pt-5 mx-5" style={{ top: "30vh" }}>
               <div className="py-5">
                 <div data-swiper-parallax="-500">
                   <h1>Building a data-driven digital Borneo</h1>
@@ -382,7 +455,7 @@ export const MobileCarousel = () => {
                   data-swiper-parallax="-200"
                   style={{ width: "600px", fontSize: "40px" }}
                 >
-                  <h2 style={{fontSize: "40px"}}>
+                  <h2 style={{ fontSize: "40px" }}>
                     Offering AdTech and MarTech solutions for clear and
                     effective digital campaigns across the region
                   </h2>
@@ -421,7 +494,7 @@ export const MobileCarousel = () => {
                 data-swiper-parallax="-200"
                 style={{ width: "400px" }}
               >
-                <h2 style={{fontSize: "40px"}}>
+                <h2 style={{ fontSize: "40px" }}>
                   We handle ad ops and management so your team always knows how
                   well ads are performing
                 </h2>
@@ -454,10 +527,10 @@ export const MobileCarousel = () => {
                 data-swiper-parallax="-200"
                 style={{ width: "550px" }}
               >
-                <h2 style={{fontSize: "40px"}}>
-                Helping you pick the end-to-end solutions from creation,
-                  targeting and execution to meet your campaign objectives<br></br> and
-                  maximise results
+                <h2 style={{ fontSize: "40px" }}>
+                  Helping you pick the end-to-end solutions from creation,
+                  targeting and execution to meet your campaign objectives
+                  <br></br> and maximise results
                 </h2>
               </div>
             </div>
@@ -485,7 +558,7 @@ export const MobileCarousel = () => {
                   data-swiper-parallax="-200"
                   style={{ width: "500px" }}
                 >
-                  <h2 style={{fontSize: "40px"}}>
+                  <h2 style={{ fontSize: "40px" }}>
                     Using simple yet impactful key data to reach audiences,
                     allowing smarter monetisation of your platform and better
                     yield on ads
@@ -517,7 +590,7 @@ export const MobileCarousel = () => {
                 <h1>Connect with prospects and customers</h1>
               </div>
               <div className="mt-5" align="center" data-swiper-parallax="-200">
-                <h2 style={{fontSize: "40px"}}>
+                <h2 style={{ fontSize: "40px" }}>
                   Plan, activate and execute ad and marketing campaigns that
                   speak to specific end users
                 </h2>

@@ -502,6 +502,13 @@ margin: 15px;
   color: #262626;
 }
 
+.quote{
+  background-color: #fbf8f6;
+  border-radius: 20px 50px;
+  border: 3px;
+  padding: 25px;
+}
+
 .navbar{
   width: 100%;
   justify-content: end;

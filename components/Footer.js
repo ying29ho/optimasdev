@@ -69,7 +69,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-4 mt-4">
+              <div className="col-sm-4 mt-5">
                 <h3 style={{fontSize: "40px"}}>Explore More</h3>
                 <div className="row" style={{fontSize: "30px"}}>
                   <a >Careers</a>
@@ -78,19 +78,19 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-sm-4 mt-4">
+              <div className="col-sm-4 mt-5">
                 <h3 style={{fontSize: "40px"}}>Contact Us</h3>
-                <div className="row" style={{fontSize: "30px"}}>
-                  <div className="col-4">Phone:</div>
-                  <div className="col-8">+673 236 7069</div>
+                <div className="row mb-3" style={{fontSize: "30px"}}>
+                  <div className="col-3">Phone:</div>
+                  <div className="col-9">+673 236 7069</div>
                 </div>
-                <div className="row" style={{fontSize: "30px"}}>
-                  <div className="col-4">Email:</div>
-                  <div className="col-8">info@optimasmgmt.com</div>
+                <div className="row mb-3" style={{fontSize: "30px"}}>
+                  <div className="col-3">Email:</div>
+                  <div className="col-9">info@optimasmgmt.com</div>
                 </div>
                 <div className="row mb-5" style={{fontSize: "30px"}}>
-                  <div className="col-4">Address:</div>
-                  <div className="col-8">
+                  <div className="col-3">Address:</div>
+                  <div className="col-9">
                     8th Floor PGGMB Building, Jalan Kianggeh, Bandar Seri
                     Begawan, BS8111, Brunei Darussalam
                   </div>

@@ -18,6 +18,7 @@ const Contact = () => {
       role: "Agency",
       basedIn: "Brunei",
       request: [],
+      outsideBorneo: "",
       // monetiseAdSpace: false,
       // manageAdCampaigns: false,
       // digitalPresenceAdviseSupport: false,
@@ -53,7 +54,9 @@ const Contact = () => {
         .required("Email is required"),
       subject: yup.string().trim().required("Subject is required"),
       message: yup.string().trim().required("Message is required"),
-      terms: yup.bool().oneOf([true], "Terms must be accepted"),
+      outsideBorneo: yup.string().trim().required("Please let us know where you are from"),
+      terms: yup.bool().oneOf([true], "You must agree to our terms"),
+      // request: yup.array().oneOf([true], "Please tell us how we can help")
     }),
   });
   return (
@@ -61,353 +64,452 @@ const Contact = () => {
       <FormikProvider value={formik}>
         {/* <Form> */}
         <MediaQuery maxWidth={900}>
-        <div
-          className="mainContainer2 d-flex justify-content-center"
-          style={{ height: "100vh" }}
-        >
-          <Image
-            src={"/images/contact/contactusheader.png"}
-            // layout="fill"
-            objectFit="contain"
-            quality={100}
-            height={567}
-            width={1440}
-            alt="contact page header image"
-          />
+          <div
+            className="mainContainer2 d-flex justify-content-center"
+            style={{ height: "100vh" }}
+          >
+            <Image
+              src={"/images/contact/contactusheader.png"}
+              // layout="fill"
+              objectFit="contain"
+              quality={100}
+              height={567}
+              width={1440}
+              alt="contact page header image"
+            />
           </div>
-          </MediaQuery>
-          <MediaQuery minWidth={901}>
-        <div className="mainContainer2 d-flex justify-content-center">
-          <Image
-            src={"/images/contact/contactusheader.png"}
-            // layout="fill"
-            objectFit="contain"
-            quality={100}
-            height={567}
-            width={1440}
-            alt="contact page header image"
-          />
-        </div>
+        </MediaQuery>
+        <MediaQuery minWidth={901}>
+          <div className="mainContainer2 d-flex justify-content-center">
+            <Image
+              src={"/images/contact/contactusheader.png"}
+              // layout="fill"
+              objectFit="contain"
+              quality={100}
+              height={567}
+              width={1440}
+              alt="contact page header image"
+            />
+          </div>
         </MediaQuery>
         <div className="container">
           <div className="row">
             <MediaQuery maxWidth={900}>
               <div>
-              <h1 className="m-3">Get In Touch!</h1>
-              <div className="">
-                <form className="mx-5" onSubmit={formik.handleSubmit}>
-                  <label className="pt-3" htmlFor="firstName" style={{fontSize: "27px"}}>
-                    First Name
-                  </label>
-                  <div className="row ">
-                    <div className="col" >
-                      <input
-                        className="form-control"
-                        placeholder="First Name"
-                        id="firstName"
-                        name="firstName"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.firstName}
-                        required
-                        style={{height: "80px", fontSize: "25px"}}
-                      />
-                      {formik.errors.firstName && (
-                        <div className="text-danger">
-                          {formik.errors.firstName}
-                        </div>
-                      )}
+                <h1 className="m-3">Get In Touch!</h1>
+                <div className="">
+                  <form className="mx-5" onSubmit={formik.handleSubmit}>
+                    <label
+                      className="pt-3"
+                      htmlFor="firstName"
+                      style={{ fontSize: "27px" }}
+                    >
+                      First Name
+                    </label>
+                    <div className="row ">
+                      <div className="col">
+                        <input
+                          className="form-control"
+                          placeholder="First Name"
+                          id="firstName"
+                          name="firstName"
+                          type="text"
+                          onChange={formik.handleChange}
+                          value={formik.values.firstName}
+                          required
+                          style={{ height: "80px", fontSize: "25px" }}
+                        />
+                        {formik.errors.firstName && (
+                          <div className="text-danger">
+                            {formik.errors.firstName}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                    </div>
-                    <label className="pt-3" htmlFor="firstName" style={{fontSize: "27px"}}>
-                    Last Name
-                  </label>
+                    <label
+                      className="pt-3"
+                      htmlFor="firstName"
+                      style={{ fontSize: "27px" }}
+                    >
+                      Last Name
+                    </label>
                     <div className="row">
+                      <div className="col">
+                        <input
+                          className="form-control"
+                          placeholder="Last Name"
+                          id="lastName"
+                          name="lastName"
+                          type="text"
+                          onChange={formik.handleChange}
+                          value={formik.values.lastName}
+                          style={{ height: "80px", fontSize: "25px" }}
+                          required
+                        />
+                        {formik.errors.lastName && (
+                          <div className="text-danger">
+                            {formik.errors.lastName}
+                          </div>
+                        )}
+                      </div>
+                    </div>
 
-                    <div className="col">
+                    <label
+                      className="pt-3"
+                      htmlFor="email"
+                      style={{ fontSize: "27px" }}
+                    >
+                      Email
+                    </label>
+                    <div className="form-group">
                       <input
                         className="form-control"
-                        placeholder="Last Name"
-                        id="lastName"
-                        name="lastName"
-                        type="text"
+                        placeholder="example@mail.com"
+                        id="email"
+                        name="email"
+                        type="email"
                         onChange={formik.handleChange}
-                        value={formik.values.lastName}
-                        style={{height: "80px", fontSize: "25px"}}
-
+                        value={formik.values.email}
+                        style={{ height: "80px", fontSize: "25px" }}
                         required
                       />
-                      {formik.errors.lastName && (
+                      <small
+                        className="form-text text-muted"
+                        style={{ fontSize: "27px" }}
+                      >
+                        We&apos;ll never share your email with anyone else.
+                      </small>
+                      {formik.errors.email && (
+                        <div className="text-danger">{formik.errors.email}</div>
+                      )}
+                    </div>
+                    <label
+                      className="pt-4"
+                      htmlFor="subject"
+                      style={{ fontSize: "27px" }}
+                    >
+                      Subject
+                    </label>
+                    <div className="form-group">
+                      <input
+                        className="form-control"
+                        placeholder="Subject"
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.subject}
+                        style={{ height: "80px", fontSize: "25px" }}
+                        required
+                      />
+                      {formik.errors.subject && (
                         <div className="text-danger">
-                          {formik.errors.lastName}
+                          {formik.errors.subject}
                         </div>
                       )}
                     </div>
+                    <label
+                      className="pt-3"
+                      htmlFor="message"
+                      style={{ fontSize: "27px" }}
+                    >
+                      Message
+                    </label>
+                    <div className="form-group">
+                      <textarea
+                        className="form-control"
+                        placeholder="Type your message here...."
+                        id="message"
+                        name="message"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.message}
+                        rows="8"
+                        style={{ fontSize: "25px" }}
+                        required
+                      />
+                      {formik.errors.message && (
+                        <div className="text-danger">
+                          {formik.errors.message}
+                        </div>
+                      )}
                     </div>
-                  
-                  <label className="pt-3" htmlFor="email" style={{fontSize: "27px"}}>
-                    Email
-                  </label>
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="example@mail.com"
-                      id="email"
-                      name="email"
-                      type="email"
-                      onChange={formik.handleChange}
-                      value={formik.values.email}
-                      style={{height: "80px", fontSize: "25px"}}
-                      required
-                    />
-                    <small className="form-text text-muted" style={{fontSize: "27px"}}>
-                      We&apos;ll never share your email with anyone else.
-                    </small>
-                    {formik.errors.email && (
-                      <div className="text-danger">{formik.errors.email}</div>
-                    )}
-                  </div>
-                  <label className="pt-4" htmlFor="subject" style={{fontSize: "27px"}}>
-                    Subject
-                  </label>
-                  <div className="form-group">
-                    <input
-                      className="form-control"
-                      placeholder="Subject"
-                      id="subject"
-                      name="subject"
-                      type="text"
-                      onChange={formik.handleChange}
-                      value={formik.values.subject}
-                      style={{height: "80px", fontSize: "25px"}}
-                      required
-                    />
-                    {formik.errors.subject && (
-                      <div className="text-danger">{formik.errors.subject}</div>
-                    )}
-                  </div>
-                  <label className="pt-3" htmlFor="message" style={{fontSize: "27px"}}>
-                    Message
-                  </label>
-                  <div className="form-group">
-                    <textarea
-                      className="form-control"
-                      placeholder="Type your message here...."
-                      id="message"
-                      name="message"
-                      type="text"
-                      onChange={formik.handleChange}
-                      value={formik.values.message}
-                      rows="8"
-                      style={{ fontSize: "25px"}}
-                      required
-                    />
-                    {formik.errors.message && (
-                      <div className="text-danger">{formik.errors.message}</div>
-                    )}
-                  </div>
 
-                  <label className="pt-4" htmlFor="services" style={{fontSize: "27px"}}>
-                    I&apos;m a...
-                  </label>
-                  <Field
-                    className="form-select"
-                    id="role"
-                    as="select"
-                    name="role"
-                    style={{height: "80px", fontSize: "25px"}}
-                    onChange={formik.handleChange}
-                  >
-                    <option value="Agency" id="agency">
-                      Agency
-                    </option>
-                    <option value="Brand" id="brand">
-                      Brand
-                    </option>
-                    <option value="Publisher" id="publisher">
-                      Publisher
-                    </option>
-                  </Field>
+                    <label
+                      className="pt-4"
+                      htmlFor="services"
+                      style={{ fontSize: "27px" }}
+                    >
+                      I&apos;m a...
+                    </label>
+                    <Field
+                      className="form-select"
+                      id="role"
+                      as="select"
+                      name="role"
+                      style={{ height: "80px", fontSize: "25px" }}
+                      onChange={formik.handleChange}
+                    >
+                      <option value="Agency" id="agency">
+                        Agency
+                      </option>
+                      <option value="Brand" id="brand">
+                        Brand
+                      </option>
+                      <option value="Publisher" id="publisher">
+                        Publisher
+                      </option>
+                    </Field>
 
-                  <label className="pt-3" htmlFor="basedIn" style={{fontSize: "27px"}}>
-                    Based in...
-                  </label>
-                  <Field
-                    className="form-select"
-                    id="basedIn"
-                    as="select"
-                    name="basedIn"
-                    style={{height: "80px", fontSize: "25px"}}
-                    onChange={formik.handleChange}
-                  >
-                    <option value="Brunei" id="brunei">
-                      Brunei
-                    </option>
-                    <option value="Kalimantan" id="kalimantan">
-                      Kalimantan
-                    </option>
-                    <option value="Sabah" id="sabah">
-                      Sabah
-                    </option>
-                    <option value="Sarawak" id="sarawak">
-                      Sarawak
-                    </option>
-                    <option value="BeyondBorneo" id="beyondBorneo">
-                      Beyond Borneo
-                    </option>
-                  </Field>
+                    <label
+                      className="pt-3"
+                      htmlFor="basedIn"
+                      style={{ fontSize: "27px" }}
+                    >
+                      Based in...
+                    </label>
+                    <Field
+                      className="form-select"
+                      id="basedIn"
+                      as="select"
+                      name="basedIn"
+                      style={{ height: "80px", fontSize: "25px" }}
+                      onChange={formik.handleChange}
+                    >
+                      <option value="Brunei" id="brunei">
+                        Brunei
+                      </option>
+                      <option value="Kalimantan" id="kalimantan">
+                        Kalimantan
+                      </option>
+                      <option value="Sabah" id="sabah">
+                        Sabah
+                      </option>
+                      <option value="Sarawak" id="sarawak">
+                        Sarawak
+                      </option>
+                      <option value="BeyondBorneo" id="beyondBorneo">
+                        Beyond Borneo
+                      </option>
+                    </Field>
 
-                  <label className="pt-4" htmlFor="services" style={{fontSize: "27px"}}>
-                    How can Optimas support me?
-                  </label>
-                  <div className="form-group mb-4">
-                    <div className="form-check m-3">
-                      {/* <input
+                    {formik.values.basedIn === "BeyondBorneo" ? (
+                      <div>
+                        <label
+                          className="pt-3"
+                          htmlFor="outsideBorneo"
+                          style={{ fontSize: "27px" }}
+                        >
+                          I&apos;m from
+                        </label>
+
+                        <input
+                          className="form-control"
+                          placeholder="Country"
+                          id="outsideBorneo"
+                          name="outsideBorneo"
+                          type="text"
+                          onChange={formik.handleChange}
+                          value={formik.values.outsideBorneo}
+                          required
+                          style={{ height: "80px", fontSize: "25px" }}
+                        />
+                        {formik.errors.outsideBorneo && (
+                          <div className="text-danger">
+                            {formik.errors.outsideBorneo}
+                          </div>
+                        )}
+                      </div>
+                    ) : null}
+
+                    <label
+                      className="pt-4"
+                      htmlFor="services"
+                      style={{ fontSize: "27px" }}
+                    >
+                      How can Optimas support me?
+                    </label>
+                    <div className="form-group mb-4">
+                      <div className="form-check m-3">
+                        {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="monetiseAdSpace"
                       onChange={formik.handleChange}
                       value={formik.values.monetiseAdSpace}
                     /> */}
-                      <label
-                        className="form-check-label"
-                        htmlFor="monetiseAdSpace"
-                        style={{fontSize: "27px"}}
-                      >
-                        <Field
-                          type="checkbox"
-                          name="requests"
-                          id="monetiseAdSpace"
-                          className="form-check-input"
-                          value="monetiseAdSpace"
-                          style={{height: "30px", width:"30px", fontSize: "25px"}}
-                        />
-                        Monetisaton of my Ad Space
-                      </label>
-                    </div>
-                    <div className="form-check m-3">
-                      {/* <input
+                        <label
+                          className="form-check-label"
+                          htmlFor="monetiseAdSpace"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            type="checkbox"
+                            name="requests"
+                            id="monetiseAdSpace"
+                            className="form-check-input"
+                            value="monetiseAdSpace"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Monetisaton of my Ad Space
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="manageAdCampaigns"
                       onChange={formik.handleChange}
                       value={formik.values.manageAdCampaigns}
                     /> */}
-                      <label
-                        className="form-check-label"
-                        htmlFor="manageAdCampaigns"
-                        style={{fontSize: "27px"}}
-                      >
-                        <Field
-                          type="checkbox"
-                          name="requests"
-                          id="manageAdCampaigns"
-                          className="form-check-input"
-                          value="manageAdCampaigns"
-                          style={{height: "30px", width:"30px", fontSize: "25px"}}
-                        />
-                        Managing Ad Campaigns
-                      </label>
-                    </div>
-                    <div className="form-check m-3">
-                      {/* <input
+                        <label
+                          className="form-check-label"
+                          htmlFor="manageAdCampaigns"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            type="checkbox"
+                            name="requests"
+                            id="manageAdCampaigns"
+                            className="form-check-input"
+                            value="manageAdCampaigns"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Managing Ad Campaigns
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="digitalPresenceAdviseSupport"
                       onChange={formik.handleChange}
                       value={formik.values.digitalPresenceAdviseSupport}
                     /> */}
-                      <label
-                        className="form-check-label"
-                        htmlFor="digitalPresenceAdviseSupport"
-                        style={{fontSize: "27px"}}
-                      >
-                        <Field
-                          type="checkbox"
-                          name="requests"
-                          id="digitalPresenceAdviseSupport"
-                          className="form-check-input"
-                          value="digitalPresenceAdvisorySupport"
-                          style={{height: "30px", width:"30px", fontSize: "25px"}}
-                        />
-                        Digital Presence Advisory &amp; Support
-                      </label>
-                    </div>
-                    <div className="form-check m-3">
-                      {/* <input
+                        <label
+                          className="form-check-label"
+                          htmlFor="digitalPresenceAdviseSupport"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            type="checkbox"
+                            name="requests"
+                            id="digitalPresenceAdviseSupport"
+                            className="form-check-input"
+                            value="digitalPresenceAdvisorySupport"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Digital Presence Advisory &amp; Support
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="marketInsights"
                       onChange={formik.handleChange}
                       value={formik.values.marketInsights}
                     /> */}
-                      <label
-                        className="form-check-label"
-                        htmlFor="marketInsights"
-                        style={{fontSize: "27px"}}
-                      >
-                        <Field
-                          type="checkbox"
-                          name="requests"
-                          id="marketInsights"
-                          className="form-check-input"
-                          value="marketInsights"
-                          style={{height: "30px", width:"30px", fontSize: "25px"}}
-                        />
-                        Market Insights
-                      </label>
-                    </div>
+                        <label
+                          className="form-check-label"
+                          htmlFor="marketInsights"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            type="checkbox"
+                            name="requests"
+                            id="marketInsights"
+                            className="form-check-input"
+                            value="marketInsights"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Market Insights
+                        </label>
+                      </div>
 
-                    <div className="form-check m-3">
-                      {/* <input
+                      <div className="form-check m-3">
+                        {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="mediaTrading"
                       onChange={formik.handleChange}
                       value={formik.values.mediaTrading}
                     /> */}
-                      <label
-                        className="form-check-label"
-                        htmlFor="mediaTrading"
-                        style={{fontSize: "27px"}}
-                      >
-                        <Field
-                          type="checkbox"
-                          name="requests"
-                          id="mediaTrading"
-                          className="form-check-input"
-                          value="mediaTrading"
-                          style={{height: "30px", width:"30px", fontSize: "25px"}}
-                        />
-                        Media Trading
-                      </label>
-                    </div>
+                        <label
+                          className="form-check-label"
+                          htmlFor="mediaTrading"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            type="checkbox"
+                            name="requests"
+                            id="mediaTrading"
+                            className="form-check-input"
+                            value="mediaTrading"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Media Trading
+                        </label>
+                      </div>
 
-                    <div className="form-check m-3">
-                      {/* <input
+                      <div className="form-check m-3">
+                        {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="other"
                       onChange={formik.handleChange}
                       value={formik.values.other}
                     /> */}
-                      <label className="form-check-label" htmlFor="other" style={{fontSize: "27px"}}>
-                        <Field
-                          type="checkbox"
-                          name="requests"
-                          id="other"
-                          className="form-check-input"
-                          value="other"
-                          style={{height: "30px", width:"30px", fontSize: "25px"}}
-                        />
-                        Other Digital Media Needs
-                      </label>
+                        <label
+                          className="form-check-label"
+                          htmlFor="other"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            type="checkbox"
+                            name="requests"
+                            id="other"
+                            className="form-check-input"
+                            value="other"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Other Digital Media Needs
+                        </label>
+                      </div>
+                      {/* {formik.errors.request && (
+                          <div className="text-danger">
+                            {formik.errors.request}
+                          </div>
+                        )} */}
                     </div>
-                  </div>
 
-                  <div className="form-group pt-5">
-                    <div className="form-check m-3">
-                      {/* <input
+                    <div className="form-group pt-5">
+                      <div className="form-check m-3">
+                        {/* <input
                       className="form-check-input"
                       type="checkbox"
                       id="terms"
@@ -416,42 +518,52 @@ const Contact = () => {
                       required
                     /> */}
 
-                      <label className="form-check-label" htmlFor="terms" style={{fontSize: "27px"}}>
-                        <Field
-                          className="form-check-input"
-                          type="checkbox"
-                          name="terms"
-                          style={{height: "30px", width:"30px", fontSize: "25px"}}
-                        />
-                        Click here to receive updates on our latest news and
-                        upcoming solutions
-                        {formik.errors.terms && (
-                          <div className="text-danger" style={{fontSize: "25px"}}>
-                            {formik.errors.terms}
-                          </div>
-                        )}
-                      </label>
+                        <label
+                          className="form-check-label"
+                          htmlFor="terms"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            name="terms"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Click here to receive updates on our latest news and
+                          upcoming solutions
+                          {formik.errors.terms && (
+                            <div
+                              className="text-danger"
+                              style={{ fontSize: "25px" }}
+                            >
+                              {formik.errors.terms}
+                            </div>
+                          )}
+                        </label>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-auto" align="center" >
+                    <div className="p-auto" align="center">
+                      <MobileSubmitButton text="Send Message" />
+                    </div>
+                    {/* <FormButton type="submit" text="Send Email" /> */}
+                    {/* <button type="submit">Submit</button> */}
+                  </form>
+                </div>
 
-                    <MobileSubmitButton text="Send Message" />
-                  </div>
-                  {/* <FormButton type="submit" text="Send Email" /> */}
-                  {/* <button type="submit">Submit</button> */}
-                </form>
-              </div>
-
-              <div className="mx-5 p-5">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.297581442316!2d114.941786915221!3d4.889756496449691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32228ad3c7eacc5d%3A0x1cbca74133a28b05!2sRegus%20-%20Bandar%20Seri%20Begawan%2C%20PGGMB!5e0!3m2!1sen!2sbn!4v1660093871934!5m2!1sen!2sbn"
-                  width="750"
-                  height="600"
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+                <div className="mx-5 p-5">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.297581442316!2d114.941786915221!3d4.889756496449691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32228ad3c7eacc5d%3A0x1cbca74133a28b05!2sRegus%20-%20Bandar%20Seri%20Begawan%2C%20PGGMB!5e0!3m2!1sen!2sbn!4v1660093871934!5m2!1sen!2sbn"
+                    width="750"
+                    height="600"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </div>
             </MediaQuery>
             <MediaQuery minWidth={901}>
@@ -615,6 +727,34 @@ const Contact = () => {
                       Beyond Borneo
                     </option>
                   </Field>
+
+                  {formik.values.basedIn === "BeyondBorneo" ? (
+                      <div>
+                        <label
+                          className="pt-3"
+                          htmlFor="outsideBorneo"
+                        >
+                          I&apos;m from
+                        </label>
+
+                        <input
+                          className="form-control"
+                          placeholder="Country"
+                          id="outsideBorneo"
+                          name="outsideBorneo"
+                          type="text"
+                          onChange={formik.handleChange}
+                          value={formik.values.outsideBorneo}
+                          required
+                      
+                        />
+                        {formik.errors.outsideBorneo && (
+                          <div className="text-danger">
+                            {formik.errors.outsideBorneo}
+                          </div>
+                        )}
+                      </div>
+                    ) : null}
 
                   <label className="pt-4" htmlFor="services">
                     How can Optimas support me?

@@ -48,7 +48,7 @@ const Contact = () => {
         );
         setSubmitted(true);
         resetForm({ values: "" });
-        alert(JSON.stringify(values, null, 2));
+        // alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
         window.scrollTo(0,0);
       }, 1000);

@@ -9,10 +9,11 @@ export default function handler (req,res){
 
     const msg =`
     Hi there!\r\n \r\n
-    ${body.firstName} ${body.lastName} who is a ${body.role} from ${body.basedIn} would like to inquire about the following: \r\n \r\n \r\n
+    ${body.firstName} ${body.lastName} who is a ${body.role} from ${body.basedIn} ${body.outsideBorneo} would like to inquire about the following: \r\n \r\n \r\n
  
     Interested Solutions:\r\n
 
+    ${body.requests}\r\n
     Monitise Ad Space: ${body.monetiseAdSpace}\r\n
     Manage Ad Campaigns: ${body.manageAdCampaigns}\r\n
     Digital Presence Advisory & Support: ${body.digitalPresenceAdviseSupport} \r\n
@@ -40,7 +41,7 @@ export default function handler (req,res){
     `
 
     const data = {
-        to: process.env.OPTIMAS_EMAIL,
+        to: process.env.TEST_EMAIL,
         from: process.env.OPTIMAS_EMAIL,
         subject: `New Web Message from ${body.firstName}!`,
         text: msg,
@@ -49,7 +50,7 @@ export default function handler (req,res){
 
     const usrData={
         to: `${body.email}`,
-        from: process.env.PTIMAS_EMAIL,
+        from: process.env.OPTIMAS_EMAIL,
         subject: `Message Received!`,
         text: usermsg, 
         html: usermsg.replace(/\r\n/g, '<br>')

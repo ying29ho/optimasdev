@@ -489,11 +489,24 @@ margin: 15px;
   color: #EE3932;
 }
 
+.submit-success{
+  background-color: #d4edda;
+  color: #262626;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
 @media screen and (max-width:900px) {
   .text-danger{
     color: #EE3932;
     font-size: 25px !important;
     font-weight: 500 !important;
+  }
+
+  .submit-success{
+    font-size: 30px;
+    margin: 30px;
   }
 }
 

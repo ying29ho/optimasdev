@@ -15,7 +15,7 @@ import { PrimaryButton } from "../components/Buttons";
 const cardContentTop = [
   {
     id: 1,
-    front: "Ads op management",
+    front: "Ads operation management",
     back: "Take full advantage of the regional AdTech ecosystem, improve customer experience and achieve your business goals.",
     img: "/images/home/solutions/adsmgmt.png",
   },
@@ -127,7 +127,7 @@ export default function Home() {
           height={567}
           width={1440}
           alt="home page header image"
-        />
+          priority/>
       </div>
           <MobileCarousel />
         </MediaQuery>

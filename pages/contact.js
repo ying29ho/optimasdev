@@ -4,10 +4,20 @@ import { Field, useFormik, FormikProvider } from "formik";
 import * as yup from "yup";
 import { SubmitButton, MobileSubmitButton } from "../components/Buttons";
 import MediaQuery from "react-responsive";
+import { CgClose } from "react-icons/cg";
 
 const Contact = () => {
-  const [message, setMessage] = useState("");
+  // const successRef = useRef(null);
+  const [msge, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const closeIcon = (
+    <CgClose
+      className="close"
+      size="15px"
+      color="#262626"
+      onClick={() => setSubmitted(false)}
+    />
+  );
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -17,7 +27,7 @@ const Contact = () => {
       message: "",
       role: "Agency",
       basedIn: "Brunei",
-      request: [],
+      requests: [],
       outsideBorneo: "",
       // monetiseAdSpace: false,
       // manageAdCampaigns: false,
@@ -29,8 +39,6 @@ const Contact = () => {
     },
 
     onSubmit: (values, { setSubmitting, resetForm }) => {
-      // alert(JSON.stringify(values, null, 2));
-      // resetForm({ values:''});
       setTimeout(() => {
         fetch("/api/contact", {
           method: "post",
@@ -40,10 +48,13 @@ const Contact = () => {
           "Success! Your message has been sent. Our team will get back to you shortly"
         );
         setSubmitted(true);
+        // console.log("submit value here");
+        // console.log(submitted);
         resetForm({ values: "" });
-        alert("Success! Your Message has been sent!");
+        alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
       }, 1000);
+      // window.scrollTo(0,0);
     },
     validationSchema: yup.object({
       firstName: yup.string().trim().required("First name is required"),
@@ -54,9 +65,12 @@ const Contact = () => {
         .required("Email is required"),
       subject: yup.string().trim().required("Subject is required"),
       message: yup.string().trim().required("Message is required"),
-      outsideBorneo: yup.string().trim().required("Please let us know where you are from"),
+      outsideBorneo: yup
+        .string()
+        .trim()
+        .required("Please let us know where you are from"),
       terms: yup.bool().oneOf([true], "You must agree to our terms"),
-      // request: yup.array().oneOf([true], "Please tell us how we can help")
+      // requests: yup.array().oneOf([true], "Please tell us how we can help")
     }),
   });
   return (
@@ -98,6 +112,14 @@ const Contact = () => {
               <div>
                 <h1 className="m-3">Get In Touch!</h1>
                 <div className="">
+                  {submitted === true ? (
+                    <div className="submit-success">
+                      <div className="row">
+                        <div className="col-11">{msge}</div>
+                        <div className="col-1">{closeIcon}</div>
+                      </div>
+                    </div>
+                  ) : null}
                   <form className="mx-5" onSubmit={formik.handleSubmit}>
                     <label
                       className="pt-3"
@@ -500,9 +522,9 @@ const Contact = () => {
                           Other Digital Media Needs
                         </label>
                       </div>
-                      {/* {formik.errors.request && (
-                          <div className="text-danger">
-                            {formik.errors.request}
+                      {/* {formik.errors.requests && (
+                          <div className="text-danger" style={{ fontSize: "25px" }}>
+                            {formik.errors.requests}
                           </div>
                         )} */}
                     </div>
@@ -581,6 +603,16 @@ const Contact = () => {
                 </div>
               </div>
               <div className="col">
+               
+                {submitted === true ? (
+                  <div className="submit-success">
+                    <div className="row">
+                      <div className="col-11">{msge}</div>
+                      <div className="col-1">{closeIcon}</div>
+                    </div>
+                  </div>
+                ) : null}
+       
                 <form onSubmit={formik.handleSubmit}>
                   <label className="pt-5" htmlFor="firstName">
                     Full Name
@@ -729,32 +761,28 @@ const Contact = () => {
                   </Field>
 
                   {formik.values.basedIn === "BeyondBorneo" ? (
-                      <div>
-                        <label
-                          className="pt-3"
-                          htmlFor="outsideBorneo"
-                        >
-                          I&apos;m from
-                        </label>
+                    <div>
+                      <label className="pt-3" htmlFor="outsideBorneo">
+                        I&apos;m from
+                      </label>
 
-                        <input
-                          className="form-control"
-                          placeholder="Country"
-                          id="outsideBorneo"
-                          name="outsideBorneo"
-                          type="text"
-                          onChange={formik.handleChange}
-                          value={formik.values.outsideBorneo}
-                          required
-                      
-                        />
-                        {formik.errors.outsideBorneo && (
-                          <div className="text-danger">
-                            {formik.errors.outsideBorneo}
-                          </div>
-                        )}
-                      </div>
-                    ) : null}
+                      <input
+                        className="form-control"
+                        placeholder="Country"
+                        id="outsideBorneo"
+                        name="outsideBorneo"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.outsideBorneo}
+                        required
+                      />
+                      {formik.errors.outsideBorneo && (
+                        <div className="text-danger">
+                          {formik.errors.outsideBorneo}
+                        </div>
+                      )}
+                    </div>
+                  ) : null}
 
                   <label className="pt-4" htmlFor="services">
                     How can Optimas support me?
@@ -823,7 +851,7 @@ const Contact = () => {
                           className="form-check-input"
                           value="digitalPresenceAdvisorySupport"
                         />
-                        Digital Presence Advisory & Support
+                        Digital Presence Advisory &apos; Support
                       </label>
                     </div>
                     <div className="form-check m-3">
@@ -891,6 +919,11 @@ const Contact = () => {
                         Other Digital Media Needs
                       </label>
                     </div>
+                    {/* {formik.errors.requests && (
+                          <div className="text-danger">
+                            {formik.errors.requests}
+                          </div>
+                        )} */}
                   </div>
 
                   <div className="form-group pt-5">

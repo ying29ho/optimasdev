@@ -54,7 +54,7 @@ const Contact = () => {
         alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
       }, 1000);
-      // window.scrollTo(0,0);
+      window.scrollTo(0,0);
     },
     validationSchema: yup.object({
       firstName: yup.string().trim().required("First name is required"),

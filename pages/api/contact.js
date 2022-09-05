@@ -63,10 +63,6 @@ export default function handler (req,res){
  mail.send(usrData)
     .catch(error=>console.log(error))
 
-
-    console.log(body);
-    console.log(process.env.SENDGRID_API_KEY)
-    console.log(process.env.OPTIMAS_EMAIL)
     res.status(200).json({status: 'Ok'})
 }
 

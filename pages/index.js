@@ -178,6 +178,9 @@ export default function Home() {
           <div className={styles.grid}> */}
         <div className="m-5 p-5d-flex justify-content-center" align="center">
           <div className="row align-items-center">
+            <p>{process.env.SENDGRID_API_KEY}</p>
+            <p>{process.env.OPTIMAS_EMAIL}</p>
+            <p>{process.env.TEST_EMAIL}</p>
             <a
               className="col"
               target="_blank"

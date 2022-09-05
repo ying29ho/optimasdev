@@ -7,7 +7,6 @@ import MediaQuery from "react-responsive";
 import { CgClose } from "react-icons/cg";
 
 const Contact = () => {
-  // const successRef = useRef(null);
   const [msge, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const closeIcon = (
@@ -48,11 +47,10 @@ const Contact = () => {
           "Success! Your message has been sent. Our team will get back to you shortly"
         );
         setSubmitted(true);
-        // console.log("submit value here");
-        // console.log(submitted);
         resetForm({ values: "" });
         alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
+        window.scrollTo(0,0);
       }, 1000);
     },
     validationSchema: yup.object({
@@ -66,8 +64,7 @@ const Contact = () => {
       message: yup.string().trim().required("Message is required"),
       outsideBorneo: yup
         .string()
-        .trim()
-        .required("Please let us know where you are from"),
+        .trim(),
       terms: yup.bool().oneOf([true], "You must agree to our terms"),
       // requests: yup.array().oneOf([true], "Please tell us how we can help")
     }),

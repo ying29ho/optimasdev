@@ -2,9 +2,9 @@ require("dotenv").config();
 const mail = require('@sendgrid/mail');
 // const apiKey = `${}`;
 
-mail.setApiKey(SENDGRID_API_KEY);
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export default function handler (req,res){
+export default async function handler (req,res){
     const body = JSON.parse(req.body);
 
     const msg =`
@@ -41,8 +41,8 @@ export default function handler (req,res){
     `
 
     const data = {
-        to: TEST_EMAIL,
-        from: OPTIMAS_EMAIL,
+        to: process.env.TEST_EMAIL,
+        from: process.env.OPTIMAS_EMAIL,
         subject: `New Web Message from ${body.firstName}!`,
         text: msg,
         html: msg.replace(/\r\n/g, '<br>')
@@ -50,16 +50,16 @@ export default function handler (req,res){
 
     const usrData={
         to: `${body.email}`,
-        from: OPTIMAS_EMAIL,
+        from: process.env.OPTIMAS_EMAIL,
         subject: `Message Received!`,
         text: usermsg, 
         html: usermsg.replace(/\r\n/g, '<br>')
     }
 
-    mail.send(data)
+    await mail.send(data)
     .catch(error=>console.log(error))
 
- mail.send(usrData)
+ await mail.send(usrData)
     .catch(error=>console.log(error))
 
     res.status(200).json({status: 'Ok'})

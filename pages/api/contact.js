@@ -1,8 +1,8 @@
 require("dotenv").config();
 const mail = require('@sendgrid/mail');
-const apiKey = `${process.env.SENDGRID_API_KEY}`;
+// const apiKey = `${}`;
 
-mail.setApiKey(apiKey);
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default function handler (req,res){
     const body = JSON.parse(req.body);
@@ -58,7 +58,6 @@ export default function handler (req,res){
 
     mail.send(data)
     .catch(error=>console.log(error))
-
 
  mail.send(usrData)
     .catch(error=>console.log(error))

@@ -7,19 +7,17 @@ mail.setApiKey(process.env.SENDGRID_API_KEY);
 export default async function handler (req,res){
     const body = JSON.parse(req.body);
 
+const newReqs = body.requests.map(each=>
+    JSON.stringify(each)).join("\r\n") ;
+
     const msg =`
     Hi there!\r\n \r\n
     ${body.firstName} ${body.lastName} who is a ${body.role} from ${body.basedIn} ${body.outsideBorneo} would like to inquire about the following: \r\n \r\n \r\n
  
     Interested Solutions:\r\n
 
-    ${body.requests}\r\n
-    Monitise Ad Space: ${body.monetiseAdSpace}\r\n
-    Manage Ad Campaigns: ${body.manageAdCampaigns}\r\n
-    Digital Presence Advisory & Support: ${body.digitalPresenceAdviseSupport} \r\n
-    Market Insights: ${body.marketInsights}\r\n
-    Media Trading: ${body.mediaTrading}\r\n 
-    Other Digital Media Needs: ${body.other} \r\n \r\n \r\n
+    ${newReqs}\r\n 
+    \r\n \r\n \r\n
     The following is the message sent \r\n
     Subject: ${body.subject}\r\n
     Message: ${body.message}\r\n \r\n
@@ -41,7 +39,7 @@ export default async function handler (req,res){
     `
 
     const data = {
-        to: process.env.TEST_EMAIL,
+        to: process.env.OPTIMAS_EMAIL,
         from: process.env.OPTIMAS_EMAIL,
         subject: `New Web Message from ${body.firstName}!`,
         text: msg,

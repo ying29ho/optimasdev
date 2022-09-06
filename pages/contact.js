@@ -801,7 +801,7 @@ const Contact = () => {
                           name="requests"
                           id="monetiseAdSpace"
                           className="form-check-input"
-                          value="monetiseAdSpace"
+                          value="Monetisation of my Ad Space"
                         />
                         Monetisaton of my Ad Space
                       </label>
@@ -823,7 +823,7 @@ const Contact = () => {
                           name="requests"
                           id="manageAdCampaigns"
                           className="form-check-input"
-                          value="manageAdCampaigns"
+                          value="Manage Ad Campaigns"
                         />
                         Managing Ad Campaigns
                       </label>
@@ -845,9 +845,9 @@ const Contact = () => {
                           name="requests"
                           id="digitalPresenceAdviseSupport"
                           className="form-check-input"
-                          value="digitalPresenceAdvisorySupport"
+                          value="Digital Presence Advisory and Support"
                         />
-                        Digital Presence Advisory &apos; Support
+                        Digital Presence Advisory &amp; Support
                       </label>
                     </div>
                     <div className="form-check m-3">
@@ -867,7 +867,7 @@ const Contact = () => {
                           name="requests"
                           id="marketInsights"
                           className="form-check-input"
-                          value="marketInsights"
+                          value="Market Insights"
                         />
                         Market Insights
                       </label>
@@ -890,7 +890,7 @@ const Contact = () => {
                           name="requests"
                           id="mediaTrading"
                           className="form-check-input"
-                          value="mediaTrading"
+                          value="Media Trading"
                         />
                         Media Trading
                       </label>
@@ -910,7 +910,7 @@ const Contact = () => {
                           name="requests"
                           id="other"
                           className="form-check-input"
-                          value="other"
+                          value="Other"
                         />
                         Other Digital Media Needs
                       </label>

@@ -68,7 +68,7 @@ function About() {
           />
         </div>
       </MediaQuery>
-      <div className="about-container py-5 m-5">
+      <div className="about-container py-5 mx-5 mt-5">
         {/* <div className="row m-5 p-3"> */}
         <div className="mx-3 my-5 mb-5 pb-5 hero">
           <h1 className="mb-5">Powering the digital movement in Borneo</h1>

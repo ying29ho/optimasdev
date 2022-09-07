@@ -367,7 +367,7 @@ export const DesktopCarousel = () => {
                   <PrimaryButton text="Learn More" />
                 </Link>
               </div>
-              <div className="col">
+              <div className="col" align="right">
                 {" "}
                 <Image
                   src="/images/home/discover-insights.png"

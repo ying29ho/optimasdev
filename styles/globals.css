@@ -198,38 +198,108 @@ ul{
 }
 
 .shape{
-   grid-area: "shape1";
-   /* width: 50%; */
-position: absolute;
-right: 0;
-top: 0;
+  grid-area: "shape1";
+ position: absolute;
+ right: 0;
+ top:0 ;
+
 }
 
+.shape-container{
+  padding-top: 8%;
+}
 
 .purposevision{
-  max-height: 900px;
- 
+height: auto;
+
 }
+
 .purpose{
-   grid-area: "purpose";
-   /* width: 100%; */
-   max-height: 300px;
-   float: left;
-   /* z-index: -1; */
-   
-  
+  grid-area: "purpose";
+  min-width: 400px;
 }
 
 .vision{
   grid-area: "vision";
-  /* width: 40%; */
-  max-height: 300px;
-  /* float: none; */
-  /* z-index: -1; */
-
- 
+  min-width: 400px;
   
+ }
+
+.purpose p{
+  font-size: 27px;
+  font-weight:600;
+  line-height: 1.2;
 }
+
+.vision p{
+  font-size: 27px;
+  font-weight:600;
+  line-height: 1.2;
+}
+
+
+
+ .teamheading h1{
+  font-size: 50px !important;
+  text-transform: none !important;
+}
+
+.subheading{
+  font-size: 29px;
+}
+@media screen and (min-width:901px) {
+  .shape{
+    grid-area: "shape1";
+    /* width: 50%; */
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+
+ .purposevision{
+  max-height: 900px;
+}
+
+.purpose{
+  grid-area: "purpose";
+  height: auto;
+  width: 100%;
+  float: left;
+  /* z-index: -1; */
+}
+
+.purpose p{
+  font-size: 30px;
+  font-weight:600;
+  line-height: 1.2;
+}
+
+.vision{
+ grid-area: "vision";
+ height: auto;
+ width: 100%;
+ float: none;
+ line-height: 1.2;
+}
+
+.vision p{
+  font-size: 30px;
+  font-weight:600;
+}
+
+.teamheading h1{
+  font-size: 60px !important;
+  text-transform: none !important;
+}
+
+.subheading{
+  font-size: 35px;
+}
+}
+
+
+
+
 
 .subheader{
   grid-area: "subheader";
@@ -258,9 +328,7 @@ top: 0;
   max-width: 450px;
 }
 
-.subheading{
-  font-size: 35px;
-}
+
 
 
 
@@ -519,9 +587,9 @@ position: absolute;
 }
 
 @media (min-width:320px) and (max-width:1100px){
-  .purposeimg{
+  /* .purposeimg{
     padding-bottom: 5%;
-  }
+  } */
 
   .desc1{
     position: absolute;
@@ -612,10 +680,7 @@ height: 500px;
   width: 786px;
   cursor: pointer;
 }
-.teamheading h1{
-  font-size: 60px !important;
-  text-transform: none !important;
-}
+
 
 .text-danger{
   color: #EE3932;

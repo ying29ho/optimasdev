@@ -7,13 +7,13 @@ const Footer = () => {
     <div className="">
       <MediaQuery maxWidth={900}>
         <footer>
-          <div className="container p-5">
+          <div className="container px-5 pb-5">
             <div className="row">
               <div className="col-sm-4 ">
                 <div className="">
                   <div
                     className="footer-brand"
-                    style={{ transform: "translateX(-30px)" }}
+                    style={{ transform: "translate(-30px, 30px)" }}
                   >
                     <Link className="footer-brand" href="/">
                       <Image
@@ -25,8 +25,41 @@ const Footer = () => {
                     </Link>
                   </div>
 
-                  <h3 style={{fontSize: "40px"}}>Lets Connect</h3>
-                  <div className="">
+                  
+                </div>
+              </div>
+              <div className="col-sm-4 mt-5">
+                <h3 style={{fontSize: "40px"}}>Explore More</h3>
+                <div className="row" style={{fontSize: "30px"}}>
+                  <a >Careers</a>
+                  <Link className="" href="/contact">
+                    <a className="">Contact Us</a>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-sm-4 mt-5">
+                <h3 style={{fontSize: "40px"}}>Contact Us</h3>
+                <div className="row mb-3" style={{fontSize: "30px"}}>
+                  <div className="col-3">Phone:</div>
+                  <div className="col-9">+673 236 7069</div>
+                </div>
+                <div className="row mb-3" style={{fontSize: "30px"}}>
+                  <div className="col-3">Email:</div>
+                  <div className="col-9">info@optimasmgmt.com</div>
+                </div>
+                <div className="row mb-5" style={{fontSize: "30px"}}>
+                  <div className="col-3">Address:</div>
+                  <div className="col-9">
+                    8th Floor PGGMB Building, Jalan Kianggeh, Bandar Seri
+                    Begawan, BS8111, Brunei Darussalam
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row mx-auto px-auto my-3" align="center">
+ 
+            <h3 style={{fontSize: "40px"}}>Lets Connect</h3>
+                  <div className="mx-auto">
                     <a
                       className="mx-2"
                       target="_blank"
@@ -67,35 +100,6 @@ const Footer = () => {
                       />
                     </a>
                   </div>
-                </div>
-              </div>
-              <div className="col-sm-4 mt-5">
-                <h3 style={{fontSize: "40px"}}>Explore More</h3>
-                <div className="row" style={{fontSize: "30px"}}>
-                  <a >Careers</a>
-                  <Link className="" href="/contact">
-                    <a className="">Contact Us</a>
-                  </Link>
-                </div>
-              </div>
-              <div className="col-sm-4 mt-5">
-                <h3 style={{fontSize: "40px"}}>Contact Us</h3>
-                <div className="row mb-3" style={{fontSize: "30px"}}>
-                  <div className="col-3">Phone:</div>
-                  <div className="col-9">+673 236 7069</div>
-                </div>
-                <div className="row mb-3" style={{fontSize: "30px"}}>
-                  <div className="col-3">Email:</div>
-                  <div className="col-9">info@optimasmgmt.com</div>
-                </div>
-                <div className="row mb-5" style={{fontSize: "30px"}}>
-                  <div className="col-3">Address:</div>
-                  <div className="col-9">
-                    8th Floor PGGMB Building, Jalan Kianggeh, Bandar Seri
-                    Begawan, BS8111, Brunei Darussalam
-                  </div>
-                </div>
-              </div>
             </div>
             <div className="row mt-5 mb-1 row justify-content-center" style={{fontSize: "30px"}}>
               Copyright 2022 Optimas MGMT

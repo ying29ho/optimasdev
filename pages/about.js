@@ -11,7 +11,18 @@ const teamDesc = [
     img: "/images/about/team/bani.png",
     name: "Bani",
     role: "Founder",
-    desc: <p>Friends and Family Call me Bani.<br></br><br></br> You may be thinking that once again, you are viewing yet another profile of someone who is passionate about Digital Marketing, Sports, Technology and Entertainment.<br></br><br></br>We might not have met yet, or may only be an acquaintance, or have not seen each other in a while. But, I trust, despite that, we will be introduced through our mutual interests and make a valuable connection.</p>,
+    desc: (
+      <p>
+        Friends and Family Call me Bani.<br></br>
+        <br></br> You may be thinking that once again, you are viewing yet
+        another profile of someone who is passionate about Digital Marketing,
+        Sports, Technology and Entertainment.<br></br>
+        <br></br>We might not have met yet, or may only be an acquaintance, or
+        have not seen each other in a while. But, I trust, despite that, we will
+        be introduced through our mutual interests and make a valuable
+        connection.
+      </p>
+    ),
     quote: true,
     quoteDesc:
       "Rabbani believes in building Brunei's digital ecosystem towards data-driven marketing in Borneo.",
@@ -21,9 +32,22 @@ const teamDesc = [
     img: "/images/about/team/wafi.png",
     name: "Wafi",
     role: "Digital Marketing Specialist",
-    desc: <p>Why did the digital marketer get into display advertising?<br></br><br></br>Because he wanted to make a lasting impression.<br></br><br></br>Hello, I am Wafi and I hold a Masters in Digital Marketing and a degree in Media Production, allowing me to navigate seamlessly from the creative to the strategic and analytical sides of marketing. Experiencing marketing internationally as an everyday consumer has aligned me to pursue a career with Optimas, in which I intend to help create a data-driven borneo.<br></br><br></br>When I&apos;m not working, you can find me in the gym throwing punches…<br></br>or getting punched in the face.</p>,
+    desc: (
+      <p>
+        Why did the digital marketer get into display advertising?<br></br>
+        <br></br>Because he wanted to make a lasting impression.<br></br>
+        <br></br>Hello, I am Wafi and I hold a Masters in Digital Marketing and
+        a degree in Media Production, allowing me to navigate seamlessly from
+        the creative to the strategic and analytical sides of marketing.
+        Experiencing marketing internationally as an everyday consumer has
+        aligned me to pursue a career with Optimas, in which I intend to help
+        create a data-driven borneo.<br></br>
+        <br></br>When I&apos;m not working, you can find me in the gym throwing
+        punches…<br></br>or getting punched in the face.
+      </p>
+    ),
     quote: false,
-    
+
     // quoteDesc: ""
   },
   {
@@ -31,7 +55,17 @@ const teamDesc = [
     img: "/images/about/team/amar.png",
     name: "Amar",
     role: "Business Development Associate",
-    desc: <p>The team member who has high spirits and ambitious.<br></br>Knows one or two dad jokes to make you laugh.<br></br><br></br>She serves as the supporting role in Optimas in creating the conversation of AdTech and Martech. <br></br><br></br>With a background in project coordinating and civic engagement. She has been in youth based work and has represented Brunei in various international and local platforms. And is also active in CrossFit.</p>,
+    desc: (
+      <p>
+        The team member who has high spirits and ambitious.<br></br>Knows one or
+        two dad jokes to make you laugh.<br></br>
+        <br></br>She serves as the supporting role in Optimas in creating the
+        conversation of AdTech and Martech. <br></br>
+        <br></br>With a background in project coordinating and civic engagement.
+        She has been in youth based work and has represented Brunei in various
+        international and local platforms. And is also active in CrossFit.
+      </p>
+    ),
     quote: false,
     // quoteDesc: ""
   },
@@ -55,6 +89,49 @@ function About() {
             alt="optimas header banner"
           />
         </div>
+        <div className="about-container px-5 pt-1">
+          <div className="hero mx-3 my-5 hero">
+            <h1 className="mb-5">Powering the digital movement in Borneo</h1>
+            <h2 style={{ fontSize: "40px" }}>
+              Optimas is a data-enabled technology platform powering a global
+              marketplace for premium advertising
+            </h2>
+          </div>
+
+          <div className="row purposeimg">
+            <div className="col-6 purposevision">
+              <div className="purpose mx-5 mt-5">
+                <h1>Our Purpose</h1>
+                <br></br>
+                <p>
+                  To create meaningful connections that power the future of
+                  advertising.
+                </p>
+              </div>
+              <br></br>
+              <br></br>
+              <div className="vision mx-5 mb-5">
+                <h1>Our Vision</h1>
+                <br></br>
+                <p>
+                  To champion partnerships and create open industry alternative
+                  solutions that tackle the greatest challenges for buyers and
+                  sellers at the intersection of digital and tv.
+                </p>
+              </div>
+            </div>
+            <div className="col-6 shape-container" align="right">
+              <Image
+                className="shape"
+                src={"/images/about/about1.png"}
+                // layout="fill"
+                width={667}
+                height={900}
+                alt="optimas image"
+              />
+            </div>
+          </div>
+        </div>
       </MediaQuery>
       <MediaQuery minWidth={901}>
         <div className="mainContainer d-flex justify-content-center">
@@ -67,52 +144,52 @@ function About() {
             alt="optimas header banner"
           />
         </div>
+        <div className="about-container pt-5 mx-5 mt-5">
+          <div className="mx-3 my-5 hero">
+            <h1 className="mb-5">Powering the digital movement in Borneo</h1>
+            <h2 style={{ fontSize: "50px" }}>
+              Optimas is a data-enabled technology platform powering a<br></br>
+              global marketplace for premium advertising
+            </h2>
+          </div>
+
+          <div className="row purposeimg">
+            <div className="col-6 purposevision">
+              <div className="purpose m-5">
+                <h1>Our Purpose</h1>
+                <br></br>
+                <p>To create meaningful</p>
+                <p>connections that power the</p>
+                <p>future of advertising.</p>
+              </div>
+
+              <br></br>
+
+              <div className="vision m-5">
+                <h1>Our Vision</h1>
+                <br></br>
+                <p>To champion partnerships and</p>
+                <p>create open industry</p>
+                <p>alternative solutions that</p>
+                <p>tackle the greatest challenges</p>
+                <p>for buyers and sellers at the</p>
+                <p>intersection of digital and tv.</p>
+              </div>
+            </div>
+            <div className="col-6" align="right">
+              <Image
+                className="shape"
+                src={"/images/about/about1.png"}
+                // layout="fill"
+                width={667}
+                height={900}
+                alt="optimas image"
+              />
+            </div>
+          </div>
+        </div>
       </MediaQuery>
-      <div className="about-container py-5 mx-5 mt-5">
-        {/* <div className="row m-5 p-3"> */}
-        <div className="mx-3 my-5 mb-5 pb-5 hero">
-          <h1 className="mb-5">Powering the digital movement in Borneo</h1>
-          <h2 style={{fontSize: "50px"}}>
-            Optimas is a data-enabled technology platform powering a<br></br>global
-            marketplace for premium advertising
-          </h2>
-        </div>
-
-        <div className="row purposeimg">
-          <div className="col-6 purposevision">
-            <div className="purpose m-5">
-              <h1>Our Purpose</h1>
-              <br></br>
-              <h3 >
-                To create meaningful connections that power the future of
-                advertising.
-              </h3>
-            </div>
-
-            <br></br>
-
-            <div className="vision m-5">
-              <h1>Our Vision</h1>
-              <br></br>
-              <h3  >
-                To champion partnerships and create open industry alternative
-                solutions that tackle the greatest challenges for buyers and
-                sellers at the intersection of digital and tv.
-              </h3>
-            </div>
-          </div>
-          <div className="col-6" align="right">
-            <Image
-              className="shape"
-              src={"/images/about/about1.png"}
-              // layout="fill"
-              width={667}
-              height={900}
-              alt="optimas image"
-            />
-          </div>
-        </div>
-      </div>
+      <div className="about-container py-1 mx-5"></div>
 
       <div className="color whatwedo">
         <div className="subheader mx-5 px-5">
@@ -167,15 +244,14 @@ function About() {
       <div className="teamheading m-5">
         <div className="row">
           <div className="col-7">
-            <h1 className="p-5">
+            <h1 className="px-5 pt-5">
               We are a group of passionate digital creators and tech-savvy
               marketers that strive to produce innovative, creative,
               provocative, and inspirational work for our clients.
             </h1>
           </div>
           <div className="col-5">
-            {/* <h2 className="subh2 p-5 mt-5"> */}
-            <p className="subheading p-5 mx-2" >
+            <p className="subheading px-5 pt-5 mx-2">
               With our cutting-edge Advertising Serve Solutions and Marketing
               Technology, we will empower our clients with improved digital
               assets to create, target and launch multichannel digital marketing

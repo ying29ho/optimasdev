@@ -72,8 +72,8 @@ function About() {
         {/* <div className="row m-5 p-3"> */}
         <div className="mx-3 my-5 mb-5 pb-5 hero">
           <h1 className="mb-5">Powering the digital movement in Borneo</h1>
-          <h2>
-            Optimas is a data-enabled technology platform powering a global
+          <h2 style={{fontSize: "50px"}}>
+            Optimas is a data-enabled technology platform powering a<br></br>global
             marketplace for premium advertising
           </h2>
         </div>
@@ -83,7 +83,7 @@ function About() {
             <div className="purpose m-5">
               <h1>Our Purpose</h1>
               <br></br>
-              <h3>
+              <h3 >
                 To create meaningful connections that power the future of
                 advertising.
               </h3>
@@ -94,7 +94,7 @@ function About() {
             <div className="vision m-5">
               <h1>Our Vision</h1>
               <br></br>
-              <h3>
+              <h3  >
                 To champion partnerships and create open industry alternative
                 solutions that tackle the greatest challenges for buyers and
                 sellers at the intersection of digital and tv.
@@ -166,29 +166,29 @@ function About() {
 
       <div className="teamheading m-5">
         <div className="row">
-          <div className="col-8">
+          <div className="col-7">
             <h1 className="p-5">
               We are a group of passionate digital creators and tech-savvy
               marketers that strive to produce innovative, creative,
               provocative, and inspirational work for our clients.
             </h1>
           </div>
-          <div className="col-4">
+          <div className="col-5">
             {/* <h2 className="subh2 p-5 mt-5"> */}
-            <h3 className="p-5 mt-5">
+            <p className="subheading p-5 mx-2" >
               With our cutting-edge Advertising Serve Solutions and Marketing
               Technology, we will empower our clients with improved digital
               assets to create, target and launch multichannel digital marketing
               campaigns.
-            </h3>
+            </p>
           </div>
         </div>
       </div>
       <div className="m-5">
-        <MediaQuery maxWidth={900}>
+        <MediaQuery maxWidth={1120}>
           <MobileTeam teamDesc={teamDesc} />
         </MediaQuery>
-        <MediaQuery minWidth={901}>
+        <MediaQuery minWidth={1121}>
           <DesktopTeam teamDesc={teamDesc} />
         </MediaQuery>
       </div>

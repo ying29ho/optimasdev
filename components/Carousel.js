@@ -27,7 +27,7 @@ export const DesktopTeam = ({ teamDesc }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <div className="row">
-      <div className="col-7 swiper-container thumbs">
+      <div className="col-7 swiper-container">
         <Swiper
           onSwiper={setThumbsSwiper}
           style={{
@@ -35,16 +35,30 @@ export const DesktopTeam = ({ teamDesc }) => {
           }}
           dir="rtl"
           loop={true}
+          loopedSlides={3}
           centeredSlides={false}
-          spaceBetween={-200}
+          spaceBetween={-50}
+          // breakpoints={{
+          //   1500: {
+          //     spaceBetween:-400,
+             
+          //   },
+          //   1800:{
+          //     spaceBetween: -600
+          //   }
+
+
+          // }}
           slidesPerView={3}
-          slidesPerGroup={3}
-          loopFillGroupWithBlank={true}
-          freeMode={true}
+          slideToClickedSlide={true}
+          touchRatio={0.6}
+          // slidesPerGroup={3}
+          // loopFillGroupWithBlank={true}
+          // freeMode={true}
           grabCursor={true}
           watchSlidesProgress={true}
-          modules={[FreeMode, Pagination, Thumbs]}
-          className="mySwiper"
+          modules={[ Pagination, Thumbs]}
+          className="thumbs"
         >
           {teamDesc.map((each) => (
             <SwiperSlide key={each.id} className="swiper-slide">
@@ -52,8 +66,8 @@ export const DesktopTeam = ({ teamDesc }) => {
                 className=""
                 src={each.img}
                 alt={each.name}
-                height={600}
-                width={650}
+                height={935}
+                width={786}
               />
             </SwiperSlide>
           ))}
@@ -66,15 +80,18 @@ export const DesktopTeam = ({ teamDesc }) => {
         </Swiper>
       </div>
       <div className="col-4 swiper-cont">
-        <Swiper
+        <Swiper 
           style={{
             "--swiper-pagination-color": "#E8554F",
           }}
           loop={true}
+          controller={thumbsSwiper}
           spaceBetween={10}
           slidesPerView={1}
           centeredSlides={true}
           navigation={false}
+          allowTouchMove={false}
+          slideToClickedSlide={true}
           pagination={{
             el: paginationRef.current,
             clickable: true,
@@ -84,7 +101,7 @@ export const DesktopTeam = ({ teamDesc }) => {
           }}
           thumbs={{ swiper: thumbsSwiper }}
           modules={[Thumbs, Pagination]}
-          className="mySwiper2"
+          className="team-description"
         >
           {teamDesc.map((each) => (
             <SwiperSlide key={each.id}>
@@ -239,19 +256,24 @@ export const DesktopCarousel = () => {
       >
         <SwiperSlide>
           <div className={styles.sliderCont}>
-            <div className="row pt-5 mx-5">
-              <div className="col-8 pt-5">
-                <div data-swiper-parallax="-500">
+            <div className="row pt-5 mx-5" align="center">
+              {/* <div className="row pt-5"> */}
+                <div className="row my-5 pt-5" data-swiper-parallax="-500">
                   <h1>Building a data-driven digital Borneo</h1>
                 </div>
-                <div className="my-5" data-swiper-parallax="-200">
-                  <h2>
-                    Offering AdTech and MarTech solutions for clear and
+                <br></br>
+                <br></br>
+                <div className="row my-5" data-swiper-parallax="-200">
+                  <h2 style={{fontSize: "50px"}}>
+                    We offer AdTech and MarTech solutions<br></br>for clear and
                     effective digital campaigns across the region
                   </h2>
                 </div>
-              </div>
-              <div className="col mx-5 align-self-end">
+              {/* </div> */}
+              <br></br>
+              <br></br>
+              <br></br>
+              <div className="my-5 align-self-center px-auto">
                 <Link href="/contact">
                   <PrimaryButton text="Be Part of the Movement" />
                 </Link>
@@ -284,7 +306,7 @@ export const DesktopCarousel = () => {
                 data-swiper-parallax="-200"
                 style={{ width: "400px" }}
               >
-                <h2>
+                <h2 style={{fontSize: "50px"}}>
                   We handle ad ops and management so your team always knows how
                   well ads are performing
                 </h2>
@@ -317,7 +339,7 @@ export const DesktopCarousel = () => {
                 data-swiper-parallax="-200"
                 style={{ width: "500px" }}
               >
-                <h2>
+                <h2 style={{fontSize: "50px"}}>
                   Helping you pick the end-to-end solutions from creation,
                   targeting and execution to meet your campaign objectives and
                   maximise results
@@ -330,12 +352,12 @@ export const DesktopCarousel = () => {
         <SwiperSlide>
           <div className={styles.sliderCont1}>
             <div className="row pt-5 mx-5 mb-5">
-              <div className="col-6 mt-5">
+              <div className="col-6 mt-3">
                 <div data-swiper-parallax="-500">
                   <h1>Discover opportunities with insights</h1>
                 </div>
                 <div className="my-5" data-swiper-parallax="-200">
-                  <h2>
+                  <h2 style={{fontSize: "50px"}}>
                     Using simple yet impactful key data to reach audiences,
                     allowing smarter monetisation of your platform and better
                     yield on ads
@@ -370,13 +392,13 @@ export const DesktopCarousel = () => {
           >
             <div className="row pt-5 mx-5 " align="center">
               <div
-                className="pt-5 d-flex flex-column"
+                className="pt-3 d-flex flex-column"
                 data-swiper-parallax="-500"
               >
                 <h1>Connect with prospects and customers</h1>
               </div>
               <div className="mt-2" align="center" data-swiper-parallax="-200">
-                <h2>
+                <h2 style={{fontSize: "50px"}}>
                   Plan, activate and execute ad and marketing campaigns that
                   speak to specific end users
                 </h2>

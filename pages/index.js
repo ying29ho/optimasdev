@@ -15,7 +15,7 @@ import { PrimaryButton } from "../components/Buttons";
 const cardContentTop = [
   {
     id: 1,
-    front: "Ads operation management",
+    front: "Ads operation & management",
     back: "Take full advantage of the regional AdTech ecosystem, improve customer experience and achieve your business goals.",
     img: "/images/home/solutions/adsmgmt.png",
   },

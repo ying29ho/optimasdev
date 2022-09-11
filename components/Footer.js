@@ -47,7 +47,7 @@ const Footer = () => {
                   <div className="col-3">Email:</div>
                   <div className="col-9">info@optimasmgmt.com</div>
                 </div>
-                <div className="row mb-5" style={{fontSize: "30px"}}>
+                <div className="row mb-3" style={{fontSize: "30px"}}>
                   <div className="col-3">Address:</div>
                   <div className="col-9">
                     8th Floor PGGMB Building, Jalan Kianggeh, Bandar Seri
@@ -158,7 +158,7 @@ const Footer = () => {
 
                   
                   <h3>Follow Us</h3>
-                  <div className="" style={{transform: "translateX(50px)"}}>
+                  <div className="" style={{transform: "translateX(-7px)"}}>
                     <a
                       className="mx-2"
                       target="_blank"

@@ -240,9 +240,34 @@ function About() {
         />
         {/* </div> */}
       </div>
-
       <div className="teamheading m-5">
-        <div className="row">
+<MediaQuery maxWidth={900}>
+<div className="row" align="justify">
+ <div className="col-11">
+
+            <h1 className="p-4">
+              We are a group of passionate digital creators &amp; tech-savvy
+              marketers that strive to produce innovative, creative,
+              provocative &amp; inspirational work for our clients.
+            </h1>
+ </div>
+          </div>
+          <div className="row" align="justify">
+            <div className="col-1">{""}</div>
+            <div className="col-11">
+
+            <p className="subheading  p-4">
+              With our cutting-edge Advertising Serve Solutions &amp; Marketing
+              Technology, we will empower our clients with improved digital
+              assets to create, target &amp; launch multichannel digital marketing
+              campaigns.
+            </p>
+            </div>
+          </div>
+
+</MediaQuery>
+<MediaQuery minWidth={901}>
+<div className="row">
           <div className="col-7">
             <h1 className="px-5 pt-5">
               We are a group of passionate digital creators and tech-savvy
@@ -259,6 +284,8 @@ function About() {
             </p>
           </div>
         </div>
+</MediaQuery>
+        
       </div>
       <div className="m-5">
         <MediaQuery maxWidth={1120}>

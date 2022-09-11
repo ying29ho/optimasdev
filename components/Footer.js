@@ -56,48 +56,51 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="row mx-auto px-auto my-3" align="center">
+            <div className="row my-3">
  
-            <h3 style={{fontSize: "40px"}}>Lets Connect</h3>
-                  <div className="mx-auto">
+            <h3 style={{fontSize: "40px"}}>Follow Us</h3>
+                  <div className="mx-auto" style={{fontSize: "30px", transform: "translateX(-9px)"}} align="left">
                     <a
                       className="mx-2"
                       target="_blank"
                       href="https://www.linkedin.com/company/optimas-mgmt"
                       rel="noopener noreferrer"
                     >
-                      <Image
+                      {/* <Image
                         src={"/socmed/linkedin.png"}
                         width={70}
                         height={70}
                         alt="find optimas on linked in"
-                      />
+                      /> */}
+                    LinkedIn
                     </a>
+                     | 
                     <a
                       className="mx-2"
                       target="_blank"
                       href="https://www.facebook.com/OptimasMGMT"
                       rel="noopener noreferrer"
                     >
-                      <Image
+                      {/* <Image
                         src={"/socmed/fb.png"}
                         width={70}
                         height={70}
                         alt="find optimas on facebook"
-                      />
+                      /> */}Facebook
                     </a>
+                     | 
                     <a
                       className="mx-2"
                       target="_blank"
                       href="https://www.instagram.com/optimasmgmt/"
                       rel="noopener noreferrer"
                     >
-                      <Image
+                      {/* <Image
                         src={"/socmed/ig.png"}
                         width={70}
                         height={70}
                         alt="find optimas on instagram"
-                      />
+                      /> */}Instagram
                     </a>
                   </div>
             </div>
@@ -154,7 +157,7 @@ const Footer = () => {
                   <div style={{transform: "translateY(-20px)"}}>
 
                   
-                  <h3>Lets Connect</h3>
+                  <h3>Follow Us</h3>
                   <div className="" style={{transform: "translateX(50px)"}}>
                     <a
                       className="mx-2"

@@ -1,16 +1,17 @@
 require("dotenv").config();
-const mail = require('@sendgrid/mail');
+const mail = require("@sendgrid/mail");
 // const apiKey = `${}`;
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export default async function handler (req,res){
-    const body = JSON.parse(req.body);
+export default async function handler(req, res) {
+  const body = JSON.parse(req.body);
 
-const newReqs = body.requests.map(each=>
-    JSON.stringify(each)).join("\r\n") ;
+    const newReqs = body.requests
+      .map((each) => JSON.stringify(each))
+      .join("\r\n");
 
-    const msg =`
+    const msg = `
     Hi there!\r\n \r\n
     ${body.firstName} ${body.lastName} who is a ${body.role} from ${body.basedIn} ${body.outsideBorneo} would like to inquire about the following: \r\n \r\n \r\n
  
@@ -18,13 +19,17 @@ const newReqs = body.requests.map(each=>
 
     ${newReqs}\r\n 
     \r\n \r\n \r\n
+
+    Is this person interested in the #DigitalBrunei Event? \r\n
+    ${body.digitalBrunei}
+    \r\n \r\n \r\n
     The following is the message sent \r\n
     Subject: ${body.subject}\r\n
     Message: ${body.message}\r\n \r\n
     You can contact ${body.firstName} at ${body.email}
     `;
 
-    const usermsg =`
+    const usermsg = `
     Hi ${body.firstName}!\r\n \r\n
 
     Thank you for contacting Optimas. \r\n
@@ -36,30 +41,27 @@ const newReqs = body.requests.map(each=>
 
     Best Regards,\r\n
     Optimas Team
-    `
+    `;
 
     const data = {
-        to: process.env.OPTIMAS_EMAIL,
-        from: process.env.OPTIMAS_EMAIL,
-        subject: `New Web Message from ${body.firstName}!`,
-        text: msg,
-        html: msg.replace(/\r\n/g, '<br>')
+      to: process.env.OPTIMAS_EMAIL,
+      from: process.env.OPTIMAS_EMAIL,
+      subject: `New Web Message from ${body.firstName}!`,
+      text: msg,
+      html: msg.replace(/\r\n/g, "<br>"),
     };
 
-    const usrData={
-        to: `${body.email}`,
-        from: process.env.OPTIMAS_EMAIL,
-        subject: `Message Received!`,
-        text: usermsg, 
-        html: usermsg.replace(/\r\n/g, '<br>')
-    }
+    const usrData = {
+      to: `${body.email}`,
+      from: process.env.OPTIMAS_EMAIL,
+      subject: `Message Received!`,
+      text: usermsg,
+      html: usermsg.replace(/\r\n/g, "<br>"),
+    };
 
-    await mail.send(data)
-    .catch(error=>console.log(error))
+    await mail.send(data).catch((error) => console.log(error));
 
- await mail.send(usrData)
-    .catch(error=>console.log(error))
+    await mail.send(usrData).catch((error) => console.log(error));
 
-    res.status(200).json({status: 'Ok'})
+    res.status(200).json({ status: "Ok" });
 }
-

@@ -28,12 +28,7 @@ const Contact = () => {
       basedIn: "Brunei",
       requests: [],
       outsideBorneo: "",
-      // monetiseAdSpace: false,
-      // manageAdCampaigns: false,
-      // digitalPresenceAdviseSupport: false,
-      // marketInsights: false,
-      // mediaTrading: false,
-      // other: false,
+      digitalBrunei: false,
       terms: false,
     },
 
@@ -518,24 +513,30 @@ const Contact = () => {
                           Other Digital Media Needs
                         </label>
                       </div>
-                      {/* {formik.errors.requests && (
-                          <div className="text-danger" style={{ fontSize: "25px" }}>
-                            {formik.errors.requests}
-                          </div>
-                        )} */}
                     </div>
-
                     <div className="form-group pt-5">
                       <div className="form-check m-3">
-                        {/* <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="terms"
-                      onChange={formik.handleChange}
-                      value={formik.values.terms}
-                      required
-                    /> */}
-
+                        <label
+                          className="form-check-label"
+                          htmlFor="digitalBrunei"
+                          style={{ fontSize: "27px" }}
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            name="digtialBrunei"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Do you want to be part of #digitalbrunei adtech ecosystem?
+                        </label>
+                      </div>
+                    </div>
+                    <div className="form-group pt-1">
+                      <div className="form-check m-3">
                         <label
                           className="form-check-label"
                           htmlFor="terms"
@@ -915,24 +916,24 @@ const Contact = () => {
                         Other Digital Media Needs
                       </label>
                     </div>
-                    {/* {formik.errors.requests && (
-                          <div className="text-danger">
-                            {formik.errors.requests}
-                          </div>
-                        )} */}
                   </div>
-
                   <div className="form-group pt-5">
                     <div className="form-check m-3">
-                      {/* <input
-                      className="form-check-input"
-                      type="checkbox"
-                      id="terms"
-                      onChange={formik.handleChange}
-                      value={formik.values.terms}
-                      required
-                    /> */}
+                      <label className="form-check-label" htmlFor="digitalBrunei">
+                        <Field
+                          className="form-check-input"
+                          type="checkbox"
+                          name="digitalBrunei"
+                        />
+                        Do you want to be part of #digitalbrunei adtech ecosystem?
+   
+                      </label>
+                    </div>
+                  </div>
 
+                  {/* <div className="form-group pt-5"> */}
+                  <div className="form-group">
+                    <div className="form-check m-3">
                       <label className="form-check-label" htmlFor="terms">
                         <Field
                           className="form-check-input"

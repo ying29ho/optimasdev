@@ -18,8 +18,8 @@ function MyApp({ Component, pageProps }) {
     </Head>
     <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossOrigin="anonymous"></Script>
         {/* <!-- Google tag (gtag.js) --> */}
-<Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}/>
-<Script strategy="lazyOnload">
+<Script id="google-analytics-id" strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}/>
+<Script id="google-analytics-id" strategy="lazyOnload">
   {`
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)}

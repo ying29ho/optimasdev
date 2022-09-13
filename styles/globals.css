@@ -69,9 +69,7 @@ nav{
   width: 100%;
   position: fixed;
   display: flex;
-  /* padding: 15px 10px; */
-  /* justify-content: end;
-  align-items: center; */
+
 
 }
 
@@ -84,19 +82,15 @@ footer{
   display: flex;
   justify-content: flex-end;
   bottom: 0;
-  /* align-items: flex-end; */
   text-align: left;
-  /* padding: 30px 50px ;
-  margin: 60px auto 0px; */
   color: #EE3932;
   background-color: #fbf8f6;
-  /* border-top: 1px solid #eaeaea; */
   list-style: none;
   width: 100%;
 }
 
 footer .ul{
-  /* margin-left: 12px; */
+
   list-style: none;
 }
 footer .li{
@@ -311,13 +305,13 @@ height: auto;
 
 .subtext{
   transform: translate(40px, 20px);
-  /* margin-top: 50px; */
+
 }
 
 
 .whatwedo{
   position: relative;
-  /* margin-top: 00px; */
+
 }
 
 

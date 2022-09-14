@@ -531,7 +531,7 @@ const Contact = () => {
                               fontSize: "25px",
                             }}
                           />
-                          Do you want to be part of #digitalbrunei adtech ecosystem?
+                          Click here to be part of the #digitalbrunei adtech ecosystem event. RSVPs are limited. Clicking this does not guarantee you a slot for the event.
                         </label>
                       </div>
                     </div>
@@ -925,7 +925,7 @@ const Contact = () => {
                           type="checkbox"
                           name="digitalBrunei"
                         />
-                        Do you want to be part of #digitalbrunei adtech ecosystem?
+                        Click here to be part of the #digitalbrunei adtech ecosystem event. RSVPs are limited. Clicking this does not guarantee you a slot for the event.
    
                       </label>
                     </div>

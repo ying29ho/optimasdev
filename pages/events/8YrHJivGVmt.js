@@ -66,12 +66,12 @@ function Oct() {
           >
             <Image
               className="fixed-bottom"
-              src={"/images/event/eventheader.png"}
+              src={"/images/event/finaleventbanner.png"}
               objectFit="contain"
               quality={100}
               height={567}
               width={1440}
-              alt="contact page header image"
+              alt="event page header image"
             />
           </div>
         </MediaQuery>
@@ -79,12 +79,12 @@ function Oct() {
           <div className="mainContainer2 d-flex justify-content-center">
             <Image
               className="fixed-bottom"
-              src={"/images/event/eventheader.png"}
+              src={"/images/event/finaleventbanner.png"}
               objectFit="contain"
               quality={100}
               height={567}
               width={1440}
-              alt="contact page header image"
+              alt="event page header image"
             />
           </div>
         </MediaQuery>

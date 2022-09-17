@@ -102,7 +102,7 @@ function Oct() {
                     Packed with panel
                     discussions, presentations, workshops, fireside chats and
                     networking sessions to deliver insights and strategies of
-                    "The #DigitalBrunei AdTech Ecosystem".
+                    &quot;The #DigitalBrunei AdTech Ecosystem&quot;.
                   </p>
                 </div>
                 <div className="">
@@ -327,7 +327,7 @@ function Oct() {
                     broadcasting and marketing sectors. <br></br><br></br>Packed with panel
                     discussions, presentations, workshops, fireside chats and
                     networking sessions to deliver insights and strategies of
-                    "The #DigitalBrunei AdTech Ecosystem".
+                    &quot; The #DigitalBrunei AdTech Ecosystem &quot;.
                   </p>
                 </div>
               </div>

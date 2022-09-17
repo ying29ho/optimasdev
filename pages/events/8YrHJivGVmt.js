@@ -6,8 +6,8 @@ import { SubmitButton, MobileSubmitButton } from "../../components/Buttons";
 import MediaQuery from "react-responsive";
 import { CgClose } from "react-icons/cg";
 
-function Oct (){
-    const [msge, setMessage] = useState("");
+function Oct() {
+  const [msge, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const closeIcon = (
     <CgClose
@@ -23,7 +23,7 @@ function Oct (){
       lastName: "",
       email: "",
       number: "",
-      company :"",
+      company: "",
       jobtitle: "",
       terms: false,
     },
@@ -40,7 +40,7 @@ function Oct (){
         setSubmitted(true);
         resetForm({ values: "" });
         setSubmitting(false);
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
       }, 1000);
     },
     validationSchema: yup.object({
@@ -56,49 +56,55 @@ function Oct (){
       // requests: yup.array().oneOf([true], "Please tell us how we can help")
     }),
   });
-return(
-<div> 
+  return (
+    <div>
       <FormikProvider value={formik}>
-      
         <MediaQuery maxWidth={900}>
           <div
             className="mainContainer2 d-flex justify-content-center"
-            style={{ height: "100vh"}}
+            style={{ height: "100vh" }}
           >
             <Image
-            className="fixed-bottom"
+              className="fixed-bottom"
               src={"/images/event/eventheader.png"}
-       
               objectFit="contain"
               quality={100}
               height={567}
               width={1440}
               alt="contact page header image"
-            
             />
           </div>
         </MediaQuery>
         <MediaQuery minWidth={901}>
           <div className="mainContainer2 d-flex justify-content-center">
             <Image
-            className="fixed-bottom"
+              className="fixed-bottom"
               src={"/images/event/eventheader.png"}
-          
               objectFit="contain"
               quality={100}
               height={567}
               width={1440}
               alt="contact page header image"
             />
-            
-         
           </div>
         </MediaQuery>
         <div className="container">
           <div className="row">
             <MediaQuery maxWidth={900}>
               <div>
-                <h1 className="p-3 m-3">Join The #DigitalBrunei<br></br>Adtech Ecosystem</h1>
+                <h1 className="p-3 m-3">
+                  Join The #DigitalBrunei<br></br>Adtech Ecosystem
+                </h1>
+                <div className="mx-4 p-5">
+                  <p>
+                    OPTIMAS proudly presents a 1-day event for digital media,
+                    broadcasting and marketing sectors. <br></br><br></br>
+                    Packed with panel
+                    discussions, presentations, workshops, fireside chats and
+                    networking sessions to deliver insights and strategies of
+                    "The #DigitalBrunei AdTech Ecosystem".
+                  </p>
+                </div>
                 <div className="">
                   {submitted === true ? (
                     <div className="submit-success">
@@ -205,7 +211,6 @@ return(
                         onChange={formik.handleChange}
                         value={formik.values.jobtitle}
                         style={{ height: "80px", fontSize: "25px" }}
-
                       />
                       {/* {formik.errors.jobtitle && (
                         <div className="text-danger">
@@ -268,7 +273,6 @@ return(
                         <div className="text-danger">{formik.errors.email}</div>
                       )}
                     </div>
-                    
 
                     <div className="form-group pt-5">
                       <div className="form-check m-3">
@@ -301,20 +305,9 @@ return(
                       </div>
                     </div>
                     <div className="p-auto" align="center">
-                      <MobileSubmitButton text="Join Program" />
+                      <MobileSubmitButton text="RSVP" />
                     </div>
                   </form>
-                </div>
-
-                <div className="mx-4 p-5">
-                <Image src={"/images/event/eventprogram1.png"}
-       
-       objectFit="contain"
-       quality={100}
-       height={750}
-       width={750}
-       alt="event day details"/>
-          
                 </div>
               </div>
             </MediaQuery>
@@ -322,17 +315,23 @@ return(
               <div className="col pt-5">
                 <h1>Join The #DigitalBrunei Adtech Ecosystem</h1>
                 <div className="p-2 mx-auto" align="ceter">
-                    <Image src={"/images/event/eventprogram1.png"}
-       
+                  {/* <Image src={"/images/event/eventprogram1.png"}
                     objectFit="contain"
                     quality={100}
                     height={540}
                     width={540}
-                    alt="event day details"/>
+                    alt="event day details"/> */}
+
+                  <p>
+                    OPTIMAS proudly presents a 1-day event for digital media,
+                    broadcasting and marketing sectors. <br></br><br></br>Packed with panel
+                    discussions, presentations, workshops, fireside chats and
+                    networking sessions to deliver insights and strategies of
+                    "The #DigitalBrunei AdTech Ecosystem".
+                  </p>
                 </div>
               </div>
               <div className="col">
-               
                 {submitted === true ? (
                   <div className="submit-success">
                     <div className="row">
@@ -341,7 +340,7 @@ return(
                     </div>
                   </div>
                 ) : null}
-       
+
                 <form onSubmit={formik.handleSubmit}>
                   <label className="pt-5" htmlFor="firstName">
                     Full Name
@@ -413,7 +412,6 @@ return(
                       type="text"
                       onChange={formik.handleChange}
                       value={formik.values.jobtitle}
-                   
                     />
                     {/* {formik.errors.subject && (
                       <div className="text-danger">{formik.errors.subject}</div>
@@ -477,7 +475,7 @@ return(
                     </div>
                   </div>
                   <div className="p-5" align="center">
-                    <SubmitButton text="Join Program" />
+                    <SubmitButton text="RSVP" />
                   </div>
                 </form>
               </div>
@@ -485,8 +483,8 @@ return(
           </div>
         </div>
       </FormikProvider>
-      </div>
-)
+    </div>
+  );
 }
 
-export  default Oct; 
+export default Oct;

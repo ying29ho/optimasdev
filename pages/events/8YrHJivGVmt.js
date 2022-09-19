@@ -96,6 +96,12 @@ function Oct() {
                   Join The #DigitalBrunei<br></br>Adtech Ecosystem
                 </h1>
                 <div className="mx-4 p-5">
+                <Image src={"/images/event/updatedeventprogram.png"}
+                    objectFit="contain"
+                    quality={100}
+                    height={750}
+                    width={750}
+                    alt="event day details"/>
                   <p>
                     OPTIMAS proudly presents a 1-day event for digital media,
                     broadcasting and marketing sectors. <br></br><br></br>
@@ -315,13 +321,6 @@ function Oct() {
               <div className="col pt-5">
                 <h1>Join The #DigitalBrunei Adtech Ecosystem</h1>
                 <div className="p-2 mx-auto" align="ceter">
-                  {/* <Image src={"/images/event/eventprogram1.png"}
-                    objectFit="contain"
-                    quality={100}
-                    height={540}
-                    width={540}
-                    alt="event day details"/> */}
-
                   <p>
                     OPTIMAS proudly presents a 1-day event for digital media,
                     broadcasting and marketing sectors. <br></br><br></br>Packed with panel
@@ -329,6 +328,13 @@ function Oct() {
                     networking sessions to deliver insights and strategies of
                     &quot; The #DigitalBrunei AdTech Ecosystem &quot;.
                   </p>
+                  <Image src={"/images/event/updatedeventprogram.png"}
+                    objectFit="contain"
+                    quality={100}
+                    height={540}
+                    width={540}
+                    alt="event day details"/>
+
                 </div>
               </div>
               <div className="col">

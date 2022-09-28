@@ -1,10 +1,18 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import  { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
 export default function Document() {
   return (
     <Html>
       <Head>
+
+      <meta property="og:title" content="Optimas"/>
+      <meta property="og:site_name" content="Optimas"/>
+        <meta property="og:description" content="Building a Digital Brunei Adtech Ecosystem"/>
+        <meta property="og:image" itemProp="image" content="https://optimas-bucket.s3.ap-south-1.amazonaws.com/OptimasLogo.png"/>
+        <meta property="og:image:secure_url" itemProp="image" content="https://optimas-bucket.s3.ap-south-1.amazonaws.com/OptimasLogo.png"/>
+        <meta property="og:url" content="https://www.optimasmgmt.com/"/>
+        <meta property="og:type" content="website"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import { useState } from "react";
 import { Field, useFormik, FormikProvider } from "formik";
 import * as yup from "yup";
@@ -7,6 +8,24 @@ import MediaQuery from "react-responsive";
 import { CgClose } from "react-icons/cg";
 
 function Oct() {
+  <Head>
+    <title>Optimas</title>
+    <meta property="og:title" content="Optimas" />
+    <meta
+      property="og:description"
+      content="Building a Digital Brunei Adtech Ecosystem"
+    />
+    <meta
+      property="og:image:secure_url"
+      itemProp="image"
+      content="https://optimas-bucket.s3.ap-south-1.amazonaws.com/OptimasLogo.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.optimasmgmt.com/events/8YrHJivGVmt"
+    />
+    <meta property="og:type" content="website" />
+  </Head>;
   const [msge, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const closeIcon = (
@@ -97,15 +116,14 @@ function Oct() {
                 </h1>
                 <div className="mx-4 py-1 px-4">
                   <div className="text-center">
-
-                  <Image
-                    src={"/images/event/updatedeventprogram260922.png"}
-                    objectFit="contain"
-                    quality={100}
-                    height={750}
-                    width={750}
-                    alt="event day details"
-                  />
+                    <Image
+                      src={"/images/event/updatedeventprogram260922.png"}
+                      objectFit="contain"
+                      quality={100}
+                      height={750}
+                      width={750}
+                      alt="event day details"
+                    />
                   </div>
                   <p>
                     OPTIMAS proudly presents a 1-day event for digital media,
@@ -338,7 +356,7 @@ function Oct() {
                     </p>
                   </div>
                 </div>
-               
+
                 <div className="col-6">
                   <Image
                     src={"/images/event/updatedeventprogram260922.png"}
@@ -351,7 +369,7 @@ function Oct() {
                 </div>
               </div>
               <div className="row pb-5">
-              <div className="col-3">{""}</div>
+                <div className="col-3">{""}</div>
                 <div className="col-6">
                   {submitted === true ? (
                     <div className="submit-success">

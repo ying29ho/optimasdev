@@ -11,6 +11,8 @@ export default function Document() {
         <meta property="og:description" content="Building a Digital Brunei Adtech Ecosystem"/>
         <meta property="og:image" itemProp="image" content="https://optimas-bucket.s3.ap-south-1.amazonaws.com/OptimasLogo.png"/>
         <meta property="og:image:secure_url" itemProp="image" content="https://optimas-bucket.s3.ap-south-1.amazonaws.com/OptimasLogo.png"/>
+        <meta property="og:image:width" content="247" />
+<meta property="og:image:height" content="106" />
         <meta property="og:url" content="https://www.optimasmgmt.com/"/>
         <meta property="og:type" content="website"/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />

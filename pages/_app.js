@@ -7,6 +7,7 @@ import "../styles/scss/global.scss";
 import "../styles/scss/Components.scss";
 // import "../styles/scss/about.scss"
 import { motion, AnimatePresence } from "framer-motion";
+// import OptimasLogo from "../public/OptimasLogo.png"
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -15,7 +16,7 @@ function MyApp({ Component, pageProps, router }) {
         <title>Optimas</title>
         <meta property="og:title" content="Optimas"/>
         <meta property="og:description" content="Building a Digital Brunei Adtech Ecosystem"/>
-        <meta property="og:image" content="/OptimasLogo.png"/>
+        <meta property="og:image" content="../public/OptimasLogo.png"/>
         <meta property="og:url" content="https://www.optimasmgmt.com/"/>
         <meta property="og:type" content="website"/>
         {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}

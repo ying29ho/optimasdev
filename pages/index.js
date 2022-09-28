@@ -96,6 +96,11 @@ export default function Home() {
     // <div className={styles.container}>
     <div>
       <Head>
+      <meta property="og:title" content="Optimas"/>
+        <meta property="og:description" content="Building a Digital Brunei Adtech Ecosystem"/>
+        <meta property="og:image" content="/OptimasLogo.png"/>
+        <meta property="og:url" content="https://www.optimasmgmt.com/"/>
+        <meta property="og:type" content="website"/>
         {/* <title>Optimas</title> */}
 
         {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}

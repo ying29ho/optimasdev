@@ -18,13 +18,15 @@ function Oct() {
     <meta
       property="og:image:secure_url"
       itemProp="image"
-      content="https://optimas-bucket.s3.ap-south-1.amazonaws.com/OptimasLogo.png"
+      content="https://optimas-bucket.s3.ap-south-1.amazonaws.com/finaleventbanner.png"
     />
+    <meta property="og:image:width" content="252" />
+    <meta property="og:image:height" content="111" />
     <meta
       property="og:url"
       content="https://www.optimasmgmt.com/events/8YrHJivGVmt"
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="article" />
   </Head>;
   const [msge, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -683,7 +685,7 @@ function Oct() {
                             id="notinterested"
                             name="notinterested"
                           />
-                          Not Interested,  I will sign up another time
+                          Not Interested, I will sign up another time
                         </label>
                       </div>
                     </div>

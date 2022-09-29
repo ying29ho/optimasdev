@@ -48,6 +48,7 @@ function Oct() {
       workshop2: false,
       workshop3: false,
       workshop4: false,
+      notinterested: false,
       terms: false,
     },
 
@@ -390,7 +391,6 @@ function Oct() {
                             type="checkbox"
                             id="workshop4"
                             name="workshop4"
-                            // value="Finding The Story Behind The Problem"
                             style={{
                               height: "30px",
                               width: "30px",
@@ -398,6 +398,26 @@ function Oct() {
                             }}
                           />
                           Finding The Story Behind The Problem
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        <label
+                          className="form-check-label"
+                          style={{ fontSize: "27px" }}
+                          htmlFor="notinterested"
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="notinterested"
+                            name="notinterested"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Not Interested, I will sign up another time
                         </label>
                       </div>
                     </div>
@@ -432,7 +452,7 @@ function Oct() {
                         </label>
                       </div>
                     </div>
-                    <div className="p-auto" align="center">
+                    <div className="p-auto mb-5" align="center">
                       <MobileSubmitButton text="RSVP" />
                     </div>
                   </form>
@@ -649,6 +669,21 @@ function Oct() {
                             // value="Finding The Story Behind The Problem"
                           />
                           Finding The Story Behind The Problem
+                        </label>
+                      </div>
+
+                      <div className="form-check m-3">
+                        <label
+                          className="form-check-label"
+                          htmlFor="notinterested"
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="notinterested"
+                            name="notinterested"
+                          />
+                          Not Interested,  I will sign up another time
                         </label>
                       </div>
                     </div>

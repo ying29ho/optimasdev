@@ -50,11 +50,11 @@ export default async function handler(
         });
         const response = await sheets.spreadsheets.values.append({
             spreadsheetId: process.env.GOOGLE_SHEET_ID,
-            range: 'A1:J1',
+            range: 'A1:K1',
             valueInputOption: 'USER_ENTERED',
             requestBody:{
                 values:[
-                    [body.firstName, body.lastName, body.company, body.jobtitle, body.number, body.email, body.workshop1, body.workshop2, body.workshop3, body.workshop4 ]
+                    [body.firstName, body.lastName, body.company, body.jobtitle, body.number, body.email, body.workshop1, body.workshop2, body.workshop3, body.workshop4, body.notinterested ]
                 ]
             }
         });

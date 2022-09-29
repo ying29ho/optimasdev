@@ -122,7 +122,7 @@ function Oct() {
                 <div className="mx-4 py-1 px-4">
                   <div className="text-center">
                     <Image
-                      src={"/images/event/updatedeventprogram290922.png"}
+                      src={"/images/event/eventprogram290922.png"}
                       objectFit="contain"
                       quality={100}
                       height={750}
@@ -477,7 +477,7 @@ function Oct() {
 
                 <div className="col-6">
                   <Image
-                    src={"/images/event/updatedeventprogram290922.png"}
+                    src={"/images/event/eventprogram290922.png"}
                     objectFit="contain"
                     quality={100}
                     height={650}

@@ -127,6 +127,7 @@ footer a{
   height: 75vh;
   position: relative;
   background-color: #EE3932;
+  z-index: 1;
    
 }
 

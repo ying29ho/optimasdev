@@ -20,9 +20,7 @@ export default async function handler(req, res) {
     ${newReqs}\r\n 
     \r\n \r\n \r\n
 
-    Is this person interested in the #DigitalBrunei Event? \r\n
-    ${body.digitalBrunei}
-    \r\n \r\n \r\n
+    
     The following is the message sent \r\n
     Subject: ${body.subject}\r\n
     Message: ${body.message}\r\n \r\n

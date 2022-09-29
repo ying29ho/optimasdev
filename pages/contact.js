@@ -28,7 +28,7 @@ const Contact = () => {
       basedIn: "Brunei",
       requests: [],
       outsideBorneo: "",
-      digitalBrunei: false,
+      // digitalBrunei: false,
       terms: false,
     },
 
@@ -45,7 +45,7 @@ const Contact = () => {
         resetForm({ values: "" });
         // alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
       }, 1000);
     },
     validationSchema: yup.object({
@@ -57,9 +57,7 @@ const Contact = () => {
         .required("Email is required"),
       subject: yup.string().trim().required("Subject is required"),
       message: yup.string().trim().required("Message is required"),
-      outsideBorneo: yup
-        .string()
-        .trim(),
+      outsideBorneo: yup.string().trim(),
       terms: yup.bool().oneOf([true], "You must agree to our terms"),
       // requests: yup.array().oneOf([true], "Please tell us how we can help")
     }),
@@ -514,28 +512,8 @@ const Contact = () => {
                         </label>
                       </div>
                     </div>
+
                     <div className="form-group pt-5">
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          htmlFor="digitalBrunei"
-                          style={{ fontSize: "27px" }}
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            name="digtialBrunei"
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                              fontSize: "25px",
-                            }}
-                          />
-                          Click here to be part of the #digitalbrunei adtech ecosystem event. RSVPs are limited. Clicking this does not guarantee you a slot for the event.
-                        </label>
-                      </div>
-                    </div>
-                    <div className="form-group pt-1">
                       <div className="form-check m-3">
                         <label
                           className="form-check-label"
@@ -600,7 +578,6 @@ const Contact = () => {
                 </div>
               </div>
               <div className="col">
-               
                 {submitted === true ? (
                   <div className="submit-success">
                     <div className="row">
@@ -609,7 +586,7 @@ const Contact = () => {
                     </div>
                   </div>
                 ) : null}
-       
+
                 <form onSubmit={formik.handleSubmit}>
                   <label className="pt-5" htmlFor="firstName">
                     Full Name
@@ -917,22 +894,8 @@ const Contact = () => {
                       </label>
                     </div>
                   </div>
-                  <div className="form-group pt-5">
-                    <div className="form-check m-3">
-                      <label className="form-check-label" htmlFor="digitalBrunei">
-                        <Field
-                          className="form-check-input"
-                          type="checkbox"
-                          name="digitalBrunei"
-                        />
-                        Click here to be part of the #digitalbrunei adtech ecosystem event. RSVPs are limited. Clicking this does not guarantee you a slot for the event.
-   
-                      </label>
-                    </div>
-                  </div>
 
-                  {/* <div className="form-group pt-5"> */}
-                  <div className="form-group">
+                  <div className="form-group pt-5">
                     <div className="form-check m-3">
                       <label className="form-check-label" htmlFor="terms">
                         <Field

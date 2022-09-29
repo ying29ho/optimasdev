@@ -95,7 +95,7 @@ function Oct() {
               quality={100}
               height={567}
               width={1440}
-              alt="event page header image"
+              alt="optimas digital brunei adtech ecosystem header image"
             />
           </div>
         </MediaQuery>

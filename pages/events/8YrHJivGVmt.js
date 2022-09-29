@@ -44,6 +44,10 @@ function Oct() {
       number: "",
       company: "",
       jobtitle: "",
+      workshop1: false,
+      workshop2: false,
+      workshop3: false,
+      workshop4: false,
       terms: false,
     },
 
@@ -117,7 +121,7 @@ function Oct() {
                 <div className="mx-4 py-1 px-4">
                   <div className="text-center">
                     <Image
-                      src={"/images/event/updatedeventprogram260922.png"}
+                      src={"/images/event/updatedeventprogram290922.png"}
                       objectFit="contain"
                       quality={100}
                       height={750}
@@ -304,6 +308,100 @@ function Oct() {
                       )}
                     </div>
 
+                    <div className="form-group pt-3">
+                      <label
+                        className="pt-4"
+                        htmlFor="workshop"
+                        style={{ fontSize: "27px" }}
+                      >
+                        Please Select The Workshop You Are Interested In
+                      </label>
+                      <div className="form-check m-3">
+                        <label
+                          className="form-check-label"
+                          style={{ fontSize: "27px" }}
+                          htmlFor="workshop1"
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            name="workshop1"
+                            id="workshop1"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Giving Your Brand Presence And Personality
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        <label
+                          className="form-check-label"
+                          style={{ fontSize: "27px" }}
+                          htmlFor="workshop2"
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="workshop2"
+                            name="workshop2"
+                            // value="Are You Ready To Market Your Content"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Are You Ready To Market Your Content?
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        <label
+                          className="form-check-label"
+                          style={{ fontSize: "27px" }}
+                          htmlFor="workshop3"
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="workshop3"
+                            name="workshop3"
+                            // value="How To Achieve  The Next Level In The Audio Advertising World"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          How To Achieve The Next Level In The Audio Advertising
+                          World
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        <label
+                          className="form-check-label"
+                          style={{ fontSize: "27px" }}
+                          htmlFor="workshop4"
+                        >
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="workshop4"
+                            name="workshop4"
+                            // value="Finding The Story Behind The Problem"
+                            style={{
+                              height: "30px",
+                              width: "30px",
+                              fontSize: "25px",
+                            }}
+                          />
+                          Finding The Story Behind The Problem
+                        </label>
+                      </div>
+                    </div>
+
                     <div className="form-group pt-5">
                       <div className="form-check m-3">
                         <label
@@ -359,7 +457,7 @@ function Oct() {
 
                 <div className="col-6">
                   <Image
-                    src={"/images/event/updatedeventprogram260922.png"}
+                    src={"/images/event/updatedeventprogram290922.png"}
                     objectFit="contain"
                     quality={100}
                     height={650}
@@ -499,6 +597,62 @@ function Oct() {
                         <div className="text-danger">{formik.errors.email}</div>
                       )}
                     </div>
+
+                    <div className="form-group pt-3">
+                      <label className="pt-4" htmlFor="workshop">
+                        Please Select The Workshop You Are Interested In
+                      </label>
+                      <div className="form-check m-3">
+                        <label className="form-check-label" htmlFor="workshop1">
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="workshop1"
+                            name="workshop1"
+                            // value="Giving Your Brand Presence And Personality"
+                          />
+                          Giving Your Brand Presence And Personality
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        <label className="form-check-label" htmlFor="workshop2">
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="workshop2"
+                            name="workshop2"
+                            // value="Are You Ready To Market Your Content"
+                          />
+                          Are You Ready To Market Your Content?
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        <label className="form-check-label" htmlFor="workshop3">
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="workshop3"
+                            name="workshop3"
+                            // value="How To Achieve The Next Level In The Audio Advertising World"
+                          />
+                          How To Achieve The Next Level In The Audio Advertising
+                          World
+                        </label>
+                      </div>
+                      <div className="form-check m-3">
+                        <label className="form-check-label" htmlFor="workshop4">
+                          <Field
+                            className="form-check-input"
+                            type="checkbox"
+                            id="workshop4"
+                            name="workshop4"
+                            // value="Finding The Story Behind The Problem"
+                          />
+                          Finding The Story Behind The Problem
+                        </label>
+                      </div>
+                    </div>
+
                     <div className="form-group pt-5">
                       <div className="form-check m-3">
                         <label className="form-check-label" htmlFor="terms">

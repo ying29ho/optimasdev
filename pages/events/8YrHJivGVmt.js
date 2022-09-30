@@ -124,7 +124,7 @@ function Oct() {
                 <div className="mx-4 py-1 px-4">
                   <div className="text-center">
                     <Image
-                      src={"/images/event/eventprogram290922.png"}
+                      src={"/images/event/eventprogram300922.png"}
                       objectFit="contain"
                       quality={100}
                       height={750}
@@ -132,15 +132,63 @@ function Oct() {
                       alt="event day details"
                     />
                   </div>
+
                   <p>
-                    OPTIMAS proudly presents a 1-day event for digital media,
-                    broadcasting and marketing sectors. <br></br>
+                      Good news! We're here to bring you The {" "}
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DigitalBrunei
+                      </span>{" "}
+                      Adtech Ecosystem Networking Event (
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DBATE2022
+                      </span>
+                      ).
+                    </p>
+
+                  <br></br>
+                  <br></br>
+                  <p>
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        Event:{" "}
+                      </span>
+                      Panel Discussion and Networking Session
+                    </p>
+
+                    <p>
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        Date:{" "}
+                      </span>
+                      Wednesday, 5 October 2022
+                    </p>
+
+                    <p>
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        Venue:{" "}
+                      </span>
+                      Ruang, Yayasan Complex, Bandar Seri {" "}{" "}{" "}{" "}Begawan
+                    </p>
+                  <br></br>
+                  <br></br>
+
+                  <p>
+                      Introducing the{" "}
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DigitalBrunei 
+                      </span>{" "}
+                      Advertising Technology (AdTech) Ecosystem Networking Event,{" "}
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DBATE
+                      </span>{" "}
+                      for short, an in-person full-day experience that includes
+                      panel discussions, industry networking opportunities,
+                      news, insights and, most importantly, conversations that
+                      will propel a greater grasp and thereby elicit new
+                      opportunities in the exciting area of digital marketing in
+                      Brunei and beyond.
+                    </p>
                     <br></br>
-                    Packed with panel discussions, presentations, workshops,
-                    fireside chats and networking sessions to deliver insights
-                    and strategies of &quot;The #DigitalBrunei AdTech
-                    Ecosystem&quot;.
-                  </p>
+                    <br></br>
+
                 </div>
                 <div className="">
                   {submitted === true ? (
@@ -467,25 +515,81 @@ function Oct() {
                   <h1>Join The #DigitalBrunei Adtech Ecosystem</h1>
                   <div className="p-2 mx-auto" align="ceter">
                     <p>
+                      Good news! We're here to bring you The {" "}
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DigitalBrunei
+                      </span>{" "}
+                      Adtech Ecosystem Networking Event (
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DBATE2022
+                      </span>
+                      ).
+                    </p>
+
+                    <br></br>
+                    <br></br>
+
+                    <p>
+                      Introducing the{" "}
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DigitalBrunei 
+                      </span>{" "}
+                      Advertising Technology (AdTech) Ecosystem Networking Event,{" "}
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        #DBATE
+                      </span>{" "}
+                      for short, an in-person full-day experience that includes
+                      panel discussions, industry networking opportunities,
+                      news, insights and, most importantly, conversations that
+                      will propel a greater grasp and thereby elicit new
+                      opportunities in the exciting area of digital marketing in
+                      Brunei and beyond.
+                    </p>
+
+                    {/* <p>
                       OPTIMAS proudly presents a 1-day event for digital media,
                       broadcasting and marketing sectors. <br></br>
                       <br></br>Packed with panel discussions, presentations,
                       workshops, fireside chats and networking sessions to
                       deliver insights and strategies of &quot; The
                       #DigitalBrunei AdTech Ecosystem &quot;.
-                    </p>
+                    </p> */}
                   </div>
                 </div>
 
                 <div className="col-6">
                   <Image
-                    src={"/images/event/eventprogram290922.png"}
+                    src={"/images/event/eventprogram300922.png"}
                     objectFit="contain"
                     quality={100}
                     height={650}
                     width={650}
                     alt="event day details"
                   />
+
+                  <div className="px-4">
+                    <p>
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        Event:{" "}
+                      </span>
+                      Panel Discussion and Networking Session
+                    </p>
+
+                    <p>
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        Date:{" "}
+                      </span>
+                      Wednesday, 5 October 2022
+                    </p>
+
+                    <p>
+                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                        Venue:{" "}
+                      </span>
+                      Ruang, Yayasan Complex, Bandar Seri {" "}{" "}{" "}{" "}Begawan
+                    </p>
+                 
+                  </div>
                 </div>
               </div>
               <div className="row pb-5">

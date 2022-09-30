@@ -134,7 +134,7 @@ function Oct() {
                   </div>
 
                   <p>
-                      Good news! We're here to bring you The {" "}
+                      Good news! We&apos;re here to bring you The {" "}
                       <span style={{ color: "#EE3932", fontWeight: "1000" }}>
                         #DigitalBrunei
                       </span>{" "}
@@ -515,7 +515,7 @@ function Oct() {
                   <h1>Join The #DigitalBrunei Adtech Ecosystem</h1>
                   <div className="p-2 mx-auto" align="ceter">
                     <p>
-                      Good news! We're here to bring you The {" "}
+                      Good news! We&apos;re here to bring you The {" "}
                       <span style={{ color: "#EE3932", fontWeight: "1000" }}>
                         #DigitalBrunei
                       </span>{" "}

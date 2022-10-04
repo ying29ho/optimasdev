@@ -134,378 +134,71 @@ function Oct() {
                   </div>
 
                   <p>
-                      Good news! We&apos;re here to bring you The {" "}
-                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        #DigitalBrunei
-                      </span>{" "}
-                      Adtech Ecosystem Networking Event (
-                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        #DBATE2022
-                      </span>
-                      ).
-                    </p>
+                    Good news! We&apos;re here to bring you The{" "}
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      #DigitalBrunei
+                    </span>{" "}
+                    Adtech Ecosystem Networking Event (
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      #DBATE2022
+                    </span>
+                    ).
+                  </p>
 
                   <br></br>
                   <br></br>
                   <p>
-                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        Event:{" "}
-                      </span>
-                      Panel Discussion and Networking Session
-                    </p>
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      Event:{" "}
+                    </span>
+                    Panel Discussion and Networking Session
+                  </p>
 
-                    <p>
-                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        Date:{" "}
-                      </span>
-                      Wednesday, 5 October 2022
-                    </p>
+                  <p>
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      Date:{" "}
+                    </span>
+                    Wednesday, 5 October 2022
+                  </p>
 
-                    <p>
-                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        Venue:{" "}
-                      </span>
-                      Ruang, Yayasan Complex, Bandar Seri {" "}{" "}{" "}{" "}Begawan
-                    </p>
+                  <p>
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      Venue:{" "}
+                    </span>
+                    Ruang, Yayasan Complex, Bandar Seri Begawan
+                  </p>
                   <br></br>
                   <br></br>
 
                   <p>
-                      Introducing the{" "}
-                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        #DigitalBrunei 
-                      </span>{" "}
-                      Advertising Technology (AdTech) Ecosystem Networking Event,{" "}
-                      <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        #DBATE
-                      </span>{" "}
-                      for short, an in-person full-day experience that includes
-                      panel discussions, industry networking opportunities,
-                      news, insights and, most importantly, conversations that
-                      will propel a greater grasp and thereby elicit new
-                      opportunities in the exciting area of digital marketing in
-                      Brunei and beyond.
-                    </p>
-                    <br></br>
-                    <br></br>
-
+                    Introducing the{" "}
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      #DigitalBrunei
+                    </span>{" "}
+                    Advertising Technology (AdTech) Ecosystem Networking Event,{" "}
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      #DBATE
+                    </span>{" "}
+                    for short, an in-person full-day experience that includes
+                    panel discussions, industry networking opportunities, news,
+                    insights and, most importantly, conversations that will
+                    propel a greater grasp and thereby elicit new opportunities
+                    in the exciting area of digital marketing in Brunei and
+                    beyond.
+                  </p>
+                  <br></br>
+                  <br></br>
                 </div>
-                <div className="">
-                  {submitted === true ? (
-                    <div className="submit-success">
-                      <div className="row">
-                        <div className="col-11">{msge}</div>
-                        <div className="col-1">{closeIcon}</div>
-                      </div>
-                    </div>
-                  ) : null}
-                  <form className="mx-5" onSubmit={formik.handleSubmit}>
-                    <label
-                      className="pt-3"
-                      htmlFor="firstName"
-                      style={{ fontSize: "27px" }}
-                    >
-                      First Name
-                    </label>
-                    <div className="row ">
-                      <div className="col">
-                        <input
-                          className="form-control"
-                          placeholder="First Name"
-                          id="firstName"
-                          name="firstName"
-                          type="text"
-                          onChange={formik.handleChange}
-                          value={formik.values.firstName}
-                          required
-                          style={{ height: "80px", fontSize: "25px" }}
-                        />
-                        {formik.errors.firstName && (
-                          <div className="text-danger">
-                            {formik.errors.firstName}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    <label
-                      className="pt-3"
-                      htmlFor="firstName"
-                      style={{ fontSize: "27px" }}
-                    >
-                      Last Name
-                    </label>
-                    <div className="row">
-                      <div className="col">
-                        <input
-                          className="form-control"
-                          placeholder="Last Name"
-                          id="lastName"
-                          name="lastName"
-                          type="text"
-                          onChange={formik.handleChange}
-                          value={formik.values.lastName}
-                          style={{ height: "80px", fontSize: "25px" }}
-                          required
-                        />
-                        {formik.errors.lastName && (
-                          <div className="text-danger">
-                            {formik.errors.lastName}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    <label
-                      className="pt-4"
-                      htmlFor="company"
-                      style={{ fontSize: "27px" }}
-                    >
-                      Company Name
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="Company Name"
-                        id="company"
-                        name="company"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.company}
-                        style={{ height: "80px", fontSize: "25px" }}
-                        required
-                      />
-                      {formik.errors.company && (
-                        <div className="text-danger">
-                          {formik.errors.company}
-                        </div>
-                      )}
-                    </div>
-                    <label
-                      className="pt-4"
-                      htmlFor="jobtitle"
-                      style={{ fontSize: "27px" }}
-                    >
-                      Job Title (Optional)
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="Job Title"
-                        id="jobtitle"
-                        name="jobtitle"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.jobtitle}
-                        style={{ height: "80px", fontSize: "25px" }}
-                      />
-                      {/* {formik.errors.jobtitle && (
-                        <div className="text-danger">
-                          {formik.errors.jobtitle}
-                        </div>
-                      )} */}
-                    </div>
-                    <label
-                      className="pt-4"
-                      htmlFor="subject"
-                      style={{ fontSize: "27px" }}
-                    >
-                      Contact Number
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="Contact Number"
-                        id="number"
-                        name="number"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.number}
-                        style={{ height: "80px", fontSize: "25px" }}
-                        required
-                      />
-                      {formik.errors.number && (
-                        <div className="text-danger">
-                          {formik.errors.number}
-                        </div>
-                      )}
-                    </div>
-
-                    <label
-                      className="pt-3"
-                      htmlFor="email"
-                      style={{ fontSize: "27px" }}
-                    >
-                      Email
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="example@mail.com"
-                        id="email"
-                        name="email"
-                        type="email"
-                        onChange={formik.handleChange}
-                        value={formik.values.email}
-                        style={{ height: "80px", fontSize: "25px" }}
-                        required
-                      />
-                      <small
-                        className="form-text text-muted"
-                        style={{ fontSize: "27px" }}
-                      >
-                        We&apos;ll never share your email with anyone else.
-                      </small>
-                      {formik.errors.email && (
-                        <div className="text-danger">{formik.errors.email}</div>
-                      )}
-                    </div>
-
-                    <div className="form-group pt-3">
-                      <label
-                        className="pt-4"
-                        htmlFor="workshop"
-                        style={{ fontSize: "27px" }}
-                      >
-                        Please Select The Workshop You Are Interested In
-                      </label>
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          style={{ fontSize: "27px" }}
-                          htmlFor="workshop1"
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            name="workshop1"
-                            id="workshop1"
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                              fontSize: "25px",
-                            }}
-                          />
-                          Giving Your Brand Presence And Personality
-                        </label>
-                      </div>
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          style={{ fontSize: "27px" }}
-                          htmlFor="workshop2"
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="workshop2"
-                            name="workshop2"
-                            // value="Are You Ready To Market Your Content"
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                              fontSize: "25px",
-                            }}
-                          />
-                          Are You Ready To Market Your Content?
-                        </label>
-                      </div>
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          style={{ fontSize: "27px" }}
-                          htmlFor="workshop3"
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="workshop3"
-                            name="workshop3"
-                            // value="How To Achieve  The Next Level In The Audio Advertising World"
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                              fontSize: "25px",
-                            }}
-                          />
-                          How To Achieve The Next Level In The Audio Advertising
-                          World
-                        </label>
-                      </div>
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          style={{ fontSize: "27px" }}
-                          htmlFor="workshop4"
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="workshop4"
-                            name="workshop4"
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                              fontSize: "25px",
-                            }}
-                          />
-                          Finding The Story Behind The Problem
-                        </label>
-                      </div>
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          style={{ fontSize: "27px" }}
-                          htmlFor="notinterested"
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="notinterested"
-                            name="notinterested"
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                              fontSize: "25px",
-                            }}
-                          />
-                          Not Interested, I will sign up another time
-                        </label>
-                      </div>
-                    </div>
-
-                    <div className="form-group pt-5">
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          htmlFor="terms"
-                          style={{ fontSize: "27px" }}
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            name="terms"
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                              fontSize: "25px",
-                            }}
-                          />
-                          Click here to receive updates on our latest news and
-                          upcoming solutions
-                          {formik.errors.terms && (
-                            <div
-                              className="text-danger"
-                              style={{ fontSize: "25px" }}
-                            >
-                              {formik.errors.terms}
-                            </div>
-                          )}
-                        </label>
-                      </div>
-                    </div>
-                    <div className="p-auto mb-5" align="center">
-                      <MobileSubmitButton text="RSVP" />
-                    </div>
-                  </form>
+                <div className="p-5" align="center">
+                <h1> Registration closed</h1>
+                  <p>
+                    Thank you for your interest in joining{" "}
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      #DBATE
+                    </span>
+                    . Unfortunately, registration has been closed due to high
+                    demand. We hope to see you in our future events.
+                  </p>    
                 </div>
               </div>
             </MediaQuery>
@@ -515,7 +208,7 @@ function Oct() {
                   <h1>Join The #DigitalBrunei Adtech Ecosystem</h1>
                   <div className="p-2 mx-auto" align="ceter">
                     <p>
-                      Good news! We&apos;re here to bring you The {" "}
+                      Good news! We&apos;re here to bring you The{" "}
                       <span style={{ color: "#EE3932", fontWeight: "1000" }}>
                         #DigitalBrunei
                       </span>{" "}
@@ -532,9 +225,10 @@ function Oct() {
                     <p>
                       Introducing the{" "}
                       <span style={{ color: "#EE3932", fontWeight: "1000" }}>
-                        #DigitalBrunei 
+                        #DigitalBrunei
                       </span>{" "}
-                      Advertising Technology (AdTech) Ecosystem Networking Event,{" "}
+                      Advertising Technology (AdTech) Ecosystem Networking
+                      Event,{" "}
                       <span style={{ color: "#EE3932", fontWeight: "1000" }}>
                         #DBATE
                       </span>{" "}
@@ -545,15 +239,6 @@ function Oct() {
                       opportunities in the exciting area of digital marketing in
                       Brunei and beyond.
                     </p>
-
-                    {/* <p>
-                      OPTIMAS proudly presents a 1-day event for digital media,
-                      broadcasting and marketing sectors. <br></br>
-                      <br></br>Packed with panel discussions, presentations,
-                      workshops, fireside chats and networking sessions to
-                      deliver insights and strategies of &quot; The
-                      #DigitalBrunei AdTech Ecosystem &quot;.
-                    </p> */}
                   </div>
                 </div>
 
@@ -586,238 +271,24 @@ function Oct() {
                       <span style={{ color: "#EE3932", fontWeight: "1000" }}>
                         Venue:{" "}
                       </span>
-                      Ruang, Yayasan Complex, Bandar Seri {" "}{" "}{" "}{" "}Begawan
+                      Ruang, Yayasan Complex, Bandar Seri Begawan
                     </p>
-                 
                   </div>
                 </div>
               </div>
               <div className="row pb-5">
-                <div className="col-3">{""}</div>
-                <div className="col-6">
-                  {submitted === true ? (
-                    <div className="submit-success">
-                      <div className="row">
-                        <div className="col-11">{msge}</div>
-                        <div className="col-1">{closeIcon}</div>
-                      </div>
-                    </div>
-                  ) : null}
-
-                  <form onSubmit={formik.handleSubmit}>
-                    <label className="pt-5" htmlFor="firstName">
-                      Full Name
-                    </label>
-                    <div className="row ">
-                      <div className="col">
-                        <input
-                          className="form-control"
-                          placeholder="First Name"
-                          id="firstName"
-                          name="firstName"
-                          type="text"
-                          onChange={formik.handleChange}
-                          value={formik.values.firstName}
-                          required
-                        />
-                        {formik.errors.firstName && (
-                          <div className="text-danger">
-                            {formik.errors.firstName}
-                          </div>
-                        )}
-                      </div>
-                      <div className="col">
-                        <input
-                          className="form-control"
-                          placeholder="Last Name"
-                          id="lastName"
-                          name="lastName"
-                          type="text"
-                          onChange={formik.handleChange}
-                          value={formik.values.lastName}
-                          required
-                        />
-                        {formik.errors.lastName && (
-                          <div className="text-danger">
-                            {formik.errors.lastName}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    <label className="pt-4" htmlFor="company">
-                      Company Name
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="Company Name"
-                        id="company"
-                        name="company"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.company}
-                        required
-                      />
-                      {formik.errors.company && (
-                        <div className="text-danger">
-                          {formik.errors.company}
-                        </div>
-                      )}
-                    </div>
-                    <label className="pt-4" htmlFor="jobtitle">
-                      Job Title (Optional)
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="Job Title"
-                        id="jobtitle"
-                        name="jobtitle"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.jobtitle}
-                      />
-                      {/* {formik.errors.subject && (
-                      <div className="text-danger">{formik.errors.subject}</div>
-                    )} */}
-                    </div>
-                    <label className="pt-4" htmlFor="number">
-                      Contact Number
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="Contact Number"
-                        id="number"
-                        name="number"
-                        type="text"
-                        onChange={formik.handleChange}
-                        value={formik.values.number}
-                        required
-                      />
-                      {formik.errors.number && (
-                        <div className="text-danger">
-                          {formik.errors.number}
-                        </div>
-                      )}
-                    </div>
-                    <label className="pt-3" htmlFor="email">
-                      Email
-                    </label>
-                    <div className="form-group">
-                      <input
-                        className="form-control"
-                        placeholder="example@mail.com"
-                        id="email"
-                        name="email"
-                        type="email"
-                        onChange={formik.handleChange}
-                        value={formik.values.email}
-                        required
-                      />
-                      <small className="form-text text-muted">
-                        We&apos;ll never share your email with anyone else.
-                      </small>
-                      {formik.errors.email && (
-                        <div className="text-danger">{formik.errors.email}</div>
-                      )}
-                    </div>
-
-                    <div className="form-group pt-3">
-                      <label className="pt-4" htmlFor="workshop">
-                        Please Select The Workshop You Are Interested In
-                      </label>
-                      <div className="form-check m-3">
-                        <label className="form-check-label" htmlFor="workshop1">
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="workshop1"
-                            name="workshop1"
-                            // value="Giving Your Brand Presence And Personality"
-                          />
-                          Giving Your Brand Presence And Personality
-                        </label>
-                      </div>
-                      <div className="form-check m-3">
-                        <label className="form-check-label" htmlFor="workshop2">
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="workshop2"
-                            name="workshop2"
-                            // value="Are You Ready To Market Your Content"
-                          />
-                          Are You Ready To Market Your Content?
-                        </label>
-                      </div>
-                      <div className="form-check m-3">
-                        <label className="form-check-label" htmlFor="workshop3">
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="workshop3"
-                            name="workshop3"
-                            // value="How To Achieve The Next Level In The Audio Advertising World"
-                          />
-                          How To Achieve The Next Level In The Audio Advertising
-                          World
-                        </label>
-                      </div>
-                      <div className="form-check m-3">
-                        <label className="form-check-label" htmlFor="workshop4">
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="workshop4"
-                            name="workshop4"
-                            // value="Finding The Story Behind The Problem"
-                          />
-                          Finding The Story Behind The Problem
-                        </label>
-                      </div>
-
-                      <div className="form-check m-3">
-                        <label
-                          className="form-check-label"
-                          htmlFor="notinterested"
-                        >
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            id="notinterested"
-                            name="notinterested"
-                          />
-                          Not Interested, I will sign up another time
-                        </label>
-                      </div>
-                    </div>
-
-                    <div className="form-group pt-5">
-                      <div className="form-check m-3">
-                        <label className="form-check-label" htmlFor="terms">
-                          <Field
-                            className="form-check-input"
-                            type="checkbox"
-                            name="terms"
-                          />
-                          Click here to receive updates on our latest news and
-                          upcoming solutions
-                          {formik.errors.terms && (
-                            <div className="text-danger">
-                              {formik.errors.terms}
-                            </div>
-                          )}
-                        </label>
-                      </div>
-                    </div>
-                    <div className="p-5" align="center">
-                      <SubmitButton text="RSVP" />
-                    </div>
-                  </form>
+                <div className="col p-5" align="center">
+                  <h1> Registration closed</h1>
+                  <p>
+                    Thank you for your interest in joining{" "}
+                    <span style={{ color: "#EE3932", fontWeight: "1000" }}>
+                      #DBATE
+                    </span>
+                    . Unfortunately, registration has been closed due to high
+                    demand. We hope to see you in our future events.
+                  </p>
+                
                 </div>
-                <div className="col-3">{""}</div>
               </div>
             </MediaQuery>
           </div>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Layout from "../components/Layout";
 import Script from "next/script";
 import Head from "next/head";
@@ -9,11 +10,19 @@ import "../styles/scss/Components.scss";
 import { motion, AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function() { 
+      dataLayer.push(arguments) 
+    }
+    window.gtag('js', new Date());
+    window.gtag('config', `${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`);
+  }, [])
   return (
     <>
       <Head>
         <title>Optimas</title>
-        
+
         {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
       </Head>
       <Script
@@ -27,15 +36,6 @@ function MyApp({ Component, pageProps, router }) {
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
       />
-      <Script id="google-analytics-id" strategy="lazyOnload">
-        {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)}
-  gtag('js', new Date());
-
-  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
-  `}
-      </Script>
 
       <Layout>
         <AnimatePresence exitBeforeEnter>

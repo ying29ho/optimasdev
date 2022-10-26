@@ -31,6 +31,9 @@ const Footer = () => {
               <div className="col-sm-4 mt-5">
                 <h3 style={{fontSize: "40px"}}>Explore More</h3>
                 <div className="row" style={{fontSize: "30px"}}>
+                <Link className="" href="/news">
+                    <a className="">News</a>
+                  </Link>
                 <Link className="" href="/events/8YrHJivGVmt">
                     <a className="">Events</a>
                   </Link>
@@ -120,6 +123,9 @@ const Footer = () => {
               <div className="col-sm-4 ">
                 <h3>Explore More</h3>
                 <div className="row">
+                <Link className="" href="/news">
+                    <a className="">News</a>
+                  </Link>
                   <Link className="" href="/events/8YrHJivGVmt">
                     <a className="">Events</a>
                   </Link>

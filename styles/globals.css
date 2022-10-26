@@ -14,7 +14,11 @@ body{
   background-color: #fafafa;
 } */
 
-
+.insights h1{
+  font-family: 'Manrope', sans-serif;
+  font-size: 72px !important;
+  font-weight: 900 !important;
+}
 
 .caption p{
   font-family: 'Manrope', sans-serif;

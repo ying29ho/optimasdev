@@ -15,10 +15,28 @@ export const NavLinks =(props)=>{
                     <a className="">About Us</a>
                 </Link>
             </motion.li>
-            <motion.li 
+            <motion.li
             initial={animateFrom}
             animate={animateTo}
             transition={{delay: 0.20}}
+            onClick={()=> props.isMobile && props.closeMobileMenu()}>
+                <Link className="" href="/news">
+                    <a className="">News</a>
+                </Link>
+            </motion.li>
+            {/* <motion.li
+            initial={animateFrom}
+            animate={animateTo}
+            transition={{delay: 0.30}}
+            onClick={()=> props.isMobile && props.closeMobileMenu()}>
+                <Link className="" href="/insights">
+                    <a className="">Insights</a>
+                </Link>
+            </motion.li> */}
+            <motion.li 
+            initial={animateFrom}
+            animate={animateTo}
+            transition={{delay: 0.30}}
             onClick={()=> props.isMobile && props.closeMobileMenu()}>
                 <Link className="" href="/contact">
                     <a className="">Contact</a>

@@ -21,7 +21,8 @@ module.exports = {
   },
 
 images:{
-  disableStaticImages: true, 
+  disableStaticImages: true,
+  domains: ['borneobulletin.com.bn'], 
 },
 
 }

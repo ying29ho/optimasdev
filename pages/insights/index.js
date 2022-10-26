@@ -92,7 +92,7 @@ export default function Insights() {
             </form>
             <div className="container">
               {insights.map((each) => (
-                <InsightsSection insights={each} />
+                <InsightsSection insights={each} key={each.id} />
               ))}
             </div>
           </div>

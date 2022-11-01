@@ -9,8 +9,8 @@ import { CgClose } from "react-icons/cg";
 
 function Oct() {
   <Head>
-    <title>Optimas</title>
-    <meta property="og:title" content="Optimas" />
+    <title>Optimas - Building a Digital Brunei Adtech Ecosystem</title>
+    <meta property="og:title" content="Optimas - Building a Digital Brunei Adtech Ecosystem" />
     <meta
       property="og:description"
       content="Building a Digital Brunei Adtech Ecosystem"

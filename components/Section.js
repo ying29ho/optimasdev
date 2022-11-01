@@ -45,7 +45,7 @@ export const MobileNewsSection = ({ articles }) => {
           src={articles.urlToImage}
           width={470}
           height={350}
-          alt="aticle image"
+          alt={articles.altImage}
         />
       </div>
       <div className="col-7 p-3" >
@@ -91,7 +91,7 @@ export const InsightsSection = ({ insights }) => {
         <br></br><br></br>
         <div className="row justify-content-center">
           <div className="col">
-            <Image height={100} width={120} src={insights.urlToImage} />
+            <Image height={100} width={120} src={insights.urlToImage} alt="insights image" />
           </div>
           <div className="col my-auto">
             <button className="btn btn-primary ">

@@ -65,7 +65,7 @@ export const DesktopTeam = ({ teamDesc }) => {
               <Image
                 className=""
                 src={each.img}
-                alt={each.name}
+                alt={`${each.name} from Optimas Team`}
                 height={935}
                 width={786}
               />
@@ -174,7 +174,8 @@ export const MobileTeam = ({ teamDesc }) => {
                     <Image
                       className=""
                       src={each.img}
-                      alt={each.name}
+                      alt={`${each.name} from Optimas Team`}
+                      
                       // height={655}
                       // width={550}
                       height={935}

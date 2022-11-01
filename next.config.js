@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
-const path = require('path')
+const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+};
 
 module.exports = {
-  env:{
+  env: {
     SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
     OPTIMAS_EMAIL: process.env.OPTIMAS_EMAIL,
     TEST_EMAIL: process.env.TEST_EMAIL,
@@ -17,12 +17,16 @@ module.exports = {
   nextConfig,
 
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
 
-images:{
-  disableStaticImages: true,
-  domains: ['borneobulletin.com.bn'], 
-},
+  images: {
+    disableStaticImages: true,
+    domains: ["borneobulletin.com.bn"],
+  },
 
-}
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
+};

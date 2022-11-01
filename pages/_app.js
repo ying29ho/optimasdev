@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <Head>
-        <title>Optimas - Building a Digital Brunei Adtech Ecosystem</title>
+        <title>Optimas - Digital Marketing Agency in Brunei</title>
 
         {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
       </Head>

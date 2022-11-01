@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <meta property="og:title" content="Optimas - Building a Digital Brunei Adtech Ecosystem" />
+        <meta property="og:title" content="Optimas - Digital Marketing Agency in Brunei" />
         <meta property="og:site_name" content="Optimas" />
         <meta
           property="og:description"

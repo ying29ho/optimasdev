@@ -99,7 +99,7 @@ export default function Home() {
       <Head>
       <meta
           name="description"
-          content="Optimas, Building a Digital Brunei Adtech Ecosystem. We are a Digital Marketing Agency in Brunei and cater to Borneo."
+          content="Optimas, Building a Digital Brunei Adtech Ecosystem. We are a Digital Marketing Agency based in Brunei who cater to Borneo. We are able to help you buy and sell online ads and run digital marketing campaigns."
         />
           <meta name="keywords" content="Digital marketing agency brunei, Digital marketing brunei, Digital ads brunei,Digital marketing agency brunei, online marketing brunei, online ads brunei, buy ads brunei, sell ads brunei"/>
       {/* <meta property="og:title" content="Optimas"/>

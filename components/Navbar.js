@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const DesktopNavbar = () => {
   return (
-    <nav className="navbar navigation px-5">
+    <nav className="navbar navigation px-3">
       <Link className="navbar-brand" href="/">
         <Image
           className=""

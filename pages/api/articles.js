@@ -12,7 +12,7 @@ export const articles = [
     urlToImage:
       "https://borneobulletin.com.bn/wp-content/uploads/2022/10/P5-A_17102022.jpg",
     altImage:
-    "Image of Optimas team",
+    "Image of Optimas team receiving token of appreciation from Laksamana",
       publishedAt: "2022-10-17",
   },
   // {

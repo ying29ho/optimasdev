@@ -13,7 +13,7 @@ function Oct() {
     <meta property="og:title" content="Optimas - Building a Digital Brunei Adtech Ecosystem" />
     <meta
       property="og:description"
-      content="Building a Digital Brunei Adtech Ecosystem"
+      content="Optimas, Building a Digital Brunei Adtech Ecosystem. We are a Digital Marketing Agency based in Brunei who cater to Borneo. We are able to help you buy and sell online ads and run digital marketing campaigns."
     />
     <meta
       property="og:image:secure_url"

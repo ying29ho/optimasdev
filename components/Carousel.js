@@ -34,24 +34,15 @@ export const DesktopTeam = ({ teamDesc }) => {
             "--swiper-pagination-color": "#E8554F",
           }}
           dir="rtl"
-          loop={true}
+          loop={false}
           loopedSlides={3}
           centeredSlides={false}
           spaceBetween={-50}
-          // breakpoints={{
-          //   1500: {
-          //     spaceBetween:-400,
-             
-          //   },
-          //   1800:{
-          //     spaceBetween: -600
-          //   }
-
-
-          // }}
-          slidesPerView={3}
+          //change to the below only when new team is added
+          // slidesPerView={3}
+          slidesPerView={1}
           slideToClickedSlide={true}
-          touchRatio={0.6}
+          touchRatio={1}
           // slidesPerGroup={3}
           // loopFillGroupWithBlank={true}
           // freeMode={true}
@@ -66,8 +57,11 @@ export const DesktopTeam = ({ teamDesc }) => {
                 className=""
                 src={each.img}
                 alt={`${each.name} from Optimas Team`}
-                height={935}
-                width={786}
+                //change to the below only when new team is added and remove objectFit and layout
+                // height={935}
+                // width={786}
+                objectFit="cover"
+                      layout="fill"
               />
             </SwiperSlide>
           ))}
@@ -138,7 +132,7 @@ export const MobileTeam = ({ teamDesc }) => {
           "--swiper-pagination-bullet-horizontal-gap": "6px",
         }}
         modules={[Parallax, Autoplay, Pagination]}
-        loop={true}
+        loop={false}
         parallax={true}
         speed={600}
         autoplay={{

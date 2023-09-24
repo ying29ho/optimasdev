@@ -155,7 +155,7 @@ function Dbate() {
                   </div> */}
 
                   <p>
-                        The "Digital Brunei Advertising Technologies Ecosystem",
+                        The &quot;Digital Brunei Advertising Technologies Ecosystem&quot;,
                         or{" "}
                         <span style={{ color: "#EE3932", fontWeight: "1000" }}>
                           DBATE
@@ -298,7 +298,7 @@ function Dbate() {
                   /> */}
                     <div className="p-2 mx-auto" align="left">
                       <p>
-                        The "Digital Brunei Advertising Technologies Ecosystem",
+                        The &quot;Digital Brunei Advertising Technologies Ecosystem&quot;,
                         or{" "}
                         <span style={{ color: "#EE3932", fontWeight: "1000" }}>
                           DBATE
